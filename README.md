@@ -1,5 +1,7 @@
 # Can Official Build Records Reveal Evidence of Package Test Execution?
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21914964.svg)](https://doi.org/10.5281/zenodo.21914964)
+
 ## Overview
 
 This repository is the replication package for an empirical study of positive package-test execution evidence in official Debian and Fedora build records. The study separates three measurements: upstream executable test capability (U), downstream packaging test intent (P), and positive qualifying execution evidence in official build records (L). It contains the frozen study inputs, deterministic processing and analysis code, retained validation evidence, and machine-readable results.
@@ -95,4 +97,4 @@ Raw upstream archives, extracted third-party source trees, raw build records, an
 
 ## Citation
 
-Citation information will be updated after publication.
+The v1.0.0 replication package is archived on Zenodo under the version-specific DOI [10.5281/zenodo.21914964](https://doi.org/10.5281/zenodo.21914964). Use this DOI when citing the archived artifacts. Citation information for the article will be added after publication.
