@@ -1,0 +1,30 @@
+{
+  "sample": {
+    "namespace": "distrotest-lite:v1.1:full-study:sample",
+    "method": "ascending SHA-256(namespace + NUL + canonical_upstream), independently within each stratum",
+    "c2v": {"population": 3694, "sample": 170},
+    "non_c2v": {"population": 3256, "sample": 30},
+    "total": 200
+  },
+  "inference": {
+    "bootstrap_seed": 20260811,
+    "bootstrap_replicates": 10000,
+    "confidence_level": 0.95,
+    "bootstrap_unit": "canonical upstream project, stratified by C2V/non-C2V with Debian/Fedora pairs retained"
+  },
+  "rules": {
+    "u": "u-rules-v1.2.0-recursive-supported-build-surfaces",
+    "p": "p-rules-v1.1.0",
+    "l": "l-rules-v1.2.2",
+    "ontology": "qualifying-actions-v1.0.0",
+    "selection": "selection-v1.0.0",
+    "lineage": "lineage-v1.2.0-host-aware-forge-paths"
+  },
+  "repositories": {
+    "policy": "Reuse the exact frozen package versions and normal stable repository origins; no substitutions.",
+    "debian_architecture": "amd64",
+    "fedora_worker_architecture": "x86_64",
+    "ubuntu_architecture": "amd64",
+    "excluded": ["testing", "proposed", "staging", "backports", "COPR", "PPA"]
+  }
+}

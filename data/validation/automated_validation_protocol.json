@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.0",
+  "protocol_id": "orthogonal-automated-validation-v1.0",
+  "author_amendment_date": "2026-08-12",
+  "status": "FROZEN_BEFORE_VALIDATION_EXECUTION",
+  "supersedes": "proposed independent dual human review",
+  "independence_definition": "implementation and evidence-path independence; not a human gold standard",
+  "u_selection": {
+    "membership": "unchanged frozen 88-case outcome-blind selection",
+    "legacy_manifest": "revision/outputs/u_validation_manifest.json",
+    "legacy_manifest_sha256": "62bcba6b8c04a688bda71dc1821c332370c0835afaa06dcbdac8027c5874dd27",
+    "validator_input": "revision/validation/u88_blind_input.json",
+    "validator_input_sha256": "584ad6597b70cbb20b57dfaad463b9b0e205d006f469b60c3c8b3a3191784b50",
+    "source_hashes": "Each of the 88 records in the label-free input contains primary-artifact SHA-256 values and a deterministic extracted-tree SHA-256 certificate.",
+    "production_labels_retained_in_validator_input": false
+  },
+  "prohibited_validator_inputs": [
+    "production U labels",
+    "production P labels",
+    "production L labels",
+    "analysis-ready result tables",
+    "RQ results",
+    "manuscript outcomes",
+    "production classifier implementation or regex tables"
+  ],
+  "validator_a": "native build-system discovery or structured native metadata in bounded offline isolation; inability to resolve is VALIDATION_INDETERMINATE",
+  "validator_b": "independently implemented structured static semantic inspection with explicit supported-surface coverage",
+  "consensus_rules": {
+    "same_resolved_state": "AUTOMATED_REFERENCE_AGREEMENT",
+    "different_resolved_states": "AUTOMATED_VALIDATION_DISAGREEMENT",
+    "one_resolved_one_indeterminate": "SINGLE_PATH_CONFIRMATION",
+    "both_indeterminate": "VALIDATION_INDETERMINATE",
+    "manual_adjudication": false,
+    "majority_selection": false
+  },
+  "freeze_order": [
+    "freeze this protocol and label-free input",
+    "freeze implementation and environment hashes",
+    "run validators A and B",
+    "freeze validator and consensus output hashes",
+    "join production labels in a separate comparison script"
+  ],
+  "correction_rule": {
+    "required_evidence": "A and B agree on an alternative state and expose a generic systematic production defect",
+    "required_actions": [
+      "define the generic defect",
+      "add positive and adversarial-negative fixtures",
+      "version the U rules",
+      "rerun all 400 U observations",
+      "rerun every U-dependent analysis",
+      "preserve prior outputs",
+      "write an observation-level transition table"
+    ],
+    "package_specific_override_forbidden": true,
+    "single_path_override_forbidden": true
+  },
+  "future_hash_manifest": "revision/validation/validation_implementation_freeze.json",
+  "future_output_hash_manifest": "revision/validation/validation_output_hashes.json"
+}

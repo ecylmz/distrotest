@@ -1,0 +1,52 @@
+{
+  "phase0": {
+    "namespace": "distrotest-lite:v1:phase0:debian-fedora",
+    "pilot_projects": 40,
+    "retrieval_date_utc": "2026-08-11",
+    "architecture": {"debian": "amd64", "fedora": "x86_64", "ubuntu": "amd64"}
+  },
+  "repositories": {
+    "debian": {
+      "release": "13.6",
+      "codename": "trixie",
+      "components": ["main", "contrib", "non-free", "non-free-firmware"],
+      "suites": ["trixie", "trixie-updates", "trixie-security"],
+      "base_urls": {
+        "trixie": "https://deb.debian.org/debian",
+        "trixie-updates": "https://deb.debian.org/debian",
+        "trixie-security": "https://security.debian.org/debian-security"
+      }
+    },
+    "fedora": {
+      "release": "44",
+      "repositories": {
+        "fedora": "https://download.fedoraproject.org/pub/fedora/linux/releases/44/Everything/source/tree",
+        "updates": "https://download.fedoraproject.org/pub/fedora/linux/updates/44/Everything/source/tree"
+      }
+    },
+    "ubuntu": {
+      "release": "26.04 LTS",
+      "codename": "resolute",
+      "components": ["main", "universe", "restricted", "multiverse"],
+      "suites": ["resolute", "resolute-updates", "resolute-security"],
+      "base_urls": {
+        "resolute": "https://archive.ubuntu.com/ubuntu",
+        "resolute-updates": "https://archive.ubuntu.com/ubuntu",
+        "resolute-security": "https://security.ubuntu.com/ubuntu"
+      }
+    }
+  },
+  "selection": {
+    "policy_version": "selection-v1.0.0",
+    "description": "Highest source-package version in base plus stable updates/security at freeze; no proposed/testing/backports/staging/COPR/PPA.",
+    "lineage_version": "lineage-v1.0.0",
+    "lineage_methods": ["EXACT_CANONICAL_FORGE_URL", "EXACT_NORMALIZED_HOMEPAGE_URL"],
+    "forbid": ["fuzzy_names", "binary_name_only", "provides", "manual_overrides", "llm_matching"]
+  },
+  "rules": {
+    "u": "u-rules-v1.0.0",
+    "p": "p-rules-v1.0.0",
+    "l": "l-rules-v1.2.1",
+    "ontology": "qualifying-actions-v1.0.0"
+  }
+}

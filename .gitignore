@@ -1,0 +1,19 @@
+.venv/
+.pytest_cache/
+__pycache__/
+*.py[cod]
+
+# Re-collected third-party records and generated reproduction outputs.
+data/work/
+data/validation/native_outputs/
+data/validation/u_positive_native_outputs/
+results/reproduced/
+results/recollected/
+
+# Local credentials and editor state.
+.env
+.env.*
+*.pem
+*.key
+.idea/
+.vscode/
