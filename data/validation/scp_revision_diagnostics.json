@@ -1,0 +1,220 @@
+{
+  "scope": "Descriptive frozen-input diagnostics; no primary outcomes changed.",
+  "frame": {
+    "debian": {
+      "source_records": 38023,
+      "keyed_records": 30096,
+      "distinct_keys": 28643,
+      "unkeyed_records": 7927,
+      "snapshot_created_at": "2026-08-11T21:19:03Z"
+    },
+    "fedora": {
+      "source_records": 23951,
+      "keyed_records": 20285,
+      "distinct_keys": 18853,
+      "unkeyed_records": 3666,
+      "snapshot_created_at": "2026-08-11T21:19:08Z"
+    },
+    "shared_keys": 7323,
+    "ambiguous_shared_keys": 373,
+    "resolved_projects": 6950
+  },
+  "hash_order_reproduces_frozen_200": true,
+  "l_states_by_distribution_stratum": [
+    {
+      "distribution": "debian",
+      "stratum": "C2V",
+      "counts": {
+        "L_NO_POSITIVE_EXECUTION_EVIDENCE": 31,
+        "L_LOG_UNAVAILABLE": 115,
+        "L_EXECUTION_EVIDENCED": 22,
+        "L_ZERO_TEST_EXECUTION_EVIDENCED": 2
+      }
+    },
+    {
+      "distribution": "debian",
+      "stratum": "NON_C2V",
+      "counts": {
+        "L_NO_POSITIVE_EXECUTION_EVIDENCE": 9,
+        "L_LOG_UNAVAILABLE": 14,
+        "L_EXECUTION_EVIDENCED": 6,
+        "L_ZERO_TEST_EXECUTION_EVIDENCED": 1
+      }
+    },
+    {
+      "distribution": "fedora",
+      "stratum": "C2V",
+      "counts": {
+        "L_LOG_INCOMPLETE_OR_UNPARSABLE": 1,
+        "L_NO_POSITIVE_EXECUTION_EVIDENCE": 41,
+        "L_EXECUTION_EVIDENCED": 54,
+        "L_LOG_UNAVAILABLE": 72,
+        "L_ZERO_TEST_EXECUTION_EVIDENCED": 2
+      }
+    },
+    {
+      "distribution": "fedora",
+      "stratum": "NON_C2V",
+      "counts": {
+        "L_EXECUTION_EVIDENCED": 12,
+        "L_NO_POSITIVE_EXECUTION_EVIDENCE": 11,
+        "L_LOG_UNAVAILABLE": 5,
+        "L_ZERO_TEST_EXECUTION_EVIDENCED": 1,
+        "L_LOG_INCOMPLETE_OR_UNPARSABLE": 1
+      }
+    }
+  ],
+  "acquisition_reasons_by_distribution_stratum": [
+    {
+      "distribution": "debian",
+      "stratum": "C2V",
+      "counts": {
+        "AVAILABLE": 55,
+        "BUILD_LOG_UNAVAILABLE": 115
+      }
+    },
+    {
+      "distribution": "debian",
+      "stratum": "NON_C2V",
+      "counts": {
+        "AVAILABLE": 16,
+        "BUILD_LOG_UNAVAILABLE": 14
+      }
+    },
+    {
+      "distribution": "fedora",
+      "stratum": "C2V",
+      "counts": {
+        "BUILD_LOG_TRUNCATED": 1,
+        "AVAILABLE": 97,
+        "X86_64_BUILD_TASK_UNRESOLVED": 72
+      }
+    },
+    {
+      "distribution": "fedora",
+      "stratum": "NON_C2V",
+      "counts": {
+        "AVAILABLE": 24,
+        "X86_64_BUILD_TASK_UNRESOLVED": 5,
+        "LOG_IDENTITY_CHECK_FAILED": 1
+      }
+    }
+  ],
+  "same_version_log_attrition": {
+    "both_usable": 53,
+    "neither_usable": 71,
+    "fedora_only_usable": 44,
+    "debian_only_usable": 2
+  },
+  "normalized_log_count": 194,
+  "usable_log_count": 192,
+  "incomplete_downloaded_log_count": 2,
+  "historical_token_v1_0_by_primary_state": [
+    {
+      "primary_state": "L_EXECUTION_EVIDENCED",
+      "token_positive": false,
+      "count": 65
+    },
+    {
+      "primary_state": "L_EXECUTION_EVIDENCED",
+      "token_positive": true,
+      "count": 29
+    },
+    {
+      "primary_state": "L_LOG_INCOMPLETE_OR_UNPARSABLE",
+      "token_positive": false,
+      "count": 2
+    },
+    {
+      "primary_state": "L_NO_POSITIVE_EXECUTION_EVIDENCE",
+      "token_positive": false,
+      "count": 91
+    },
+    {
+      "primary_state": "L_NO_POSITIVE_EXECUTION_EVIDENCE",
+      "token_positive": true,
+      "count": 1
+    },
+    {
+      "primary_state": "L_ZERO_TEST_EXECUTION_EVIDENCED",
+      "token_positive": false,
+      "count": 6
+    }
+  ],
+  "debian_endpoint_stamp_coverage": 71,
+  "debian_endpoint_stamp_range_utc": [
+    "2017-01-16T13:14:20+00:00",
+    "2026-01-27T00:42:56+00:00"
+  ],
+  "date_limitations": "Debian endpoint stamps and Fedora selected-worker task creation times are record-date proxies. They do not certify identical toolchains or build timing.",
+  "additional_v1_1_negative_fixtures": {
+    "Test cases: 0 passed, 5 skipped in 0.1s": {
+      "tokens": [
+        "test",
+        "cases",
+        "0",
+        "passed",
+        "5",
+        "skipped",
+        "in",
+        "0",
+        "1",
+        "s"
+      ],
+      "numbers": [
+        0,
+        5,
+        0,
+        1
+      ],
+      "positive": false,
+      "reason": "EXPLICIT_ZERO_SUCCESS_COUNT"
+    },
+    "All 0 test cases passed; 12 skipped": {
+      "tokens": [
+        "all",
+        "0",
+        "test",
+        "cases",
+        "passed",
+        "12",
+        "skipped"
+      ],
+      "numbers": [
+        0,
+        12
+      ],
+      "positive": false,
+      "reason": "EXPLICIT_ZERO_SUCCESS_COUNT"
+    },
+    "Tests: 0 passed in 7.2 seconds": {
+      "tokens": [
+        "tests",
+        "0",
+        "passed",
+        "in",
+        "7",
+        "2",
+        "seconds"
+      ],
+      "numbers": [
+        0,
+        7,
+        2
+      ],
+      "positive": false,
+      "reason": "EXPLICIT_ZERO_SUCCESS_COUNT"
+    }
+  },
+  "fedora_worker_date_coverage": 123,
+  "fedora_worker_date_range_utc": [
+    "2024-07-18T07:57:26.502198+00:00",
+    "2026-06-06T19:41:52.113065+00:00"
+  ],
+  "strict_pair_record_date_gap_fedora_minus_debian_days": {
+    "n": 53,
+    "minimum": 256.9340156883333,
+    "median": 550.6791787840393,
+    "maximum": 3289.3967842789
+  }
+}

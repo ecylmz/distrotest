@@ -723,6 +723,68 @@
       }
     },
     {
+      "path": "data/manifests/build_dates_scp_revision.json",
+      "purpose": "Record-date metadata for the 194 frozen downloaded official log identities.",
+      "creation": "scripts/collect/collect_build_dates.py: Debian endpoint stamps and official Koji worker/build metadata; no log substitution.",
+      "structure": "object: collected_at_utc, scope, interpretation, records",
+      "observed_field_types": {
+        "$": [
+          "object"
+        ],
+        "$.collected_at_utc": [
+          "string"
+        ],
+        "$.interpretation": [
+          "string"
+        ],
+        "$.records": [
+          "array"
+        ],
+        "$.records[]": [
+          "object"
+        ],
+        "$.records[].build_completion_time": [
+          "string"
+        ],
+        "$.records[].build_id": [
+          "integer"
+        ],
+        "$.records[].build_start_time": [
+          "string"
+        ],
+        "$.records[].canonical_upstream": [
+          "string"
+        ],
+        "$.records[].date_source": [
+          "string"
+        ],
+        "$.records[].date_utc": [
+          "string"
+        ],
+        "$.records[].distribution": [
+          "string"
+        ],
+        "$.records[].nvr": [
+          "string"
+        ],
+        "$.records[].official_identifier": [
+          "string"
+        ],
+        "$.records[].raw_sha256": [
+          "string"
+        ],
+        "$.records[].worker_arch": [
+          "string"
+        ],
+        "$.records[].worker_task_id": [
+          "integer"
+        ],
+        "$.scope": [
+          "string"
+        ]
+      }
+    },
+    {
       "path": "data/manifests/c2a_primary_archive.json",
       "purpose": "Selected primary upstream archive hashes and exact-byte comparison states.",
       "creation": "Debian primary orig archive versus expanded RPM Source0 selection and SHA-256 comparison.",
@@ -2714,6 +2776,301 @@
       }
     },
     {
+      "path": "data/validation/literature_search_2026-08-12.json",
+      "purpose": "Targeted positioning queries, included studies, and retrieval limitations.",
+      "creation": "Accessible-web/primary-source search with citation checks on 12-13 August 2026; not a systematic review.",
+      "structure": "object: schema_version, search_date_utc, positioning_closed_utc, capabilities, capabilities_record_status, closure_amendment, queries, screening_rule, included_or_reverified, official_mechanism_sources, excluded_examples, novelty_assessment",
+      "observed_field_types": {
+        "$": [
+          "object"
+        ],
+        "$.capabilities": [
+          "object"
+        ],
+        "$.capabilities.Consensus": [
+          "string"
+        ],
+        "$.capabilities.Scite": [
+          "string"
+        ],
+        "$.capabilities.Scopus": [
+          "string"
+        ],
+        "$.capabilities.Web_of_Science": [
+          "string"
+        ],
+        "$.capabilities.accessible_web_and_primary_records": [
+          "string"
+        ],
+        "$.capabilities_record_status": [
+          "string"
+        ],
+        "$.closure_amendment": [
+          "object"
+        ],
+        "$.closure_amendment.authority": [
+          "string"
+        ],
+        "$.closure_amendment.date": [
+          "string"
+        ],
+        "$.closure_amendment.named_service_availability_is_gate": [
+          "boolean"
+        ],
+        "$.closure_amendment.outcome_dependence": [
+          "boolean"
+        ],
+        "$.closure_amendment.policy": [
+          "string"
+        ],
+        "$.closure_amendment.systematic_review_claimed": [
+          "boolean"
+        ],
+        "$.closure_amendment.type": [
+          "string"
+        ],
+        "$.closure_amendment.unchanged": [
+          "array"
+        ],
+        "$.closure_amendment.unchanged[]": [
+          "string"
+        ],
+        "$.excluded_examples": [
+          "array"
+        ],
+        "$.excluded_examples[]": [
+          "object"
+        ],
+        "$.excluded_examples[].category": [
+          "string"
+        ],
+        "$.excluded_examples[].reason": [
+          "string"
+        ],
+        "$.included_or_reverified": [
+          "array"
+        ],
+        "$.included_or_reverified[]": [
+          "object"
+        ],
+        "$.included_or_reverified[].authors": [
+          "string"
+        ],
+        "$.included_or_reverified[].classification": [
+          "string"
+        ],
+        "$.included_or_reverified[].doi": [
+          "string"
+        ],
+        "$.included_or_reverified[].pages": [
+          "string"
+        ],
+        "$.included_or_reverified[].reason": [
+          "string"
+        ],
+        "$.included_or_reverified[].title": [
+          "string"
+        ],
+        "$.included_or_reverified[].url": [
+          "string"
+        ],
+        "$.included_or_reverified[].venue": [
+          "string"
+        ],
+        "$.included_or_reverified[].year": [
+          "integer"
+        ],
+        "$.novelty_assessment": [
+          "object"
+        ],
+        "$.novelty_assessment.blockers": [
+          "array"
+        ],
+        "$.novelty_assessment.closure_status": [
+          "string"
+        ],
+        "$.novelty_assessment.direct_equivalent_found": [
+          "boolean"
+        ],
+        "$.novelty_assessment.superseded_blockers": [
+          "array"
+        ],
+        "$.novelty_assessment.superseded_blockers[]": [
+          "string"
+        ],
+        "$.novelty_assessment.supersession_note": [
+          "string"
+        ],
+        "$.novelty_assessment.warranted_claim": [
+          "string"
+        ],
+        "$.official_mechanism_sources": [
+          "array"
+        ],
+        "$.official_mechanism_sources[]": [
+          "object"
+        ],
+        "$.official_mechanism_sources[].title": [
+          "string"
+        ],
+        "$.official_mechanism_sources[].url": [
+          "string"
+        ],
+        "$.official_mechanism_sources[].use": [
+          "string"
+        ],
+        "$.positioning_closed_utc": [
+          "string"
+        ],
+        "$.queries": [
+          "array"
+        ],
+        "$.queries[]": [
+          "string"
+        ],
+        "$.schema_version": [
+          "string"
+        ],
+        "$.screening_rule": [
+          "string"
+        ],
+        "$.search_date_utc": [
+          "string"
+        ]
+      }
+    },
+    {
+      "path": "data/validation/log_audit_annotations.json",
+      "purpose": "Archived within-set visible-evidence annotations for all 89 logs.",
+      "creation": "Unblinded annotation packets displayed automatic labels; assessor identities and independent adjudication are not recorded. Historical recall intervals are not population-calibrated.",
+      "structure": "object: annotation_scope, manifest_sha256, reviewed_audit_ids, false_positive_audit_ids, missed_visible_positive_audit_ids, visible_zero_test_evidence_audit_ids, systematic_defect, notes",
+      "observed_field_types": {
+        "$": [
+          "object"
+        ],
+        "$.annotation_scope": [
+          "string"
+        ],
+        "$.false_positive_audit_ids": [
+          "array"
+        ],
+        "$.manifest_sha256": [
+          "string"
+        ],
+        "$.missed_visible_positive_audit_ids": [
+          "array"
+        ],
+        "$.notes": [
+          "string"
+        ],
+        "$.reviewed_audit_ids": [
+          "array"
+        ],
+        "$.reviewed_audit_ids[]": [
+          "integer"
+        ],
+        "$.systematic_defect": [
+          "boolean"
+        ],
+        "$.visible_zero_test_evidence_audit_ids": [
+          "array"
+        ],
+        "$.visible_zero_test_evidence_audit_ids[]": [
+          "integer"
+        ]
+      }
+    },
+    {
+      "path": "data/validation/log_audit_manifest.json",
+      "purpose": "Historical deterministic enriched 89-log audit selection.",
+      "creation": "Stable-hash positive/no-positive selections, all zero cases, and capped new-family coverage after primary L correction.",
+      "structure": "object: automatic_labels_sha256, created_at, namespace, new_family_cap, newly_encountered_evidence_families, phase0_evidence_families, records",
+      "observed_field_types": {
+        "$": [
+          "object"
+        ],
+        "$.automatic_labels_sha256": [
+          "string"
+        ],
+        "$.created_at": [
+          "string"
+        ],
+        "$.namespace": [
+          "string"
+        ],
+        "$.new_family_cap": [
+          "string"
+        ],
+        "$.newly_encountered_evidence_families": [
+          "array"
+        ],
+        "$.newly_encountered_evidence_families[]": [
+          "string"
+        ],
+        "$.phase0_evidence_families": [
+          "array"
+        ],
+        "$.phase0_evidence_families[]": [
+          "string"
+        ],
+        "$.records": [
+          "array"
+        ],
+        "$.records[]": [
+          "object"
+        ],
+        "$.records[].audit_id": [
+          "integer"
+        ],
+        "$.records[].automatic_families": [
+          "array"
+        ],
+        "$.records[].automatic_families[]": [
+          "string"
+        ],
+        "$.records[].automatic_rule_ids": [
+          "array"
+        ],
+        "$.records[].automatic_rule_ids[]": [
+          "string"
+        ],
+        "$.records[].automatic_state": [
+          "string"
+        ],
+        "$.records[].canonical_upstream": [
+          "string"
+        ],
+        "$.records[].distribution": [
+          "string"
+        ],
+        "$.records[].normalized_path": [
+          "string"
+        ],
+        "$.records[].official_identifier": [
+          "string"
+        ],
+        "$.records[].raw_sha256": [
+          "string"
+        ],
+        "$.records[].selection_hash": [
+          "string"
+        ],
+        "$.records[].selection_reasons": [
+          "array"
+        ],
+        "$.records[].selection_reasons[]": [
+          "string"
+        ],
+        "$.records[].source": [
+          "string"
+        ],
+        "$.records[].u_family": [
+          "null",
+          "string"
+        ]
+      }
+    },
+    {
       "path": "data/validation/production_comparison_provenance.json",
       "purpose": "Provenance of classifier outputs used for validation comparisons.",
       "creation": "Explicit production-input identity and hash inventory.",
@@ -2741,6 +3098,623 @@
           "string"
         ],
         "$.validation_outputs_freeze_sha256": [
+          "string"
+        ]
+      }
+    },
+    {
+      "path": "data/validation/rq1_u_correction_sensitivity.json",
+      "purpose": "Historical RQ1 denominator sensitivity before the generic U correction.",
+      "creation": "scripts/analyze/u_correction_sensitivity.py reconstructs old U states from all retained transitions and repeats the same weighted analysis.",
+      "structure": "object: scope, old_rule_version, new_rule_version, rq1",
+      "observed_field_types": {
+        "$": [
+          "object"
+        ],
+        "$.new_rule_version": [
+          "string"
+        ],
+        "$.old_rule_version": [
+          "string"
+        ],
+        "$.rq1": [
+          "object"
+        ],
+        "$.rq1.debian": [
+          "object"
+        ],
+        "$.rq1.debian.conditional": [
+          "object"
+        ],
+        "$.rq1.debian.conditional.denominator": [
+          "integer"
+        ],
+        "$.rq1.debian.conditional.positive_count": [
+          "integer"
+        ],
+        "$.rq1.debian.conditional.unweighted_proportion": [
+          "number"
+        ],
+        "$.rq1.debian.conditional.unweighted_wilson_ci": [
+          "array"
+        ],
+        "$.rq1.debian.conditional.unweighted_wilson_ci[]": [
+          "number"
+        ],
+        "$.rq1.debian.conditional.weighted_bootstrap_ci": [
+          "array"
+        ],
+        "$.rq1.debian.conditional.weighted_bootstrap_ci[]": [
+          "number"
+        ],
+        "$.rq1.debian.conditional.weighted_fpc_sensitivity": [
+          "object"
+        ],
+        "$.rq1.debian.conditional.weighted_fpc_sensitivity.estimate": [
+          "number"
+        ],
+        "$.rq1.debian.conditional.weighted_fpc_sensitivity.method": [
+          "string"
+        ],
+        "$.rq1.debian.conditional.weighted_fpc_sensitivity.normal_ci": [
+          "array"
+        ],
+        "$.rq1.debian.conditional.weighted_fpc_sensitivity.normal_ci[]": [
+          "number"
+        ],
+        "$.rq1.debian.conditional.weighted_fpc_sensitivity.standard_error": [
+          "number"
+        ],
+        "$.rq1.debian.conditional.weighted_proportion": [
+          "number"
+        ],
+        "$.rq1.debian.overall": [
+          "object"
+        ],
+        "$.rq1.debian.overall.denominator": [
+          "integer"
+        ],
+        "$.rq1.debian.overall.positive_count": [
+          "integer"
+        ],
+        "$.rq1.debian.overall.unweighted_proportion": [
+          "number"
+        ],
+        "$.rq1.debian.overall.unweighted_wilson_ci": [
+          "array"
+        ],
+        "$.rq1.debian.overall.unweighted_wilson_ci[]": [
+          "number"
+        ],
+        "$.rq1.debian.overall.weighted_bootstrap_ci": [
+          "array"
+        ],
+        "$.rq1.debian.overall.weighted_bootstrap_ci[]": [
+          "number"
+        ],
+        "$.rq1.debian.overall.weighted_fpc_sensitivity": [
+          "object"
+        ],
+        "$.rq1.debian.overall.weighted_fpc_sensitivity.estimate": [
+          "number"
+        ],
+        "$.rq1.debian.overall.weighted_fpc_sensitivity.method": [
+          "string"
+        ],
+        "$.rq1.debian.overall.weighted_fpc_sensitivity.normal_ci": [
+          "array"
+        ],
+        "$.rq1.debian.overall.weighted_fpc_sensitivity.normal_ci[]": [
+          "number"
+        ],
+        "$.rq1.debian.overall.weighted_fpc_sensitivity.standard_error": [
+          "number"
+        ],
+        "$.rq1.debian.overall.weighted_proportion": [
+          "number"
+        ],
+        "$.rq1.debian.u_state_counts": [
+          "object"
+        ],
+        "$.rq1.debian.u_state_counts.U_NO_TEST_CAPABILITY_RESOLVED": [
+          "integer"
+        ],
+        "$.rq1.debian.u_state_counts.U_TEST_ASSETS_ONLY": [
+          "integer"
+        ],
+        "$.rq1.debian.u_state_counts.U_TEST_ENTRYPOINT_RESOLVED": [
+          "integer"
+        ],
+        "$.rq1.debian.u_state_counts.U_UNRESOLVED": [
+          "integer"
+        ],
+        "$.rq1.fedora": [
+          "object"
+        ],
+        "$.rq1.fedora.conditional": [
+          "object"
+        ],
+        "$.rq1.fedora.conditional.denominator": [
+          "integer"
+        ],
+        "$.rq1.fedora.conditional.positive_count": [
+          "integer"
+        ],
+        "$.rq1.fedora.conditional.unweighted_proportion": [
+          "number"
+        ],
+        "$.rq1.fedora.conditional.unweighted_wilson_ci": [
+          "array"
+        ],
+        "$.rq1.fedora.conditional.unweighted_wilson_ci[]": [
+          "number"
+        ],
+        "$.rq1.fedora.conditional.weighted_bootstrap_ci": [
+          "array"
+        ],
+        "$.rq1.fedora.conditional.weighted_bootstrap_ci[]": [
+          "number"
+        ],
+        "$.rq1.fedora.conditional.weighted_fpc_sensitivity": [
+          "object"
+        ],
+        "$.rq1.fedora.conditional.weighted_fpc_sensitivity.estimate": [
+          "number"
+        ],
+        "$.rq1.fedora.conditional.weighted_fpc_sensitivity.method": [
+          "string"
+        ],
+        "$.rq1.fedora.conditional.weighted_fpc_sensitivity.normal_ci": [
+          "array"
+        ],
+        "$.rq1.fedora.conditional.weighted_fpc_sensitivity.normal_ci[]": [
+          "number"
+        ],
+        "$.rq1.fedora.conditional.weighted_fpc_sensitivity.standard_error": [
+          "number"
+        ],
+        "$.rq1.fedora.conditional.weighted_proportion": [
+          "number"
+        ],
+        "$.rq1.fedora.overall": [
+          "object"
+        ],
+        "$.rq1.fedora.overall.denominator": [
+          "integer"
+        ],
+        "$.rq1.fedora.overall.positive_count": [
+          "integer"
+        ],
+        "$.rq1.fedora.overall.unweighted_proportion": [
+          "number"
+        ],
+        "$.rq1.fedora.overall.unweighted_wilson_ci": [
+          "array"
+        ],
+        "$.rq1.fedora.overall.unweighted_wilson_ci[]": [
+          "number"
+        ],
+        "$.rq1.fedora.overall.weighted_bootstrap_ci": [
+          "array"
+        ],
+        "$.rq1.fedora.overall.weighted_bootstrap_ci[]": [
+          "number"
+        ],
+        "$.rq1.fedora.overall.weighted_fpc_sensitivity": [
+          "object"
+        ],
+        "$.rq1.fedora.overall.weighted_fpc_sensitivity.estimate": [
+          "number"
+        ],
+        "$.rq1.fedora.overall.weighted_fpc_sensitivity.method": [
+          "string"
+        ],
+        "$.rq1.fedora.overall.weighted_fpc_sensitivity.normal_ci": [
+          "array"
+        ],
+        "$.rq1.fedora.overall.weighted_fpc_sensitivity.normal_ci[]": [
+          "number"
+        ],
+        "$.rq1.fedora.overall.weighted_fpc_sensitivity.standard_error": [
+          "number"
+        ],
+        "$.rq1.fedora.overall.weighted_proportion": [
+          "number"
+        ],
+        "$.rq1.fedora.u_state_counts": [
+          "object"
+        ],
+        "$.rq1.fedora.u_state_counts.U_NO_TEST_CAPABILITY_RESOLVED": [
+          "integer"
+        ],
+        "$.rq1.fedora.u_state_counts.U_TEST_ASSETS_ONLY": [
+          "integer"
+        ],
+        "$.rq1.fedora.u_state_counts.U_TEST_ENTRYPOINT_RESOLVED": [
+          "integer"
+        ],
+        "$.rq1.fedora.u_state_counts.U_UNRESOLVED": [
+          "integer"
+        ],
+        "$.scope": [
+          "string"
+        ]
+      }
+    },
+    {
+      "path": "data/validation/scp_revision_diagnostics.json",
+      "purpose": "Frame filters, sample reconstruction, L states/reasons, paired attrition, token counts, and date-gap diagnostics.",
+      "creation": "scripts/prepare/revision_diagnostics.py from frozen inputs and separately collected official date metadata.",
+      "structure": "object: scope, frame, hash_order_reproduces_frozen_200, l_states_by_distribution_stratum, acquisition_reasons_by_distribution_stratum, same_version_log_attrition, normalized_log_count, usable_log_count, incomplete_downloaded_log_count, historical_token_v1_0_by_primary_state, debian_endpoint_stamp_coverage, debian_endpoint_stamp_range_utc, date_limitations, additional_v1_1_negative_fixtures, fedora_worker_date_coverage, fedora_worker_date_range_utc, strict_pair_record_date_gap_fedora_minus_debian_days",
+      "observed_field_types": {
+        "$": [
+          "object"
+        ],
+        "$.acquisition_reasons_by_distribution_stratum": [
+          "array"
+        ],
+        "$.acquisition_reasons_by_distribution_stratum[]": [
+          "object"
+        ],
+        "$.acquisition_reasons_by_distribution_stratum[].counts": [
+          "object"
+        ],
+        "$.acquisition_reasons_by_distribution_stratum[].counts.AVAILABLE": [
+          "integer"
+        ],
+        "$.acquisition_reasons_by_distribution_stratum[].counts.BUILD_LOG_TRUNCATED": [
+          "integer"
+        ],
+        "$.acquisition_reasons_by_distribution_stratum[].counts.BUILD_LOG_UNAVAILABLE": [
+          "integer"
+        ],
+        "$.acquisition_reasons_by_distribution_stratum[].counts.LOG_IDENTITY_CHECK_FAILED": [
+          "integer"
+        ],
+        "$.acquisition_reasons_by_distribution_stratum[].counts.X86_64_BUILD_TASK_UNRESOLVED": [
+          "integer"
+        ],
+        "$.acquisition_reasons_by_distribution_stratum[].distribution": [
+          "string"
+        ],
+        "$.acquisition_reasons_by_distribution_stratum[].stratum": [
+          "string"
+        ],
+        "$.additional_v1_1_negative_fixtures": [
+          "object"
+        ],
+        "$.additional_v1_1_negative_fixtures.All 0 test cases passed; 12 skipped": [
+          "object"
+        ],
+        "$.additional_v1_1_negative_fixtures.All 0 test cases passed; 12 skipped.numbers": [
+          "array"
+        ],
+        "$.additional_v1_1_negative_fixtures.All 0 test cases passed; 12 skipped.numbers[]": [
+          "integer"
+        ],
+        "$.additional_v1_1_negative_fixtures.All 0 test cases passed; 12 skipped.positive": [
+          "boolean"
+        ],
+        "$.additional_v1_1_negative_fixtures.All 0 test cases passed; 12 skipped.reason": [
+          "string"
+        ],
+        "$.additional_v1_1_negative_fixtures.All 0 test cases passed; 12 skipped.tokens": [
+          "array"
+        ],
+        "$.additional_v1_1_negative_fixtures.All 0 test cases passed; 12 skipped.tokens[]": [
+          "string"
+        ],
+        "$.additional_v1_1_negative_fixtures.Test cases: 0 passed, 5 skipped in 0.1s": [
+          "object"
+        ],
+        "$.additional_v1_1_negative_fixtures.Test cases: 0 passed, 5 skipped in 0.1s.numbers": [
+          "array"
+        ],
+        "$.additional_v1_1_negative_fixtures.Test cases: 0 passed, 5 skipped in 0.1s.numbers[]": [
+          "integer"
+        ],
+        "$.additional_v1_1_negative_fixtures.Test cases: 0 passed, 5 skipped in 0.1s.positive": [
+          "boolean"
+        ],
+        "$.additional_v1_1_negative_fixtures.Test cases: 0 passed, 5 skipped in 0.1s.reason": [
+          "string"
+        ],
+        "$.additional_v1_1_negative_fixtures.Test cases: 0 passed, 5 skipped in 0.1s.tokens": [
+          "array"
+        ],
+        "$.additional_v1_1_negative_fixtures.Test cases: 0 passed, 5 skipped in 0.1s.tokens[]": [
+          "string"
+        ],
+        "$.additional_v1_1_negative_fixtures.Tests: 0 passed in 7.2 seconds": [
+          "object"
+        ],
+        "$.additional_v1_1_negative_fixtures.Tests: 0 passed in 7.2 seconds.numbers": [
+          "array"
+        ],
+        "$.additional_v1_1_negative_fixtures.Tests: 0 passed in 7.2 seconds.numbers[]": [
+          "integer"
+        ],
+        "$.additional_v1_1_negative_fixtures.Tests: 0 passed in 7.2 seconds.positive": [
+          "boolean"
+        ],
+        "$.additional_v1_1_negative_fixtures.Tests: 0 passed in 7.2 seconds.reason": [
+          "string"
+        ],
+        "$.additional_v1_1_negative_fixtures.Tests: 0 passed in 7.2 seconds.tokens": [
+          "array"
+        ],
+        "$.additional_v1_1_negative_fixtures.Tests: 0 passed in 7.2 seconds.tokens[]": [
+          "string"
+        ],
+        "$.date_limitations": [
+          "string"
+        ],
+        "$.debian_endpoint_stamp_coverage": [
+          "integer"
+        ],
+        "$.debian_endpoint_stamp_range_utc": [
+          "array"
+        ],
+        "$.debian_endpoint_stamp_range_utc[]": [
+          "string"
+        ],
+        "$.fedora_worker_date_coverage": [
+          "integer"
+        ],
+        "$.fedora_worker_date_range_utc": [
+          "array"
+        ],
+        "$.fedora_worker_date_range_utc[]": [
+          "string"
+        ],
+        "$.frame": [
+          "object"
+        ],
+        "$.frame.ambiguous_shared_keys": [
+          "integer"
+        ],
+        "$.frame.debian": [
+          "object"
+        ],
+        "$.frame.debian.distinct_keys": [
+          "integer"
+        ],
+        "$.frame.debian.keyed_records": [
+          "integer"
+        ],
+        "$.frame.debian.snapshot_created_at": [
+          "string"
+        ],
+        "$.frame.debian.source_records": [
+          "integer"
+        ],
+        "$.frame.debian.unkeyed_records": [
+          "integer"
+        ],
+        "$.frame.fedora": [
+          "object"
+        ],
+        "$.frame.fedora.distinct_keys": [
+          "integer"
+        ],
+        "$.frame.fedora.keyed_records": [
+          "integer"
+        ],
+        "$.frame.fedora.snapshot_created_at": [
+          "string"
+        ],
+        "$.frame.fedora.source_records": [
+          "integer"
+        ],
+        "$.frame.fedora.unkeyed_records": [
+          "integer"
+        ],
+        "$.frame.resolved_projects": [
+          "integer"
+        ],
+        "$.frame.shared_keys": [
+          "integer"
+        ],
+        "$.hash_order_reproduces_frozen_200": [
+          "boolean"
+        ],
+        "$.historical_token_v1_0_by_primary_state": [
+          "array"
+        ],
+        "$.historical_token_v1_0_by_primary_state[]": [
+          "object"
+        ],
+        "$.historical_token_v1_0_by_primary_state[].count": [
+          "integer"
+        ],
+        "$.historical_token_v1_0_by_primary_state[].primary_state": [
+          "string"
+        ],
+        "$.historical_token_v1_0_by_primary_state[].token_positive": [
+          "boolean"
+        ],
+        "$.incomplete_downloaded_log_count": [
+          "integer"
+        ],
+        "$.l_states_by_distribution_stratum": [
+          "array"
+        ],
+        "$.l_states_by_distribution_stratum[]": [
+          "object"
+        ],
+        "$.l_states_by_distribution_stratum[].counts": [
+          "object"
+        ],
+        "$.l_states_by_distribution_stratum[].counts.L_EXECUTION_EVIDENCED": [
+          "integer"
+        ],
+        "$.l_states_by_distribution_stratum[].counts.L_LOG_INCOMPLETE_OR_UNPARSABLE": [
+          "integer"
+        ],
+        "$.l_states_by_distribution_stratum[].counts.L_LOG_UNAVAILABLE": [
+          "integer"
+        ],
+        "$.l_states_by_distribution_stratum[].counts.L_NO_POSITIVE_EXECUTION_EVIDENCE": [
+          "integer"
+        ],
+        "$.l_states_by_distribution_stratum[].counts.L_ZERO_TEST_EXECUTION_EVIDENCED": [
+          "integer"
+        ],
+        "$.l_states_by_distribution_stratum[].distribution": [
+          "string"
+        ],
+        "$.l_states_by_distribution_stratum[].stratum": [
+          "string"
+        ],
+        "$.normalized_log_count": [
+          "integer"
+        ],
+        "$.same_version_log_attrition": [
+          "object"
+        ],
+        "$.same_version_log_attrition.both_usable": [
+          "integer"
+        ],
+        "$.same_version_log_attrition.debian_only_usable": [
+          "integer"
+        ],
+        "$.same_version_log_attrition.fedora_only_usable": [
+          "integer"
+        ],
+        "$.same_version_log_attrition.neither_usable": [
+          "integer"
+        ],
+        "$.scope": [
+          "string"
+        ],
+        "$.strict_pair_record_date_gap_fedora_minus_debian_days": [
+          "object"
+        ],
+        "$.strict_pair_record_date_gap_fedora_minus_debian_days.maximum": [
+          "number"
+        ],
+        "$.strict_pair_record_date_gap_fedora_minus_debian_days.median": [
+          "number"
+        ],
+        "$.strict_pair_record_date_gap_fedora_minus_debian_days.minimum": [
+          "number"
+        ],
+        "$.strict_pair_record_date_gap_fedora_minus_debian_days.n": [
+          "integer"
+        ],
+        "$.usable_log_count": [
+          "integer"
+        ]
+      }
+    },
+    {
+      "path": "data/validation/study_chronology.json",
+      "purpose": "Historical workflow stages and warranted provenance wording.",
+      "creation": "Repository-based chronology distinguishing internal protocol, sampling freeze, generic corrections, primary analysis, and post-hoc trace.",
+      "structure": "object: schema_version, events",
+      "observed_field_types": {
+        "$": [
+          "object"
+        ],
+        "$.events": [
+          "array"
+        ],
+        "$.events[]": [
+          "object"
+        ],
+        "$.events[].certainty": [
+          "string"
+        ],
+        "$.events[].date_or_evidence": [
+          "string"
+        ],
+        "$.events[].event": [
+          "string"
+        ],
+        "$.events[].unwarranted_wording": [
+          "string"
+        ],
+        "$.events[].warranted_wording": [
+          "string"
+        ],
+        "$.schema_version": [
+          "string"
+        ]
+      }
+    },
+    {
+      "path": "data/validation/token_v1_1_zero_success_check.json",
+      "purpose": "Added zero-success exclusions and their effect on retained token candidate sets.",
+      "creation": "scripts/validate/check_token_v1_1.py rechecks v1.0 tokens with the v1.1 exclusion; no change across 194 log decisions and three additional negatives rejected.",
+      "structure": "object: scope, limitation, candidate_log_count, historical_positives, changed_log_count, additional_negatives, records",
+      "observed_field_types": {
+        "$": [
+          "object"
+        ],
+        "$.additional_negatives": [
+          "array"
+        ],
+        "$.additional_negatives[]": [
+          "object"
+        ],
+        "$.additional_negatives[].result": [
+          "object"
+        ],
+        "$.additional_negatives[].result.numbers": [
+          "array"
+        ],
+        "$.additional_negatives[].result.numbers[]": [
+          "integer"
+        ],
+        "$.additional_negatives[].result.positive": [
+          "boolean"
+        ],
+        "$.additional_negatives[].result.reason": [
+          "string"
+        ],
+        "$.additional_negatives[].result.tokens": [
+          "array"
+        ],
+        "$.additional_negatives[].result.tokens[]": [
+          "string"
+        ],
+        "$.additional_negatives[].text": [
+          "string"
+        ],
+        "$.candidate_log_count": [
+          "integer"
+        ],
+        "$.changed_log_count": [
+          "integer"
+        ],
+        "$.historical_positives": [
+          "integer"
+        ],
+        "$.limitation": [
+          "string"
+        ],
+        "$.records": [
+          "array"
+        ],
+        "$.records[]": [
+          "object"
+        ],
+        "$.records[].historical_token_positive": [
+          "boolean"
+        ],
+        "$.records[].log": [
+          "string"
+        ],
+        "$.records[].positive_lines": [
+          "array"
+        ],
+        "$.records[].positive_lines[]": [
+          "integer"
+        ],
+        "$.records[].v1_1_positive": [
+          "boolean"
+        ],
+        "$.scope": [
           "string"
         ]
       }

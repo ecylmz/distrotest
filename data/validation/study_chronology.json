@@ -1,0 +1,42 @@
+{
+  "schema_version": "1.0",
+  "events": [
+    {
+      "event": "Protocol file and Phase-0 repository activity",
+      "date_or_evidence": "Repository artifacts dated 2026-08-11; protocol header dated 2026-08-12",
+      "warranted_wording": "Internal protocol used for Phase 0",
+      "unwarranted_wording": "Externally preregistered before all collection",
+      "certainty": "INFERRED"
+    },
+    {
+      "event": "Full-study sample freeze",
+      "date_or_evidence": "Frozen sample/manifests before full-study source/log outcomes",
+      "warranted_wording": "Internally specified and frozen before full-study sampling outcomes",
+      "certainty": "EXPLICIT"
+    },
+    {
+      "event": "Generic P and L amendments",
+      "date_or_evidence": "Versioned amendment manifests and preserved old artifacts",
+      "warranted_wording": "Prospective generic amendments at their documented workflow stages",
+      "certainty": "EXPLICIT"
+    },
+    {
+      "event": "Frozen primary analysis",
+      "date_or_evidence": "Versioned result JSON and hashes",
+      "warranted_wording": "Frozen primary under L v1.2.2 and P v1.1.0",
+      "certainty": "EXPLICIT"
+    },
+    {
+      "event": "Complete seven-case trace",
+      "date_or_evidence": "config/rq3_directional_case_review.json and generated evidence tables",
+      "warranted_wording": "Post-hoc explanatory trace of all observed primary directional disagreements",
+      "certainty": "EXPLICIT"
+    },
+    {
+      "event": "Scientific revision",
+      "date_or_evidence": "2026-08-12 branch, rollback tag, decision ledger, and revision outputs",
+      "warranted_wording": "Post-audit correction of identity, source roles, weighting, uncertainty, and sensitivity inference",
+      "certainty": "EXPLICIT"
+    }
+  ]
+}

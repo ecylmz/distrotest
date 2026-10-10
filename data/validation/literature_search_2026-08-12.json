@@ -1,0 +1,215 @@
+{
+  "schema_version": "1.1",
+  "search_date_utc": "2026-08-12",
+  "positioning_closed_utc": "2026-08-13",
+  "capabilities": {
+    "Consensus": "UNAVAILABLE_IN_ENVIRONMENT",
+    "Scite": "UNAVAILABLE_IN_ENVIRONMENT",
+    "Web_of_Science": "INSTITUTIONAL_ACCESS_UNAVAILABLE",
+    "Scopus": "INSTITUTIONAL_ACCESS_UNAVAILABLE",
+    "accessible_web_and_primary_records": "EXECUTED"
+  },
+  "capabilities_record_status": "HISTORICAL_NONBLOCKING",
+  "closure_amendment": {
+    "authority": "author decision",
+    "date": "2026-08-13",
+    "type": "NON_OUTCOME_METHODOLOGICAL_ADMINISTRATIVE",
+    "policy": "Targeted related-work review plus backward and forward citation snowballing around the closest studies. Literature blocks only if directly equivalent prior work materially invalidates the joint U/P/L contribution.",
+    "named_service_availability_is_gate": false,
+    "systematic_review_claimed": false,
+    "outcome_dependence": false,
+    "unchanged": ["sample", "measurements", "estimands", "U/P/L definitions", "statistical analyses"]
+  },
+  "queries": [
+    "site:dl.acm.org Linux distributions package mapping homologous packages empirical study",
+    "site:ieeexplore.ieee.org Linux distribution package freshness empirical study",
+    "site:link.springer.com Linux distributions package freshness empirical software engineering",
+    "site:usenix.org Debian Fedora build logs package testing empirical",
+    "\"package freshness\" \"Linux distributions\" empirical",
+    "\"software package freshness\" Debian Fedora",
+    "\"Linux distributions\" \"package mapping\" research paper",
+    "\"reproducible builds\" Nix packages empirical study",
+    "\"A Quantitative Assessment of Package Freshness in Linux Distributions\" DOI",
+    "\"On Package Freshness in Linux Distributions\" IEEE DOI",
+    "\"Does Functional Package Management Enable Reproducible Builds at Scale? Yes\" conference DOI",
+    "site:dl.acm.org \"An Empirical Study on Reproducible Packaging in Open-Source Ecosystems\"",
+    "site:debian.org/doc Debian package build-time tests autopkgtest distinction policy",
+    "site:docs.fedoraproject.org packaging guidelines %check tests build package",
+    "site:dl.acm.org Linux package build logs test execution distribution packages",
+    "site:ieeexplore.ieee.org Debian build logs tests package empirical study",
+    "\"Toward Efficient Package Maintenance\" Peng 2026 DOI",
+    "\"LLM-Assisted Industrial-Scale Differential Testing\" DOI",
+    "\"Testing the Past: Can We Still Run Tests\" DOI",
+    "\"Vulnerability Management in Linux Distributions\" DOI",
+    "\"Assessing the State and Improving the Art of Parallel Testing for C\"",
+    "\"EvidenT: An Evidence-Preserving Framework for Iterative System-Level Package Repair\"",
+    "\"Making Data-Driven Porting Decisions with Tuscan\"",
+    "Linux distribution package testing official build logs empirical study Debian Fedora test execution evidence",
+    "\"dh_auto_test\" empirical study package tests Debian build logs",
+    "\"%check\" package testing empirical study Fedora RPM build logs",
+    "cross-distribution matched packages test execution build records"
+  ],
+  "screening_rule": "Include work only when its empirical unit, outcome, evidence surface, or infrastructure mechanism helps delimit upstream/downstream package identity, build-time testing, official build records, or artifact reproducibility. Keyword overlap alone is insufficient.",
+  "included_or_reverified": [
+    {
+      "title": "Assessing the State and Improving the Art of Parallel Testing for C",
+      "authors": "Oliver Schwahn; Nicolas Coppik; Stefan Winter; Neeraj Suri",
+      "year": 2019,
+      "venue": "28th ACM SIGSOFT International Symposium on Software Testing and Analysis",
+      "pages": "123--133",
+      "doi": "10.1145/3293882.3330573",
+      "url": "https://doi.org/10.1145/3293882.3330573",
+      "classification": "STRONG_PARTIAL_OVERLAP",
+      "reason": "Analyzes C test suites in the Debian Buster package repository and executes selected Debian source-package suites; establishes that testing distribution-package populations is not novel, but does not measure official-record positive evidence or jointly distinguish U, P, and L."
+    },
+    {
+      "title": "EvidenT: An Evidence-Preserving Framework for Iterative System-Level Package Repair",
+      "authors": "Chenyu Zhao; Minghua Ma; Shenglin Zhang; Zeshun Huang; Yongqian Sun; Chetan Bansal; Saravan Rajmohan; Dan Pei",
+      "year": 2026,
+      "venue": "ACM SIGSOFT International Symposium on Software Testing and Analysis, Research Papers",
+      "url": "https://conf.researchr.org/details/issta-2026/issta-2026-research-papers/203/EvidenT-An-Evidence-Preserving-Framework-for-Iterative-System-Level-Package-Repair",
+      "classification": "STRONG_PARTIAL_OVERLAP",
+      "reason": "Combines package recipes, source archives, build artifacts, external build-service evidence, and logs for build-failure diagnosis and iterative repair; it does not measure U/P/L or cross-distribution verification observability. Archival DOI and pagination were not available in the verified official conference record and were not guessed."
+    },
+    {
+      "title": "Making Data-Driven Porting Decisions with Tuscan",
+      "authors": "Kareem Khazem; Earl T. Barr; Petr Hosek",
+      "year": 2018,
+      "venue": "27th ACM SIGSOFT International Symposium on Software Testing and Analysis",
+      "pages": "276--286",
+      "doi": "10.1145/3213846.3213855",
+      "url": "https://doi.org/10.1145/3213846.3213855",
+      "classification": "PARTIAL_OVERLAP",
+      "reason": "Performs large-scale deterministic reproducible builds of an operating-system distribution to study portability; it actively reconstructs builds and does not measure U/P/L or intent against official-record evidence."
+    },
+    {
+      "title": "LastPyMile: Identifying the Discrepancy between Sources and Packages",
+      "authors": "Duc-Ly Vu; Fabio Massacci; Ivan Pashchenko; Henrik Plate; Antonino Sabetta",
+      "year": 2021,
+      "venue": "29th ACM Joint European Software Engineering Conference and Symposium on the Foundations of Software Engineering",
+      "pages": "780--792",
+      "doi": "10.1145/3468264.3468592",
+      "url": "https://doi.org/10.1145/3468264.3468592",
+      "classification": "PARTIAL_OVERLAP",
+      "reason": "Measures source-repository versus published-package discrepancies; it does not study verification observability or jointly measure U/P/L."
+    },
+    {
+      "title": "Automated Patching for Unreproducible Builds",
+      "authors": "Zhilei Ren; Shiwei Sun; Jifeng Xuan; Xiaochen Li; Zhide Zhou; He Jiang",
+      "year": 2022,
+      "venue": "44th International Conference on Software Engineering",
+      "pages": "200--211",
+      "doi": "10.1145/3510003.3510102",
+      "url": "https://doi.org/10.1145/3510003.3510102",
+      "classification": "ADJACENT_WORK",
+      "reason": "Uses dynamic build evidence for unreproducible-build diagnosis and repair; its outcome is reproducibility, not test-execution observability or U/P/L alignment."
+    },
+    {
+      "title": "On Package Freshness in Linux Distributions",
+      "authors": "Damien Legay; Alexandre Decan; Tom Mens",
+      "year": 2020,
+      "venue": "IEEE International Conference on Software Maintenance and Evolution",
+      "doi": "10.1109/ICSME46990.2020.00072",
+      "url": "https://conferences.computer.org/icsme/pdfs/ICSME2020-1oOutvkGTwF4GyVvNtr3Mm/561900a682/561900a682.pdf",
+      "classification": "PARTIAL_OVERLAP",
+      "reason": "Cross-distribution package context and freshness perceptions; does not measure build-time test evidence."
+    },
+    {
+      "title": "A Quantitative Assessment of Package Freshness in Linux Distributions",
+      "authors": "Damien Legay; Alexandre Decan; Tom Mens",
+      "year": 2021,
+      "venue": "4th International Workshop on Software Health in Projects, Ecosystems and Communities",
+      "doi": "10.1109/SoHeal52568.2021.00008",
+      "url": "https://conf.researchr.org/details/soheal-2021/soheal-2021-papers/2/A-Quantitative-Assessment-of-Package-Freshness-in-Linux-Distributions",
+      "classification": "PARTIAL_OVERLAP",
+      "reason": "Maps 890 common packages across six distributions to compare versions; nearest methodological neighbor for homologous-package construction, but outcome is freshness."
+    },
+    {
+      "title": "Does Functional Package Management Enable Reproducible Builds at Scale? Yes",
+      "authors": "Julien Malka; Stefano Zacchiroli; Théo Zimmermann",
+      "year": 2025,
+      "venue": "22nd International Conference on Mining Software Repositories",
+      "pages": "775--787",
+      "doi": "10.1109/MSR66628.2025.00115",
+      "url": "https://researchportal.ip-paris.fr/en/publications/does-functional-package-management-enable-reproducible-builds-at-/",
+      "classification": "ADJACENT_WORK",
+      "reason": "Large-scale execution and log/diffoscope evidence for Nix reproducible builds; intervenes by rebuilding and studies artifact equality, unlike retrospective official-log observability."
+    },
+    {
+      "title": "Testing the Past: Can We Still Run Tests in Past Snapshots for Java Projects?",
+      "year": 2024,
+      "doi": "10.1007/s10664-024-10530-z",
+      "url": "https://doi.org/10.1007/s10664-024-10530-z",
+      "classification": "STRONG_PARTIAL_OVERLAP",
+      "reason": "Reverified metadata; reconstructs and executes historical Java tests rather than mining distribution build evidence."
+    },
+    {
+      "title": "Vulnerability Management in Linux Distributions",
+      "year": 2023,
+      "doi": "10.1007/s10664-022-10267-7",
+      "url": "https://doi.org/10.1007/s10664-022-10267-7",
+      "classification": "PARTIAL_OVERLAP",
+      "reason": "Reverified metadata; matches Debian and Fedora upstream/downstream vulnerability lineages but studies vulnerability-management outcomes."
+    },
+    {
+      "title": "Toward Efficient Package Maintenance: An Empirical Study of Patch Sharing across Four Linux Distributions",
+      "year": 2026,
+      "venue": "48th IEEE/ACM International Conference on Software Engineering",
+      "url": "https://conf.researchr.org/details/icse-2026/icse-2026-research-track/308/Toward-Efficient-Package-Maintenance-An-Empirical-Study-of-Patch-Sharing-across-Four",
+      "classification": "STRONG_PARTIAL_OVERLAP",
+      "reason": "Official conference record verifies title/authors/venue and homologous-package framing; final DOI was not established in the accessible record."
+    },
+    {
+      "title": "LLM-Assisted Industrial-Scale Differential Testing of Package Incompatibilities in Linux Distributions",
+      "year": 2025,
+      "venue": "40th IEEE/ACM International Conference on Automated Software Engineering, Industry Showcase",
+      "doi": "10.1109/ASE63991.2025.00293",
+      "url": "https://conf.researchr.org/details/ase-2025/ase-2025-industry-showcase/39/LLM-assisted-Industrial-Scale-Differential-Testing-of-Package-Incompatibilities-in-Li",
+      "classification": "ADJACENT_WORK",
+      "reason": "Reverified official venue metadata; controlled differential executions rather than observational build-record evidence."
+    }
+  ],
+  "official_mechanism_sources": [
+    {
+      "title": "Debian Policy: debian/rules and DEB_BUILD_OPTIONS",
+      "url": "https://www.debian.org/doc/debian-policy/ch-source.html#debian-rules-and-deb-build-options",
+      "use": "Build-time nocheck semantics."
+    },
+    {
+      "title": "autopkgtest(1)",
+      "url": "https://manpages.debian.org/testing/autopkgtest/autopkgtest.1.en.html",
+      "use": "Distinguishes as-installed binary-package tests from build-time test execution."
+    },
+    {
+      "title": "Fedora Packaging Guidelines",
+      "url": "https://docs.fedoraproject.org/en-US/packaging-guidelines/",
+      "use": "Official RPM build-section and %check context."
+    }
+  ],
+  "excluded_examples": [
+    {
+      "category": "CI test-log mining",
+      "reason": "Hosted project CI differs in ownership, recipe surface, package lineage, and official distribution-build identity."
+    },
+    {
+      "category": "reproducible-build and source/package discrepancy studies",
+      "reason": "They study rebuilt artifact equality or source differences, not whether official production records retain positive test-execution evidence."
+    },
+    {
+      "category": "autopkgtest/debci documentation",
+      "reason": "As-installed package testing is a different lifecycle stage from tests executed during source-package builds."
+    }
+  ],
+  "novelty_assessment": {
+    "direct_equivalent_found": false,
+    "warranted_claim": "To our knowledge, prior work has examined package matching and evolution across Linux distributions, package test suites, historical testability, package reconstruction and reproducibility, and build-log-supported package diagnosis separately. We found no directly equivalent empirical design that jointly relates upstream executable test capability, downstream package-level testing intent, and positive test-execution evidence preserved in official distribution build records for matched packages across independent distribution families.",
+    "closure_status": "LITERATURE_NOVELTY_POSITIONING_COMPLETE",
+    "blockers": [],
+    "superseded_blockers": [
+      "Web of Science and Scopus searches and exports require unavailable institutional access.",
+      "Consensus and Scite were unavailable, so Smart Citation and correction/retraction checks were not completed through those services.",
+      "The accessible search is not a systematic-review-grade guarantee of completeness."
+    ],
+    "supersession_note": "The first two historical access conditions are not scientific gates under the 2026-08-13 author amendment. The final statement remains a scope limitation: this paper does not claim systematic or exhaustive literature coverage."
+  }
+}

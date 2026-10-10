@@ -1,0 +1,115 @@
+{
+  "scope": "Historical RQ1 denominator sensitivity before generic U correction; primary results remain unchanged.",
+  "old_rule_version": "u-rules-v1.1.0-source-role-and-read-diagnostics",
+  "new_rule_version": "u-rules-v1.2.0-recursive-supported-build-surfaces",
+  "rq1": {
+    "debian": {
+      "conditional": {
+        "positive_count": 8,
+        "denominator": 20,
+        "unweighted_proportion": 0.4,
+        "unweighted_wilson_ci": [
+          0.21880653237281705,
+          0.6134184992377469
+        ],
+        "weighted_proportion": 0.4999454405207609,
+        "weighted_bootstrap_ci": [
+          0.2,
+          0.7707796607842472
+        ],
+        "weighted_fpc_sensitivity": {
+          "estimate": 0.4999454405207608,
+          "standard_error": 0.14387344998695123,
+          "normal_ci": [
+            0.2179586602148117,
+            0.7819322208267099
+          ],
+          "method": "Taylor-linearized stratified ratio variance with without-replacement finite-population correction"
+        }
+      },
+      "overall": {
+        "positive_count": 8,
+        "denominator": 50,
+        "unweighted_proportion": 0.16,
+        "unweighted_wilson_ci": [
+          0.08337420678033404,
+          0.2851421606303499
+        ],
+        "weighted_proportion": 0.21049729883873827,
+        "weighted_bootstrap_ci": [
+          0.06838632306291509,
+          0.37107726973704713
+        ],
+        "weighted_fpc_sensitivity": {
+          "estimate": 0.2104972988387383,
+          "standard_error": 0.07882004317471672,
+          "normal_ci": [
+            0.05601285295640143,
+            0.36498174472107514
+          ],
+          "method": "Taylor-linearized stratified ratio variance with without-replacement finite-population correction"
+        }
+      },
+      "u_state_counts": {
+        "U_TEST_ASSETS_ONLY": 42,
+        "U_NO_TEST_CAPABILITY_RESOLVED": 12,
+        "U_TEST_ENTRYPOINT_RESOLVED": 50,
+        "U_UNRESOLVED": 96
+      }
+    },
+    "fedora": {
+      "conditional": {
+        "positive_count": 20,
+        "denominator": 36,
+        "unweighted_proportion": 0.5555555555555556,
+        "unweighted_wilson_ci": [
+          0.395810617556973,
+          0.7045873125991978
+        ],
+        "weighted_proportion": 0.6315317969897296,
+        "weighted_bootstrap_ci": [
+          0.42167596055655904,
+          0.8181138742574238
+        ],
+        "weighted_fpc_sensitivity": {
+          "estimate": 0.6315317969897297,
+          "standard_error": 0.10292125078943712,
+          "normal_ci": [
+            0.42980985219861834,
+            0.8332537417808411
+          ],
+          "method": "Taylor-linearized stratified ratio variance with without-replacement finite-population correction"
+        }
+      },
+      "overall": {
+        "positive_count": 20,
+        "denominator": 49,
+        "unweighted_proportion": 0.40816326530612246,
+        "unweighted_wilson_ci": [
+          0.28215238520386865,
+          0.5475268060815286
+        ],
+        "weighted_proportion": 0.44034801684743513,
+        "weighted_bootstrap_ci": [
+          0.260422832298976,
+          0.6249190383178993
+        ],
+        "weighted_fpc_sensitivity": {
+          "estimate": 0.44034801684743524,
+          "standard_error": 0.09335144979355939,
+          "normal_ci": [
+            0.25738253734745975,
+            0.6233134963474107
+          ],
+          "method": "Taylor-linearized stratified ratio variance with without-replacement finite-population correction"
+        }
+      },
+      "u_state_counts": {
+        "U_TEST_ASSETS_ONLY": 41,
+        "U_UNRESOLVED": 99,
+        "U_TEST_ENTRYPOINT_RESOLVED": 49,
+        "U_NO_TEST_CAPABILITY_RESOLVED": 11
+      }
+    }
+  }
+}

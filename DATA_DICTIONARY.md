@@ -6,6 +6,12 @@ For each released JSON or CSV data file, this catalogue gives its purpose, produ
 
 U states distinguish executable entrypoints, assets, supported absence, and unresolved semantics. P categories overlap and are not additive. L states distinguish visible positives, explicit zero-test output, usable logs without positives, incomplete logs, and unavailable logs. Missing evidence is not historical non-execution. Confidence intervals and weights must be interpreted using each result row's method and weighting fields; sparse-zero Wilson bounds are unweighted.
 
+The historical token checker is named `token_semantic_success_validator_v1.0` in machine-readable records. The separately versioned v1.1 exclusion rejects zero-success counts when nonzero skip counts or timings could mislead v1.0. The original entry points and records are retained.
+
+The log audit selected cases using classifier outputs and displayed those outputs during annotation. Its perfect within-set agreement does not supply a calibrated population recall interval; no independently adjudicated assessor labels are documented.
+
+Record dates describe the selected historical official builds, which can be years apart. Same-version and exact-archive pairing leave toolchain and time effects uncontrolled. Retrieval failure codes refer to the specified architecture and version policy rather than every possible official record.
+
 Historical manifests and validation stages are retained for provenance. The corrected sample and final primary labels drive the authoritative primary results. Sensitivity labels and results remain secondary. Automated validation agreement is not independent human ground truth. Ubuntu records document the planned secondary analysis and do not support primary Ubuntu inference.
 
 ## `data/derived/automatic_upl_labels_posthoc_l_sensitivity.json`
@@ -71,6 +77,14 @@ Complete seven-case explanatory trace with primary/sensitivity states and recipe
 Created by: Post-hoc inspection of every directional primary disagreement in the 53 strict pairs; labels not overwritten.
 
 Structure: `object: review_scope, review_type, primary_counts, trace_sensitivity_counts, trace_sensitivity_discordance, trace_sensitivity_fedora_minus_debian, trace_sensitivity_exact_artifact_discordance, trace_sensitivity_exact_artifact_fedora_minus_debian, trace_sensitivity_debian_declared, cases`. Full observed field types are in `DATA_SCHEMA.json`.
+
+## `data/manifests/build_dates_scp_revision.json`
+
+Record-date metadata for the 194 frozen downloaded official log identities.
+
+Created by: scripts/collect/collect_build_dates.py: Debian endpoint stamps and official Koji worker/build metadata; no log substitution.
+
+Structure: `object: collected_at_utc, scope, interpretation, records`. Full observed field types are in `DATA_SCHEMA.json`.
 
 ## `data/manifests/c2a_primary_archive.json`
 
@@ -256,6 +270,30 @@ Created by: Frozen validation input/output provenance inventory.
 
 Structure: `object: records, rule, scope, status, validation_artifact`. Full observed field types are in `DATA_SCHEMA.json`.
 
+## `data/validation/literature_search_2026-08-12.json`
+
+Targeted positioning queries, included studies, and retrieval limitations.
+
+Created by: Accessible-web/primary-source search with citation checks on 12-13 August 2026; not a systematic review.
+
+Structure: `object: schema_version, search_date_utc, positioning_closed_utc, capabilities, capabilities_record_status, closure_amendment, queries, screening_rule, included_or_reverified, official_mechanism_sources, excluded_examples, novelty_assessment`. Full observed field types are in `DATA_SCHEMA.json`.
+
+## `data/validation/log_audit_annotations.json`
+
+Archived within-set visible-evidence annotations for all 89 logs.
+
+Created by: Unblinded annotation packets displayed automatic labels; assessor identities and independent adjudication are not recorded. Historical recall intervals are not population-calibrated.
+
+Structure: `object: annotation_scope, manifest_sha256, reviewed_audit_ids, false_positive_audit_ids, missed_visible_positive_audit_ids, visible_zero_test_evidence_audit_ids, systematic_defect, notes`. Full observed field types are in `DATA_SCHEMA.json`.
+
+## `data/validation/log_audit_manifest.json`
+
+Historical deterministic enriched 89-log audit selection.
+
+Created by: Stable-hash positive/no-positive selections, all zero cases, and capped new-family coverage after primary L correction.
+
+Structure: `object: automatic_labels_sha256, created_at, namespace, new_family_cap, newly_encountered_evidence_families, phase0_evidence_families, records`. Full observed field types are in `DATA_SCHEMA.json`.
+
 ## `data/validation/production_comparison_provenance.json`
 
 Provenance of classifier outputs used for validation comparisons.
@@ -263,6 +301,38 @@ Provenance of classifier outputs used for validation comparisons.
 Created by: Explicit production-input identity and hash inventory.
 
 Structure: `object: freeze_commit, production_inputs, schema_version, validation_outputs_freeze_sha256`. Full observed field types are in `DATA_SCHEMA.json`.
+
+## `data/validation/rq1_u_correction_sensitivity.json`
+
+Historical RQ1 denominator sensitivity before the generic U correction.
+
+Created by: scripts/analyze/u_correction_sensitivity.py reconstructs old U states from all retained transitions and repeats the same weighted analysis.
+
+Structure: `object: scope, old_rule_version, new_rule_version, rq1`. Full observed field types are in `DATA_SCHEMA.json`.
+
+## `data/validation/scp_revision_diagnostics.json`
+
+Frame filters, sample reconstruction, L states/reasons, paired attrition, token counts, and date-gap diagnostics.
+
+Created by: scripts/prepare/revision_diagnostics.py from frozen inputs and separately collected official date metadata.
+
+Structure: `object: scope, frame, hash_order_reproduces_frozen_200, l_states_by_distribution_stratum, acquisition_reasons_by_distribution_stratum, same_version_log_attrition, normalized_log_count, usable_log_count, incomplete_downloaded_log_count, historical_token_v1_0_by_primary_state, debian_endpoint_stamp_coverage, debian_endpoint_stamp_range_utc, date_limitations, additional_v1_1_negative_fixtures, fedora_worker_date_coverage, fedora_worker_date_range_utc, strict_pair_record_date_gap_fedora_minus_debian_days`. Full observed field types are in `DATA_SCHEMA.json`.
+
+## `data/validation/study_chronology.json`
+
+Historical workflow stages and warranted provenance wording.
+
+Created by: Repository-based chronology distinguishing internal protocol, sampling freeze, generic corrections, primary analysis, and post-hoc trace.
+
+Structure: `object: schema_version, events`. Full observed field types are in `DATA_SCHEMA.json`.
+
+## `data/validation/token_v1_1_zero_success_check.json`
+
+Added zero-success exclusions and their effect on retained token candidate sets.
+
+Created by: scripts/validate/check_token_v1_1.py rechecks v1.0 tokens with the v1.1 exclusion; no change across 194 log decisions and three additional negatives rejected.
+
+Structure: `object: scope, limitation, candidate_log_count, historical_positives, changed_log_count, additional_negatives, records`. Full observed field types are in `DATA_SCHEMA.json`.
 
 ## `data/validation/u88_blind_input.json`
 

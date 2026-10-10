@@ -82,7 +82,7 @@ The main analysis writes:
 
 ## Reproducing the revised figures
 
-The four quantitative manuscript figures use the authoritative typed values and frozen primary labels. Rendering does not refit an analysis. With the pinned plotting dependency:
+The authoritative typed values and frozen primary labels supply the four quantitative manuscript figures. Rendering preserves the original analysis. With the pinned plotting dependency:
 
 ```bash
 uv run --with matplotlib==3.10.6 python scripts/analyze/render_figures.py
@@ -110,13 +110,23 @@ Raw upstream archives, extracted third-party source trees, raw build records, an
 
 ## Revision documentation (v1.1.0)
 
-This release documents all 50 JSON/CSV data files in a generated catalogue and supplies the complete paired-disagreement codebook. It preserves the frozen source observations, primary and sensitivity labels, and authoritative numerical results from v1.0.0. To regenerate the structural catalogue:
+This release documents all 58 JSON/CSV data files in a generated catalogue and supplies the complete paired-disagreement codebook, enriched audit records, historical U-denominator sensitivity, and record-date diagnostics. It preserves the frozen source observations, primary and sensitivity labels, and authoritative numerical results from v1.0.0. A separately versioned token-checker exclusion rejects explicit zero-success counts without changing the retained 194 candidate-set decisions; v1.0 behavior and outputs remain available. To regenerate the structural catalogue:
 
 ```bash
 uv run python scripts/prepare/generate_data_dictionary.py
 ```
 
 The 170/30 sample allocation was fixed to prioritize same-version pairs within a 200-project budget. The planning record does not contain a prospective retrieval-rate calculation uniquely deriving that allocation. The 67-usable-pair precision target required 39.4% joint usability from 170 selected projects; 53/170 (31.2%) were usable. The deterministic hash ordering and final weights are retained in the sample manifests. These additions explain the original design; they preserve its sample and analyses.
+
+To reproduce the added frozen-input diagnostics and checks:
+
+```bash
+uv run python scripts/prepare/revision_diagnostics.py
+uv run python scripts/analyze/u_correction_sensitivity.py
+uv run python scripts/validate/check_token_v1_1.py
+```
+
+The official-date metadata can be recollected with `scripts/collect/collect_build_dates.py`; this network operation updates metadata only, and it leaves the frozen log corpus and outcome labels intact. The enriched log audit was unblinded and has no documented independent adjudication. Its historical agreement figures must not be interpreted as calibrated population recall.
 
 ## Citation
 
