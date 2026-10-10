@@ -18,6 +18,9 @@ This repository is the replication package for an empirical study of positive pa
 - `data/derived/`: final U/P/L observations and rule-transition records.
 - `data/validation/`: machine-readable validation protocols, certificates, comparisons, and frozen output hashes.
 - `results/authoritative/`: authoritative primary, sensitivity, and typed result files.
+- [DATA_DICTIONARY.md](DATA_DICTIONARY.md): purpose, production stage, structure, and interpretation of every released data file.
+- [DATA_SCHEMA.json](DATA_SCHEMA.json): observed nested field types and join keys.
+- `data/explanatory/`: complete seven-case primary-disagreement codebook with recipe/log locators.
 
 Generated re-collection data are written under `data/work/`. Reproduced results are written under `results/reproduced/` or `results/recollected/`; these directories are ignored by Git.
 
@@ -94,6 +97,16 @@ For identical frozen inputs and the locked environment, the machine-readable pri
 This repository directly distributes normalized package-index metadata, frozen sample and acquisition manifests, official identifiers and URLs, immutable hashes, final derived U/P/L observations, validation certificates, and authoritative result files.
 
 Raw upstream archives, extracted third-party source trees, raw build records, and normalized build logs are intentionally not redistributed. The manifests retain the official locations, exact package/build identities, timestamps, and SHA-256 values needed to retrieve and verify them. This boundary avoids redistributing large provider-controlled artifacts and build records that can contain incidental personal identifiers.
+
+## Revision documentation (v1.1.0)
+
+This release documents all 50 JSON/CSV data files in a generated catalogue and supplies the complete paired-disagreement codebook. It preserves the frozen source observations, primary and sensitivity labels, and authoritative numerical results from v1.0.0. To regenerate the structural catalogue:
+
+```bash
+uv run python scripts/prepare/generate_data_dictionary.py
+```
+
+The 170/30 sample allocation was fixed to prioritize same-version pairs within a 200-project budget. The planning record does not contain a prospective retrieval-rate calculation uniquely deriving that allocation. The 67-usable-pair precision target required 39.4% joint usability from 170 selected projects; 53/170 (31.2%) were usable. The deterministic hash ordering and final weights are retained in the sample manifests. These additions explain the original design; they preserve its sample and analyses.
 
 ## Citation
 

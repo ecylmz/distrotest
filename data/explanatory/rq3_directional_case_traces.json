@@ -1,0 +1,300 @@
+{
+  "review_scope": "All seven primary-label directional disagreements among the 53 strict same-upstream-version Debian/Fedora pairs",
+  "review_type": "post-hoc explanatory mechanism trace; primary frozen labels are not overwritten",
+  "primary_counts": {
+    "both": 17,
+    "debian_only": 4,
+    "fedora_only": 3,
+    "neither": 29
+  },
+  "trace_sensitivity_counts": {
+    "both": 18,
+    "debian_only": 4,
+    "fedora_only": 2,
+    "neither": 29
+  },
+  "trace_sensitivity_discordance": "6/53 (11.3%)",
+  "trace_sensitivity_fedora_minus_debian": "-2/53 (-3.8 percentage points)",
+  "trace_sensitivity_exact_artifact_discordance": "2/37 (5.4%)",
+  "trace_sensitivity_exact_artifact_fedora_minus_debian": "0/37 (0.0 percentage points)",
+  "trace_sensitivity_debian_declared": {
+    "primary": "3/11 (30.4% design weighted)",
+    "trace_corrected": "4/11 (34.8% design weighted)",
+    "trace_corrected_declared_minus_nohook": "7.2 percentage points"
+  },
+  "cases": [
+    {
+      "canonical_upstream": "cran.r-project.org/package=filelock",
+      "display_name": "filelock",
+      "primary_direction": "fedora_only",
+      "artifact_state": "C2A_EXACT",
+      "mechanism_class": "runner_selection_and_output_visibility",
+      "debian_summary": "dh_auto_test; no qualifying nonzero transcript.",
+      "fedora_summary": "%R_check; testthat.R recorded OK.",
+      "interpretation": "Positive runner result visible only in Fedora; Debian execution unresolved.",
+      "measurement_sensitivity_case": false,
+      "evidence": [
+        {
+          "distribution": "debian",
+          "kind": "recipe",
+          "path": "full_study/distrotest-lite:v1.1:full-study:sample/normalized/sources/debian/cran.r-project.org_package_filelock/tree/debian/rules",
+          "needle": "dh $@ --buildsystem R",
+          "line": 4
+        },
+        {
+          "distribution": "debian",
+          "kind": "log",
+          "path": "full_study/distrotest-lite:v1.1:full-study:sample/normalized/logs/debian/cran.r-project.org_package_filelock.log",
+          "needle": "dh_auto_test -a -O--buildsystem=R",
+          "line": 1208
+        },
+        {
+          "distribution": "fedora",
+          "kind": "recipe",
+          "path": "full_study/distrotest-lite:v1.1:full-study:sample/normalized/sources/fedora/cran.r-project.org_package_filelock/srpm/R-filelock.spec",
+          "needle": "%R_check",
+          "line": 42
+        },
+        {
+          "distribution": "fedora",
+          "kind": "log",
+          "path": "full_study/distrotest-lite:v1.1:full-study:sample/normalized/logs/fedora/cran.r-project.org_package_filelock.log",
+          "needle": "Running ‘testthat.R’",
+          "line": 323
+        }
+      ]
+    },
+    {
+      "canonical_upstream": "github.com/blitzpp/blitz",
+      "display_name": "Blitz++",
+      "primary_direction": "debian_only",
+      "artifact_state": "C2A_UNRESOLVED",
+      "mechanism_class": "different_test_targets",
+      "debian_summary": "examples/testsuite checks; PASS records.",
+      "fedora_summary": "CTest: ‘No tests were found’.",
+      "interpretation": "Different test targets or configurations.",
+      "measurement_sensitivity_case": false,
+      "evidence": [
+        {
+          "distribution": "debian",
+          "kind": "recipe",
+          "path": "full_study/distrotest-lite:v1.1:full-study:sample/normalized/sources/debian/github.com_blitzpp_blitz/tree/debian/rules",
+          "needle": "$(MAKE) -C $(BUILDDIR)/testsuite check",
+          "line": 40
+        },
+        {
+          "distribution": "debian",
+          "kind": "log",
+          "path": "full_study/distrotest-lite:v1.1:full-study:sample/normalized/logs/debian/github.com_blitzpp_blitz.log",
+          "needle": "PASS: arrayx",
+          "line": 2289
+        },
+        {
+          "distribution": "fedora",
+          "kind": "recipe",
+          "path": "full_study/distrotest-lite:v1.1:full-study:sample/normalized/sources/fedora/github.com_blitzpp_blitz/srpm/blitz.spec",
+          "needle": "ctest -V %{?_smp_mflags}",
+          "line": 70
+        },
+        {
+          "distribution": "fedora",
+          "kind": "log",
+          "path": "full_study/distrotest-lite:v1.1:full-study:sample/normalized/logs/fedora/github.com_blitzpp_blitz.log",
+          "needle": "No tests were found!!!",
+          "line": 966
+        }
+      ]
+    },
+    {
+      "canonical_upstream": "github.com/cgwalters/git-evtag",
+      "display_name": "git-evtag",
+      "primary_direction": "debian_only",
+      "artifact_state": "C2A_ARTIFACT_DIFFERS",
+      "mechanism_class": "fedora_check_omitted",
+      "debian_summary": "debhelper to make check; seven PASS records.",
+      "fedora_summary": "No %check section.",
+      "interpretation": "Fedora recipe omits the check step.",
+      "measurement_sensitivity_case": false,
+      "evidence": [
+        {
+          "distribution": "debian",
+          "kind": "recipe",
+          "path": "full_study/distrotest-lite:v1.1:full-study:sample/normalized/sources/debian/github.com_cgwalters_git-evtag/tree/debian/rules",
+          "needle": "dh $@",
+          "line": 9
+        },
+        {
+          "distribution": "debian",
+          "kind": "log",
+          "path": "full_study/distrotest-lite:v1.1:full-study:sample/normalized/logs/debian/github.com_cgwalters_git-evtag.log",
+          "needle": "# TOTAL: 7",
+          "line": 1224
+        },
+        {
+          "distribution": "fedora",
+          "kind": "recipe_absence",
+          "path": "full_study/distrotest-lite:v1.1:full-study:sample/normalized/sources/fedora/github.com_cgwalters_git-evtag/srpm/git-evtag.spec",
+          "needle": "%check",
+          "line": null
+        }
+      ]
+    },
+    {
+      "canonical_upstream": "github.com/icecc/icecream",
+      "display_name": "Icecream",
+      "primary_direction": "fedora_only",
+      "artifact_state": "C2A_ARTIFACT_DIFFERS",
+      "mechanism_class": "debian_empty_override_suppression",
+      "debian_summary": "Empty test-helper override.",
+      "fedora_summary": "make check; one PASS record.",
+      "interpretation": "Debian recipe suppresses the helper.",
+      "measurement_sensitivity_case": false,
+      "evidence": [
+        {
+          "distribution": "debian",
+          "kind": "recipe",
+          "path": "full_study/distrotest-lite:v1.1:full-study:sample/normalized/sources/debian/github.com_icecc_icecream/tree/debian/rules",
+          "needle": ".PHONY: override_dh_auto_test",
+          "line": 22
+        },
+        {
+          "distribution": "debian",
+          "kind": "log_absence",
+          "path": "full_study/distrotest-lite:v1.1:full-study:sample/normalized/logs/debian/github.com_icecc_icecream.log",
+          "needle": "dh_auto_test",
+          "line": null
+        },
+        {
+          "distribution": "fedora",
+          "kind": "recipe",
+          "path": "full_study/distrotest-lite:v1.1:full-study:sample/normalized/sources/fedora/github.com_icecc_icecream/srpm/icecream.spec",
+          "needle": "LD_LIBRARY_PATH=%{buildroot}/%{_libdir} make check",
+          "line": 132
+        },
+        {
+          "distribution": "fedora",
+          "kind": "log",
+          "path": "full_study/distrotest-lite:v1.1:full-study:sample/normalized/logs/fedora/github.com_icecc_icecream.log",
+          "needle": "# TOTAL: 1",
+          "line": 798
+        }
+      ]
+    },
+    {
+      "canonical_upstream": "github.com/nayuki/qr-code-generator",
+      "display_name": "QR Code Generator",
+      "primary_direction": "fedora_only",
+      "artifact_state": "C2A_EXACT",
+      "mechanism_class": "primary_rule_output_format_miss",
+      "debian_summary": "qrcodegen-test; all 521 cases passed.",
+      "fedora_summary": "%ctest; one of one passed.",
+      "interpretation": "Both logs report passing tests; primary Debian label is a rule miss.",
+      "measurement_sensitivity_case": true,
+      "evidence": [
+        {
+          "distribution": "debian",
+          "kind": "recipe",
+          "path": "full_study/distrotest-lite:v1.1:full-study:sample/normalized/sources/debian/github.com_nayuki_qr-code-generator/tree/debian/rules",
+          "needle": "./c/qrcodegen-test",
+          "line": 63
+        },
+        {
+          "distribution": "debian",
+          "kind": "log",
+          "path": "full_study/distrotest-lite:v1.1:full-study:sample/normalized/logs/debian/github.com_nayuki_qr-code-generator.log",
+          "needle": "All 521 test cases passed",
+          "line": 478
+        },
+        {
+          "distribution": "fedora",
+          "kind": "recipe",
+          "path": "full_study/distrotest-lite:v1.1:full-study:sample/normalized/sources/fedora/github.com_nayuki_qr-code-generator/srpm/qr-code-generator.spec",
+          "needle": "%ctest",
+          "line": 123
+        },
+        {
+          "distribution": "fedora",
+          "kind": "log",
+          "path": "full_study/distrotest-lite:v1.1:full-study:sample/normalized/logs/fedora/github.com_nayuki_qr-code-generator.log",
+          "needle": "100% tests passed, 0 tests failed out of 1",
+          "line": 632
+        }
+      ]
+    },
+    {
+      "canonical_upstream": "wiki.gnome.org/apps/geary",
+      "display_name": "Geary",
+      "primary_direction": "debian_only",
+      "artifact_state": "C2A_EXACT",
+      "mechanism_class": "fedora_environmental_test_step_omitted",
+      "debian_summary": "DBus/Xvfb wrapper; Meson PASS records.",
+      "fedora_summary": "No %check section.",
+      "interpretation": "Debian provisions the test environment and invokes the suite.",
+      "measurement_sensitivity_case": false,
+      "evidence": [
+        {
+          "distribution": "debian",
+          "kind": "recipe",
+          "path": "full_study/distrotest-lite:v1.1:full-study:sample/normalized/sources/debian/wiki.gnome.org_apps_geary/tree/debian/rules",
+          "needle": "dbus-run-session -- xvfb-run -a dh_auto_test",
+          "line": 28
+        },
+        {
+          "distribution": "debian",
+          "kind": "log",
+          "path": "full_study/distrotest-lite:v1.1:full-study:sample/normalized/logs/debian/wiki.gnome.org_apps_geary.log",
+          "needle": "meson test --verbose --verbose",
+          "line": 17126
+        },
+        {
+          "distribution": "fedora",
+          "kind": "recipe_absence",
+          "path": "full_study/distrotest-lite:v1.1:full-study:sample/normalized/sources/fedora/wiki.gnome.org_apps_geary/srpm/geary.spec",
+          "needle": "%check",
+          "line": null
+        }
+      ]
+    },
+    {
+      "canonical_upstream": "xiph.org/oggz",
+      "display_name": "liboggz",
+      "primary_direction": "debian_only",
+      "artifact_state": "C2A_ARTIFACT_DIFFERS",
+      "mechanism_class": "fedora_explicit_comment_disabled",
+      "debian_summary": "debhelper to make check; multiple PASS records.",
+      "fedora_summary": "make check commented out for an rpath issue.",
+      "interpretation": "Fedora explicitly disables this package's suite.",
+      "measurement_sensitivity_case": false,
+      "evidence": [
+        {
+          "distribution": "debian",
+          "kind": "recipe",
+          "path": "full_study/distrotest-lite:v1.1:full-study:sample/normalized/sources/debian/xiph.org_oggz/tree/debian/rules",
+          "needle": "dh $@ --with bash-completion",
+          "line": 6
+        },
+        {
+          "distribution": "debian",
+          "kind": "log",
+          "path": "full_study/distrotest-lite:v1.1:full-study:sample/normalized/logs/debian/xiph.org_oggz.log",
+          "needle": "PASS: write-bad-bos",
+          "line": 1394
+        },
+        {
+          "distribution": "fedora",
+          "kind": "recipe",
+          "path": "full_study/distrotest-lite:v1.1:full-study:sample/normalized/sources/fedora/xiph.org_oggz/srpm/liboggz.spec",
+          "needle": "# Tests disabled for moment because of rpath issue",
+          "line": 75
+        },
+        {
+          "distribution": "fedora",
+          "kind": "log",
+          "path": "full_study/distrotest-lite:v1.1:full-study:sample/normalized/logs/fedora/xiph.org_oggz.log",
+          "needle": "Executing(%check)",
+          "line": 1173
+        }
+      ]
+    }
+  ]
+}

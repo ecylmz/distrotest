@@ -1,0 +1,5999 @@
+{
+  "schema_version": "1.0",
+  "schema_status": "Observed structural inventory, not a normative JSON Schema; missing keys and empty arrays do not establish required fields or item types.",
+  "join_keys": [
+    "canonical_upstream",
+    "distribution"
+  ],
+  "files": [
+    {
+      "path": "data/derived/automatic_upl_labels_posthoc_l_sensitivity.json",
+      "purpose": "Parallel U/P/L observations with the opt-in generic success-sentence L rule.",
+      "creation": "Primary observations reclassified under the retained generic-L sensitivity; primary labels are preserved.",
+      "structure": "object: l, p, rule_versions, u",
+      "observed_field_types": {
+        "$": [
+          "object"
+        ],
+        "$.l": [
+          "array"
+        ],
+        "$.l[]": [
+          "object"
+        ],
+        "$.l[].canonical_upstream": [
+          "string"
+        ],
+        "$.l[].distribution": [
+          "string"
+        ],
+        "$.l[].evidence": [
+          "array"
+        ],
+        "$.l[].evidence[]": [
+          "object"
+        ],
+        "$.l[].evidence[].byte_end": [
+          "integer"
+        ],
+        "$.l[].evidence[].byte_start": [
+          "integer"
+        ],
+        "$.l[].evidence[].family": [
+          "string"
+        ],
+        "$.l[].evidence[].line_end": [
+          "integer"
+        ],
+        "$.l[].evidence[].line_start": [
+          "integer"
+        ],
+        "$.l[].evidence[].rule_id": [
+          "string"
+        ],
+        "$.l[].evidence[].snippet": [
+          "string"
+        ],
+        "$.l[].source_log": [
+          "null",
+          "string"
+        ],
+        "$.l[].source_log_sha256": [
+          "null",
+          "string"
+        ],
+        "$.l[].state": [
+          "string"
+        ],
+        "$.l[].zero_evidence": [
+          "array"
+        ],
+        "$.l[].zero_evidence[]": [
+          "object"
+        ],
+        "$.l[].zero_evidence[].byte_end": [
+          "integer"
+        ],
+        "$.l[].zero_evidence[].byte_start": [
+          "integer"
+        ],
+        "$.l[].zero_evidence[].family": [
+          "string"
+        ],
+        "$.l[].zero_evidence[].line_end": [
+          "integer"
+        ],
+        "$.l[].zero_evidence[].line_start": [
+          "integer"
+        ],
+        "$.l[].zero_evidence[].rule_id": [
+          "string"
+        ],
+        "$.l[].zero_evidence[].snippet": [
+          "string"
+        ],
+        "$.p": [
+          "array"
+        ],
+        "$.p[]": [
+          "object"
+        ],
+        "$.p[].canonical_upstream": [
+          "string"
+        ],
+        "$.p[].distribution": [
+          "string"
+        ],
+        "$.p[].evidence": [
+          "array"
+        ],
+        "$.p[].evidence[]": [
+          "object"
+        ],
+        "$.p[].evidence[].label": [
+          "string"
+        ],
+        "$.p[].evidence[].match": [
+          "string"
+        ],
+        "$.p[].evidence[].path": [
+          "string"
+        ],
+        "$.p[].evidence[].rule_id": [
+          "string"
+        ],
+        "$.p[].labels": [
+          "array"
+        ],
+        "$.p[].labels[]": [
+          "string"
+        ],
+        "$.p[].reason": [
+          "null",
+          "string"
+        ],
+        "$.rule_versions": [
+          "object"
+        ],
+        "$.rule_versions.l": [
+          "string"
+        ],
+        "$.rule_versions.lineage": [
+          "string"
+        ],
+        "$.rule_versions.ontology": [
+          "string"
+        ],
+        "$.rule_versions.p": [
+          "string"
+        ],
+        "$.rule_versions.selection": [
+          "string"
+        ],
+        "$.rule_versions.u": [
+          "string"
+        ],
+        "$.u": [
+          "array"
+        ],
+        "$.u[]": [
+          "object"
+        ],
+        "$.u[].canonical_upstream": [
+          "string"
+        ],
+        "$.u[].distribution": [
+          "string"
+        ],
+        "$.u[].family": [
+          "null",
+          "string"
+        ],
+        "$.u[].read_warnings": [
+          "array"
+        ],
+        "$.u[].reason": [
+          "null",
+          "string"
+        ],
+        "$.u[].rules": [
+          "array"
+        ],
+        "$.u[].rules[]": [
+          "object"
+        ],
+        "$.u[].rules[].family": [
+          "string"
+        ],
+        "$.u[].rules[].line_start": [
+          "integer"
+        ],
+        "$.u[].rules[].match": [
+          "string"
+        ],
+        "$.u[].rules[].path": [
+          "string"
+        ],
+        "$.u[].rules[].rule_id": [
+          "string"
+        ],
+        "$.u[].state": [
+          "string"
+        ]
+      }
+    },
+    {
+      "path": "data/derived/automatic_upl_labels_primary.json",
+      "purpose": "Final primary U/P/L observations, keyed by project and distribution.",
+      "creation": "Deterministic source and recipe classifiers plus the frozen primary log classifier; generic U corrections included.",
+      "structure": "object: l, p, rule_versions, u",
+      "observed_field_types": {
+        "$": [
+          "object"
+        ],
+        "$.l": [
+          "array"
+        ],
+        "$.l[]": [
+          "object"
+        ],
+        "$.l[].canonical_upstream": [
+          "string"
+        ],
+        "$.l[].distribution": [
+          "string"
+        ],
+        "$.l[].evidence": [
+          "array"
+        ],
+        "$.l[].evidence[]": [
+          "object"
+        ],
+        "$.l[].evidence[].byte_end": [
+          "integer"
+        ],
+        "$.l[].evidence[].byte_start": [
+          "integer"
+        ],
+        "$.l[].evidence[].family": [
+          "string"
+        ],
+        "$.l[].evidence[].line_end": [
+          "integer"
+        ],
+        "$.l[].evidence[].line_start": [
+          "integer"
+        ],
+        "$.l[].evidence[].rule_id": [
+          "string"
+        ],
+        "$.l[].evidence[].snippet": [
+          "string"
+        ],
+        "$.l[].source_log": [
+          "null",
+          "string"
+        ],
+        "$.l[].source_log_sha256": [
+          "null",
+          "string"
+        ],
+        "$.l[].state": [
+          "string"
+        ],
+        "$.l[].zero_evidence": [
+          "array"
+        ],
+        "$.l[].zero_evidence[]": [
+          "object"
+        ],
+        "$.l[].zero_evidence[].byte_end": [
+          "integer"
+        ],
+        "$.l[].zero_evidence[].byte_start": [
+          "integer"
+        ],
+        "$.l[].zero_evidence[].family": [
+          "string"
+        ],
+        "$.l[].zero_evidence[].line_end": [
+          "integer"
+        ],
+        "$.l[].zero_evidence[].line_start": [
+          "integer"
+        ],
+        "$.l[].zero_evidence[].rule_id": [
+          "string"
+        ],
+        "$.l[].zero_evidence[].snippet": [
+          "string"
+        ],
+        "$.p": [
+          "array"
+        ],
+        "$.p[]": [
+          "object"
+        ],
+        "$.p[].canonical_upstream": [
+          "string"
+        ],
+        "$.p[].distribution": [
+          "string"
+        ],
+        "$.p[].evidence": [
+          "array"
+        ],
+        "$.p[].evidence[]": [
+          "object"
+        ],
+        "$.p[].evidence[].label": [
+          "string"
+        ],
+        "$.p[].evidence[].match": [
+          "string"
+        ],
+        "$.p[].evidence[].path": [
+          "string"
+        ],
+        "$.p[].evidence[].rule_id": [
+          "string"
+        ],
+        "$.p[].labels": [
+          "array"
+        ],
+        "$.p[].labels[]": [
+          "string"
+        ],
+        "$.p[].reason": [
+          "null",
+          "string"
+        ],
+        "$.rule_versions": [
+          "object"
+        ],
+        "$.rule_versions.l": [
+          "string"
+        ],
+        "$.rule_versions.lineage": [
+          "string"
+        ],
+        "$.rule_versions.ontology": [
+          "string"
+        ],
+        "$.rule_versions.p": [
+          "string"
+        ],
+        "$.rule_versions.selection": [
+          "string"
+        ],
+        "$.rule_versions.u": [
+          "string"
+        ],
+        "$.u": [
+          "array"
+        ],
+        "$.u[]": [
+          "object"
+        ],
+        "$.u[].canonical_upstream": [
+          "string"
+        ],
+        "$.u[].distribution": [
+          "string"
+        ],
+        "$.u[].family": [
+          "null",
+          "string"
+        ],
+        "$.u[].read_warnings": [
+          "array"
+        ],
+        "$.u[].reason": [
+          "null",
+          "string"
+        ],
+        "$.u[].rules": [
+          "array"
+        ],
+        "$.u[].rules[]": [
+          "object"
+        ],
+        "$.u[].rules[].family": [
+          "string"
+        ],
+        "$.u[].rules[].line_start": [
+          "integer"
+        ],
+        "$.u[].rules[].match": [
+          "string"
+        ],
+        "$.u[].rules[].path": [
+          "string"
+        ],
+        "$.u[].rules[].rule_id": [
+          "string"
+        ],
+        "$.u[].state": [
+          "string"
+        ]
+      }
+    },
+    {
+      "path": "data/derived/l_rule_transitions.json",
+      "purpose": "Observations whose L state changes in the opt-in sensitivity.",
+      "creation": "Comparison of primary and sensitivity L arrays.",
+      "structure": "array (1 records)",
+      "observed_field_types": {
+        "$": [
+          "array"
+        ],
+        "$[]": [
+          "object"
+        ],
+        "$[].canonical_upstream": [
+          "string"
+        ],
+        "$[].distribution": [
+          "string"
+        ],
+        "$[].new_rule_ids": [
+          "array"
+        ],
+        "$[].new_rule_ids[]": [
+          "string"
+        ],
+        "$[].new_state": [
+          "string"
+        ],
+        "$[].old_state": [
+          "string"
+        ]
+      }
+    },
+    {
+      "path": "data/derived/u_label_transitions_v1.1.0_to_v1.2.0.csv",
+      "purpose": "Tabular U transitions for reuse in analysis tools.",
+      "creation": "CSV serialization of the retained U-transition records.",
+      "structure": "CSV (400 rows): canonical_upstream, distribution, old_state, new_state, old_family, new_family, changed, new_rule_ids",
+      "observed_field_types": {
+        "canonical_upstream": [
+          "string"
+        ],
+        "distribution": [
+          "string"
+        ],
+        "old_state": [
+          "string"
+        ],
+        "new_state": [
+          "string"
+        ],
+        "old_family": [
+          "string"
+        ],
+        "new_family": [
+          "string"
+        ],
+        "changed": [
+          "string"
+        ],
+        "new_rule_ids": [
+          "string"
+        ]
+      }
+    },
+    {
+      "path": "data/derived/u_label_transitions_v1.1.0_to_v1.2.0.json",
+      "purpose": "Complete U state transitions for all source observations.",
+      "creation": "Comparison before and after generic supported-entrypoint correction.",
+      "structure": "object: changed_count, new_rule_version, observation_count, old_rule_version, records",
+      "observed_field_types": {
+        "$": [
+          "object"
+        ],
+        "$.changed_count": [
+          "integer"
+        ],
+        "$.new_rule_version": [
+          "string"
+        ],
+        "$.observation_count": [
+          "integer"
+        ],
+        "$.old_rule_version": [
+          "string"
+        ],
+        "$.records": [
+          "array"
+        ],
+        "$.records[]": [
+          "object"
+        ],
+        "$.records[].canonical_upstream": [
+          "string"
+        ],
+        "$.records[].changed": [
+          "boolean"
+        ],
+        "$.records[].distribution": [
+          "string"
+        ],
+        "$.records[].new_family": [
+          "null",
+          "string"
+        ],
+        "$.records[].new_rule_ids": [
+          "array"
+        ],
+        "$.records[].new_rule_ids[]": [
+          "string"
+        ],
+        "$.records[].new_state": [
+          "string"
+        ],
+        "$.records[].old_family": [
+          "null",
+          "string"
+        ],
+        "$.records[].old_state": [
+          "string"
+        ]
+      }
+    },
+    {
+      "path": "data/derived/u_transition_matrix_v1.1.0_to_v1.2.0.json",
+      "purpose": "Counts of U transitions by old and revised state.",
+      "creation": "Aggregation of the complete U-transition records.",
+      "structure": "object: matrix, new_rule_version, old_rule_version",
+      "observed_field_types": {
+        "$": [
+          "object"
+        ],
+        "$.matrix": [
+          "object"
+        ],
+        "$.matrix.U_NO_TEST_CAPABILITY_RESOLVED": [
+          "object"
+        ],
+        "$.matrix.U_NO_TEST_CAPABILITY_RESOLVED.U_NO_TEST_CAPABILITY_RESOLVED": [
+          "integer"
+        ],
+        "$.matrix.U_NO_TEST_CAPABILITY_RESOLVED.U_TEST_ENTRYPOINT_RESOLVED": [
+          "integer"
+        ],
+        "$.matrix.U_TEST_ASSETS_ONLY": [
+          "object"
+        ],
+        "$.matrix.U_TEST_ASSETS_ONLY.U_TEST_ASSETS_ONLY": [
+          "integer"
+        ],
+        "$.matrix.U_TEST_ASSETS_ONLY.U_TEST_ENTRYPOINT_RESOLVED": [
+          "integer"
+        ],
+        "$.matrix.U_TEST_ENTRYPOINT_RESOLVED": [
+          "object"
+        ],
+        "$.matrix.U_TEST_ENTRYPOINT_RESOLVED.U_TEST_ENTRYPOINT_RESOLVED": [
+          "integer"
+        ],
+        "$.matrix.U_UNRESOLVED": [
+          "object"
+        ],
+        "$.matrix.U_UNRESOLVED.U_UNRESOLVED": [
+          "integer"
+        ],
+        "$.new_rule_version": [
+          "string"
+        ],
+        "$.old_rule_version": [
+          "string"
+        ]
+      }
+    },
+    {
+      "path": "data/explanatory/rq3_directional_case_traces.csv",
+      "purpose": "Tabular version of the seven-case explanatory trace.",
+      "creation": "Serialization of the same complete explanatory case set.",
+      "structure": "CSV (7 rows): canonical_upstream, primary_direction, artifact_state, mechanism_class, measurement_sensitivity_case, interpretation",
+      "observed_field_types": {
+        "canonical_upstream": [
+          "string"
+        ],
+        "primary_direction": [
+          "string"
+        ],
+        "artifact_state": [
+          "string"
+        ],
+        "mechanism_class": [
+          "string"
+        ],
+        "measurement_sensitivity_case": [
+          "string"
+        ],
+        "interpretation": [
+          "string"
+        ]
+      }
+    },
+    {
+      "path": "data/explanatory/rq3_directional_case_traces.json",
+      "purpose": "Complete seven-case explanatory trace with primary/sensitivity states and recipe/log locators.",
+      "creation": "Post-hoc inspection of every directional primary disagreement in the 53 strict pairs; labels not overwritten.",
+      "structure": "object: review_scope, review_type, primary_counts, trace_sensitivity_counts, trace_sensitivity_discordance, trace_sensitivity_fedora_minus_debian, trace_sensitivity_exact_artifact_discordance, trace_sensitivity_exact_artifact_fedora_minus_debian, trace_sensitivity_debian_declared, cases",
+      "observed_field_types": {
+        "$": [
+          "object"
+        ],
+        "$.cases": [
+          "array"
+        ],
+        "$.cases[]": [
+          "object"
+        ],
+        "$.cases[].artifact_state": [
+          "string"
+        ],
+        "$.cases[].canonical_upstream": [
+          "string"
+        ],
+        "$.cases[].debian_summary": [
+          "string"
+        ],
+        "$.cases[].display_name": [
+          "string"
+        ],
+        "$.cases[].evidence": [
+          "array"
+        ],
+        "$.cases[].evidence[]": [
+          "object"
+        ],
+        "$.cases[].evidence[].distribution": [
+          "string"
+        ],
+        "$.cases[].evidence[].kind": [
+          "string"
+        ],
+        "$.cases[].evidence[].line": [
+          "integer",
+          "null"
+        ],
+        "$.cases[].evidence[].needle": [
+          "string"
+        ],
+        "$.cases[].evidence[].path": [
+          "string"
+        ],
+        "$.cases[].fedora_summary": [
+          "string"
+        ],
+        "$.cases[].interpretation": [
+          "string"
+        ],
+        "$.cases[].measurement_sensitivity_case": [
+          "boolean"
+        ],
+        "$.cases[].mechanism_class": [
+          "string"
+        ],
+        "$.cases[].primary_direction": [
+          "string"
+        ],
+        "$.primary_counts": [
+          "object"
+        ],
+        "$.primary_counts.both": [
+          "integer"
+        ],
+        "$.primary_counts.debian_only": [
+          "integer"
+        ],
+        "$.primary_counts.fedora_only": [
+          "integer"
+        ],
+        "$.primary_counts.neither": [
+          "integer"
+        ],
+        "$.review_scope": [
+          "string"
+        ],
+        "$.review_type": [
+          "string"
+        ],
+        "$.trace_sensitivity_counts": [
+          "object"
+        ],
+        "$.trace_sensitivity_counts.both": [
+          "integer"
+        ],
+        "$.trace_sensitivity_counts.debian_only": [
+          "integer"
+        ],
+        "$.trace_sensitivity_counts.fedora_only": [
+          "integer"
+        ],
+        "$.trace_sensitivity_counts.neither": [
+          "integer"
+        ],
+        "$.trace_sensitivity_debian_declared": [
+          "object"
+        ],
+        "$.trace_sensitivity_debian_declared.primary": [
+          "string"
+        ],
+        "$.trace_sensitivity_debian_declared.trace_corrected": [
+          "string"
+        ],
+        "$.trace_sensitivity_debian_declared.trace_corrected_declared_minus_nohook": [
+          "string"
+        ],
+        "$.trace_sensitivity_discordance": [
+          "string"
+        ],
+        "$.trace_sensitivity_exact_artifact_discordance": [
+          "string"
+        ],
+        "$.trace_sensitivity_exact_artifact_fedora_minus_debian": [
+          "string"
+        ],
+        "$.trace_sensitivity_fedora_minus_debian": [
+          "string"
+        ]
+      }
+    },
+    {
+      "path": "data/manifests/c2a_primary_archive.json",
+      "purpose": "Selected primary upstream archive hashes and exact-byte comparison states.",
+      "creation": "Debian primary orig archive versus expanded RPM Source0 selection and SHA-256 comparison.",
+      "structure": "object: identity_rule, rows",
+      "observed_field_types": {
+        "$": [
+          "object"
+        ],
+        "$.identity_rule": [
+          "string"
+        ],
+        "$.rows": [
+          "array"
+        ],
+        "$.rows[]": [
+          "object"
+        ],
+        "$.rows[].canonical_upstream": [
+          "string"
+        ],
+        "$.rows[].debian_primary_upstream_artifacts": [
+          "array"
+        ],
+        "$.rows[].debian_primary_upstream_artifacts[]": [
+          "object"
+        ],
+        "$.rows[].debian_primary_upstream_artifacts[].name": [
+          "string"
+        ],
+        "$.rows[].debian_primary_upstream_artifacts[].role": [
+          "string"
+        ],
+        "$.rows[].debian_primary_upstream_artifacts[].sha256": [
+          "string"
+        ],
+        "$.rows[].debian_primary_upstream_artifacts[].size": [
+          "integer"
+        ],
+        "$.rows[].debian_primary_upstream_artifacts[].url": [
+          "string"
+        ],
+        "$.rows[].fedora_primary_upstream_artifact": [
+          "null",
+          "object"
+        ],
+        "$.rows[].fedora_primary_upstream_artifact.archive_kind": [
+          "string"
+        ],
+        "$.rows[].fedora_primary_upstream_artifact.bytes": [
+          "integer"
+        ],
+        "$.rows[].fedora_primary_upstream_artifact.extraction_kind": [
+          "string"
+        ],
+        "$.rows[].fedora_primary_upstream_artifact.name": [
+          "string"
+        ],
+        "$.rows[].fedora_primary_upstream_artifact.role": [
+          "string"
+        ],
+        "$.rows[].fedora_primary_upstream_artifact.sha256": [
+          "string"
+        ],
+        "$.rows[].identity_role": [
+          "string"
+        ],
+        "$.rows[].state": [
+          "string"
+        ]
+      }
+    },
+    {
+      "path": "data/manifests/frame_revision.json",
+      "purpose": "Corrected matched-frame counts, exclusions, and revision metadata.",
+      "creation": "Rebuilding the homepage-based frame after host-grammar repairs.",
+      "structure": "object: added_resolved_projects, additions, method_version, old, removed_resolved_projects, revised, sample_added, sample_removed, source_indices",
+      "observed_field_types": {
+        "$": [
+          "object"
+        ],
+        "$.added_resolved_projects": [
+          "array"
+        ],
+        "$.added_resolved_projects[]": [
+          "string"
+        ],
+        "$.additions": [
+          "array"
+        ],
+        "$.additions[]": [
+          "object"
+        ],
+        "$.additions[].c2v_candidate": [
+          "boolean"
+        ],
+        "$.additions[].canonical_upstream": [
+          "string"
+        ],
+        "$.additions[].debian_lineages": [
+          "array"
+        ],
+        "$.additions[].debian_lineages[]": [
+          "string"
+        ],
+        "$.additions[].debian_upstream_versions": [
+          "array"
+        ],
+        "$.additions[].debian_upstream_versions[]": [
+          "string"
+        ],
+        "$.additions[].fedora_lineages": [
+          "array"
+        ],
+        "$.additions[].fedora_lineages[]": [
+          "string"
+        ],
+        "$.additions[].fedora_upstream_versions": [
+          "array"
+        ],
+        "$.additions[].fedora_upstream_versions[]": [
+          "string"
+        ],
+        "$.additions[].lineage_state": [
+          "string"
+        ],
+        "$.method_version": [
+          "string"
+        ],
+        "$.old": [
+          "object"
+        ],
+        "$.old.c2v_projects": [
+          "integer"
+        ],
+        "$.old.non_c2v_projects": [
+          "integer"
+        ],
+        "$.old.resolved_projects": [
+          "integer"
+        ],
+        "$.removed_resolved_projects": [
+          "array"
+        ],
+        "$.removed_resolved_projects[]": [
+          "string"
+        ],
+        "$.revised": [
+          "object"
+        ],
+        "$.revised.c2v_projects": [
+          "integer"
+        ],
+        "$.revised.non_c2v_projects": [
+          "integer"
+        ],
+        "$.revised.resolved_projects": [
+          "integer"
+        ],
+        "$.sample_added": [
+          "array"
+        ],
+        "$.sample_removed": [
+          "array"
+        ],
+        "$.source_indices": [
+          "object"
+        ],
+        "$.source_indices.debian": [
+          "object"
+        ],
+        "$.source_indices.debian.path": [
+          "string"
+        ],
+        "$.source_indices.debian.sha256": [
+          "string"
+        ],
+        "$.source_indices.fedora": [
+          "object"
+        ],
+        "$.source_indices.fedora.path": [
+          "string"
+        ],
+        "$.source_indices.fedora.sha256": [
+          "string"
+        ]
+      }
+    },
+    {
+      "path": "data/manifests/log_acquisition.json",
+      "purpose": "Exact official build identities, URLs, retrieval states, hashes, and reason codes.",
+      "creation": "Debian buildd and Fedora Koji acquisition adapters under the fixed exact-version/architecture policy.",
+      "structure": "object: completed_at, records",
+      "observed_field_types": {
+        "$": [
+          "object"
+        ],
+        "$.completed_at": [
+          "string"
+        ],
+        "$.records": [
+          "array"
+        ],
+        "$.records[]": [
+          "object"
+        ],
+        "$.records[].architecture": [
+          "string"
+        ],
+        "$.records[].build_id": [
+          "integer"
+        ],
+        "$.records[].build_status": [
+          "string"
+        ],
+        "$.records[].build_task_id": [
+          "integer"
+        ],
+        "$.records[].canonical_upstream": [
+          "string"
+        ],
+        "$.records[].distribution": [
+          "string"
+        ],
+        "$.records[].identity": [
+          "object"
+        ],
+        "$.records[].identity.architecture": [
+          "boolean"
+        ],
+        "$.records[].identity.package": [
+          "boolean"
+        ],
+        "$.records[].identity.version": [
+          "boolean"
+        ],
+        "$.records[].index_sha256": [
+          "string"
+        ],
+        "$.records[].index_url": [
+          "string"
+        ],
+        "$.records[].normalized_log_sha256": [
+          "string"
+        ],
+        "$.records[].normalized_path": [
+          "string"
+        ],
+        "$.records[].nvr": [
+          "string"
+        ],
+        "$.records[].official_identifier": [
+          "string"
+        ],
+        "$.records[].output_architecture": [
+          "string"
+        ],
+        "$.records[].raw_blob": [
+          "string"
+        ],
+        "$.records[].raw_sha256": [
+          "string"
+        ],
+        "$.records[].raw_size": [
+          "integer"
+        ],
+        "$.records[].reason": [
+          "null",
+          "string"
+        ],
+        "$.records[].repository_origin": [
+          "string"
+        ],
+        "$.records[].retrieved_at": [
+          "string"
+        ],
+        "$.records[].source": [
+          "string"
+        ],
+        "$.records[].state": [
+          "string"
+        ],
+        "$.records[].task_id": [
+          "integer"
+        ],
+        "$.records[].task_worker_architecture": [
+          "string"
+        ],
+        "$.records[].upstream_version": [
+          "string"
+        ],
+        "$.records[].url": [
+          "string"
+        ],
+        "$.records[].version": [
+          "string"
+        ],
+        "$.records[].warnings": [
+          "array"
+        ],
+        "$.records[].warnings[]": [
+          "string"
+        ]
+      }
+    },
+    {
+      "path": "data/manifests/population_manifest.json",
+      "purpose": "Historical frozen repository population and pre-outcome provenance.",
+      "creation": "Population freeze before sample selection; corrected frame is documented separately.",
+      "structure": "object: input_frame_sha256, namespace, project_count, projects, selection_method",
+      "observed_field_types": {
+        "$": [
+          "object"
+        ],
+        "$.input_frame_sha256": [
+          "string"
+        ],
+        "$.namespace": [
+          "string"
+        ],
+        "$.project_count": [
+          "integer"
+        ],
+        "$.projects": [
+          "array"
+        ],
+        "$.projects[]": [
+          "object"
+        ],
+        "$.projects[].canonical_upstream": [
+          "string"
+        ],
+        "$.projects[].debian_lineage": [
+          "string"
+        ],
+        "$.projects[].debian_upstream_version": [
+          "string"
+        ],
+        "$.projects[].fedora_lineage": [
+          "string"
+        ],
+        "$.projects[].fedora_upstream_version": [
+          "string"
+        ],
+        "$.projects[].selection_hash": [
+          "string"
+        ],
+        "$.projects[].stratum": [
+          "string"
+        ],
+        "$.selection_method": [
+          "string"
+        ]
+      }
+    },
+    {
+      "path": "data/manifests/sample_200.json",
+      "purpose": "Original frozen sample identities, observations, selection hashes, and design fields.",
+      "creation": "Stratum-wise SHA-256 ordering with the fixed namespace; no replacement after L measurement.",
+      "structure": "object: frozen_at, input_frame_sha256, namespace, population_manifest_sha256, projects, selected_project_count, selection_method, strata",
+      "observed_field_types": {
+        "$": [
+          "object"
+        ],
+        "$.frozen_at": [
+          "string"
+        ],
+        "$.input_frame_sha256": [
+          "string"
+        ],
+        "$.namespace": [
+          "string"
+        ],
+        "$.population_manifest_sha256": [
+          "string"
+        ],
+        "$.projects": [
+          "array"
+        ],
+        "$.projects[]": [
+          "object"
+        ],
+        "$.projects[].c2v_candidate": [
+          "boolean"
+        ],
+        "$.projects[].canonical_upstream": [
+          "string"
+        ],
+        "$.projects[].debian_lineages": [
+          "array"
+        ],
+        "$.projects[].debian_lineages[]": [
+          "string"
+        ],
+        "$.projects[].debian_upstream_versions": [
+          "array"
+        ],
+        "$.projects[].debian_upstream_versions[]": [
+          "string"
+        ],
+        "$.projects[].design_weight": [
+          "number"
+        ],
+        "$.projects[].fedora_lineages": [
+          "array"
+        ],
+        "$.projects[].fedora_lineages[]": [
+          "string"
+        ],
+        "$.projects[].fedora_upstream_versions": [
+          "array"
+        ],
+        "$.projects[].fedora_upstream_versions[]": [
+          "string"
+        ],
+        "$.projects[].inclusion_probability": [
+          "number"
+        ],
+        "$.projects[].inclusion_probability_fraction": [
+          "string"
+        ],
+        "$.projects[].lineage_state": [
+          "string"
+        ],
+        "$.projects[].observations": [
+          "array"
+        ],
+        "$.projects[].observations[]": [
+          "object"
+        ],
+        "$.projects[].observations[].canonical_upstream": [
+          "string"
+        ],
+        "$.projects[].observations[].component": [
+          "string"
+        ],
+        "$.projects[].observations[].directory": [
+          "string"
+        ],
+        "$.projects[].observations[].distribution": [
+          "string"
+        ],
+        "$.projects[].observations[].epoch": [
+          "string"
+        ],
+        "$.projects[].observations[].files": [
+          "array"
+        ],
+        "$.projects[].observations[].files[]": [
+          "object"
+        ],
+        "$.projects[].observations[].files[].name": [
+          "string"
+        ],
+        "$.projects[].observations[].files[].sha256": [
+          "string"
+        ],
+        "$.projects[].observations[].files[].size": [
+          "integer"
+        ],
+        "$.projects[].observations[].homepage": [
+          "string"
+        ],
+        "$.projects[].observations[].location": [
+          "string"
+        ],
+        "$.projects[].observations[].nvr": [
+          "string"
+        ],
+        "$.projects[].observations[].primary_sha256": [
+          "string"
+        ],
+        "$.projects[].observations[].primary_url": [
+          "string"
+        ],
+        "$.projects[].observations[].release": [
+          "string"
+        ],
+        "$.projects[].observations[].repository": [
+          "string"
+        ],
+        "$.projects[].observations[].repository_base": [
+          "string"
+        ],
+        "$.projects[].observations[].rpm_sha256": [
+          "string"
+        ],
+        "$.projects[].observations[].source": [
+          "string"
+        ],
+        "$.projects[].observations[].source_index_sha256": [
+          "string"
+        ],
+        "$.projects[].observations[].source_index_url": [
+          "string"
+        ],
+        "$.projects[].observations[].suite": [
+          "string"
+        ],
+        "$.projects[].observations[].summary": [
+          "string"
+        ],
+        "$.projects[].observations[].upstream_version": [
+          "string"
+        ],
+        "$.projects[].observations[].vcs_browser": [
+          "string"
+        ],
+        "$.projects[].observations[].vcs_git": [
+          "string"
+        ],
+        "$.projects[].observations[].version": [
+          "string"
+        ],
+        "$.projects[].reason": [
+          "null"
+        ],
+        "$.projects[].sample_id": [
+          "integer"
+        ],
+        "$.projects[].selection_hash": [
+          "string"
+        ],
+        "$.projects[].stratum": [
+          "string"
+        ],
+        "$.projects[].stratum_rank": [
+          "integer"
+        ],
+        "$.selected_project_count": [
+          "integer"
+        ],
+        "$.selection_method": [
+          "string"
+        ],
+        "$.strata": [
+          "object"
+        ],
+        "$.strata.C2V": [
+          "object"
+        ],
+        "$.strata.C2V.design_weight": [
+          "number"
+        ],
+        "$.strata.C2V.inclusion_probability": [
+          "number"
+        ],
+        "$.strata.C2V.inclusion_probability_fraction": [
+          "string"
+        ],
+        "$.strata.C2V.path": [
+          "string"
+        ],
+        "$.strata.C2V.population": [
+          "integer"
+        ],
+        "$.strata.C2V.sample": [
+          "integer"
+        ],
+        "$.strata.C2V.sha256": [
+          "string"
+        ],
+        "$.strata.NON_C2V": [
+          "object"
+        ],
+        "$.strata.NON_C2V.design_weight": [
+          "number"
+        ],
+        "$.strata.NON_C2V.inclusion_probability": [
+          "number"
+        ],
+        "$.strata.NON_C2V.inclusion_probability_fraction": [
+          "string"
+        ],
+        "$.strata.NON_C2V.path": [
+          "string"
+        ],
+        "$.strata.NON_C2V.population": [
+          "integer"
+        ],
+        "$.strata.NON_C2V.sample": [
+          "integer"
+        ],
+        "$.strata.NON_C2V.sha256": [
+          "string"
+        ]
+      }
+    },
+    {
+      "path": "data/manifests/sample_revision.json",
+      "purpose": "Same selected projects with corrected-frame probabilities and weights.",
+      "creation": "Reassociation of the unchanged sample with the corrected frame.",
+      "structure": "object: frozen_at, input_frame_sha256, namespace, population_manifest_sha256, projects, revision, selected_project_count, selection_method, strata",
+      "observed_field_types": {
+        "$": [
+          "object"
+        ],
+        "$.frozen_at": [
+          "string"
+        ],
+        "$.input_frame_sha256": [
+          "string"
+        ],
+        "$.namespace": [
+          "string"
+        ],
+        "$.population_manifest_sha256": [
+          "string"
+        ],
+        "$.projects": [
+          "array"
+        ],
+        "$.projects[]": [
+          "object"
+        ],
+        "$.projects[].c2v_candidate": [
+          "boolean"
+        ],
+        "$.projects[].canonical_upstream": [
+          "string"
+        ],
+        "$.projects[].debian_lineages": [
+          "array"
+        ],
+        "$.projects[].debian_lineages[]": [
+          "string"
+        ],
+        "$.projects[].debian_upstream_versions": [
+          "array"
+        ],
+        "$.projects[].debian_upstream_versions[]": [
+          "string"
+        ],
+        "$.projects[].design_weight": [
+          "number"
+        ],
+        "$.projects[].fedora_lineages": [
+          "array"
+        ],
+        "$.projects[].fedora_lineages[]": [
+          "string"
+        ],
+        "$.projects[].fedora_upstream_versions": [
+          "array"
+        ],
+        "$.projects[].fedora_upstream_versions[]": [
+          "string"
+        ],
+        "$.projects[].inclusion_probability": [
+          "number"
+        ],
+        "$.projects[].inclusion_probability_fraction": [
+          "string"
+        ],
+        "$.projects[].lineage_state": [
+          "string"
+        ],
+        "$.projects[].observations": [
+          "array"
+        ],
+        "$.projects[].observations[]": [
+          "object"
+        ],
+        "$.projects[].observations[].canonical_upstream": [
+          "string"
+        ],
+        "$.projects[].observations[].component": [
+          "string"
+        ],
+        "$.projects[].observations[].directory": [
+          "string"
+        ],
+        "$.projects[].observations[].distribution": [
+          "string"
+        ],
+        "$.projects[].observations[].epoch": [
+          "string"
+        ],
+        "$.projects[].observations[].files": [
+          "array"
+        ],
+        "$.projects[].observations[].files[]": [
+          "object"
+        ],
+        "$.projects[].observations[].files[].name": [
+          "string"
+        ],
+        "$.projects[].observations[].files[].sha256": [
+          "string"
+        ],
+        "$.projects[].observations[].files[].size": [
+          "integer"
+        ],
+        "$.projects[].observations[].homepage": [
+          "string"
+        ],
+        "$.projects[].observations[].location": [
+          "string"
+        ],
+        "$.projects[].observations[].nvr": [
+          "string"
+        ],
+        "$.projects[].observations[].primary_sha256": [
+          "string"
+        ],
+        "$.projects[].observations[].primary_url": [
+          "string"
+        ],
+        "$.projects[].observations[].release": [
+          "string"
+        ],
+        "$.projects[].observations[].repository": [
+          "string"
+        ],
+        "$.projects[].observations[].repository_base": [
+          "string"
+        ],
+        "$.projects[].observations[].rpm_sha256": [
+          "string"
+        ],
+        "$.projects[].observations[].source": [
+          "string"
+        ],
+        "$.projects[].observations[].source_index_sha256": [
+          "string"
+        ],
+        "$.projects[].observations[].source_index_url": [
+          "string"
+        ],
+        "$.projects[].observations[].suite": [
+          "string"
+        ],
+        "$.projects[].observations[].summary": [
+          "string"
+        ],
+        "$.projects[].observations[].upstream_version": [
+          "string"
+        ],
+        "$.projects[].observations[].vcs_browser": [
+          "string"
+        ],
+        "$.projects[].observations[].vcs_git": [
+          "string"
+        ],
+        "$.projects[].observations[].version": [
+          "string"
+        ],
+        "$.projects[].reason": [
+          "null"
+        ],
+        "$.projects[].sample_id": [
+          "integer"
+        ],
+        "$.projects[].selection_hash": [
+          "string"
+        ],
+        "$.projects[].stratum": [
+          "string"
+        ],
+        "$.projects[].stratum_population": [
+          "integer"
+        ],
+        "$.projects[].stratum_rank": [
+          "integer"
+        ],
+        "$.revision": [
+          "object"
+        ],
+        "$.revision.baseline_sample_sha256": [
+          "string"
+        ],
+        "$.revision.sample_membership_unchanged": [
+          "boolean"
+        ],
+        "$.revision.strata": [
+          "object"
+        ],
+        "$.revision.strata.C2V": [
+          "object"
+        ],
+        "$.revision.strata.C2V.design_weight": [
+          "number"
+        ],
+        "$.revision.strata.C2V.population": [
+          "integer"
+        ],
+        "$.revision.strata.C2V.sample": [
+          "integer"
+        ],
+        "$.revision.strata.NON_C2V": [
+          "object"
+        ],
+        "$.revision.strata.NON_C2V.design_weight": [
+          "number"
+        ],
+        "$.revision.strata.NON_C2V.population": [
+          "integer"
+        ],
+        "$.revision.strata.NON_C2V.sample": [
+          "integer"
+        ],
+        "$.selected_project_count": [
+          "integer"
+        ],
+        "$.selection_method": [
+          "string"
+        ],
+        "$.strata": [
+          "object"
+        ],
+        "$.strata.C2V": [
+          "object"
+        ],
+        "$.strata.C2V.design_weight": [
+          "number"
+        ],
+        "$.strata.C2V.inclusion_probability": [
+          "number"
+        ],
+        "$.strata.C2V.inclusion_probability_fraction": [
+          "string"
+        ],
+        "$.strata.C2V.path": [
+          "string"
+        ],
+        "$.strata.C2V.population": [
+          "integer"
+        ],
+        "$.strata.C2V.sample": [
+          "integer"
+        ],
+        "$.strata.C2V.sha256": [
+          "string"
+        ],
+        "$.strata.NON_C2V": [
+          "object"
+        ],
+        "$.strata.NON_C2V.design_weight": [
+          "number"
+        ],
+        "$.strata.NON_C2V.inclusion_probability": [
+          "number"
+        ],
+        "$.strata.NON_C2V.inclusion_probability_fraction": [
+          "string"
+        ],
+        "$.strata.NON_C2V.path": [
+          "string"
+        ],
+        "$.strata.NON_C2V.population": [
+          "integer"
+        ],
+        "$.strata.NON_C2V.sample": [
+          "integer"
+        ],
+        "$.strata.NON_C2V.sha256": [
+          "string"
+        ]
+      }
+    },
+    {
+      "path": "data/manifests/source_acquisition_revision.json",
+      "purpose": "Source acquisition records after declared-role resolution.",
+      "creation": "Distribution-specific source acquisition and role-based primary-payload selection.",
+      "structure": "object: records",
+      "observed_field_types": {
+        "$": [
+          "object"
+        ],
+        "$.records": [
+          "array"
+        ],
+        "$.records[]": [
+          "object"
+        ],
+        "$.records[].canonical_upstream": [
+          "string"
+        ],
+        "$.records[].detail": [
+          "string"
+        ],
+        "$.records[].distribution": [
+          "string"
+        ],
+        "$.records[].files": [
+          "array"
+        ],
+        "$.records[].files[]": [
+          "object"
+        ],
+        "$.records[].files[].name": [
+          "string"
+        ],
+        "$.records[].files[].sha256": [
+          "string"
+        ],
+        "$.records[].files[].size": [
+          "integer"
+        ],
+        "$.records[].files[].url": [
+          "string"
+        ],
+        "$.records[].nvr": [
+          "null",
+          "string"
+        ],
+        "$.records[].packaging_tree": [
+          "string"
+        ],
+        "$.records[].primary_source": [
+          "object"
+        ],
+        "$.records[].primary_source.archive_kind": [
+          "string"
+        ],
+        "$.records[].primary_source.bytes": [
+          "integer"
+        ],
+        "$.records[].primary_source.extraction_kind": [
+          "string"
+        ],
+        "$.records[].primary_source.name": [
+          "string"
+        ],
+        "$.records[].primary_source.role": [
+          "string"
+        ],
+        "$.records[].primary_source.sha256": [
+          "string"
+        ],
+        "$.records[].primary_source_artifacts": [
+          "array"
+        ],
+        "$.records[].primary_source_artifacts[]": [
+          "object"
+        ],
+        "$.records[].primary_source_artifacts[].name": [
+          "string"
+        ],
+        "$.records[].primary_source_artifacts[].role": [
+          "string"
+        ],
+        "$.records[].primary_source_artifacts[].sha256": [
+          "string"
+        ],
+        "$.records[].primary_source_artifacts[].size": [
+          "integer"
+        ],
+        "$.records[].primary_source_artifacts[].url": [
+          "string"
+        ],
+        "$.records[].reason": [
+          "null",
+          "string"
+        ],
+        "$.records[].repository_origin": [
+          "string"
+        ],
+        "$.records[].source": [
+          "string"
+        ],
+        "$.records[].source_artifacts": [
+          "array"
+        ],
+        "$.records[].source_artifacts[]": [
+          "object"
+        ],
+        "$.records[].source_artifacts[].archive_kind": [
+          "string"
+        ],
+        "$.records[].source_artifacts[].bytes": [
+          "integer"
+        ],
+        "$.records[].source_artifacts[].name": [
+          "string"
+        ],
+        "$.records[].source_artifacts[].role": [
+          "string"
+        ],
+        "$.records[].source_artifacts[].sha256": [
+          "string"
+        ],
+        "$.records[].state": [
+          "string"
+        ],
+        "$.records[].tree": [
+          "string"
+        ],
+        "$.records[].upstream_version": [
+          "string"
+        ],
+        "$.records[].version": [
+          "string"
+        ]
+      }
+    },
+    {
+      "path": "data/manifests/source_indices/debian_sources.json",
+      "purpose": "Normalized Debian source-package index records before matching.",
+      "creation": "Official Sources indices verified against InRelease metadata; latest native source version per name.",
+      "structure": "object: created_at, distribution, index_reasons, records",
+      "observed_field_types": {
+        "$": [
+          "object"
+        ],
+        "$.created_at": [
+          "string"
+        ],
+        "$.distribution": [
+          "string"
+        ],
+        "$.index_reasons": [
+          "array"
+        ],
+        "$.records": [
+          "array"
+        ],
+        "$.records[]": [
+          "object"
+        ],
+        "$.records[].component": [
+          "string"
+        ],
+        "$.records[].directory": [
+          "string"
+        ],
+        "$.records[].distribution": [
+          "string"
+        ],
+        "$.records[].files": [
+          "array"
+        ],
+        "$.records[].files[]": [
+          "object"
+        ],
+        "$.records[].files[].name": [
+          "string"
+        ],
+        "$.records[].files[].sha256": [
+          "string"
+        ],
+        "$.records[].files[].size": [
+          "integer"
+        ],
+        "$.records[].homepage": [
+          "string"
+        ],
+        "$.records[].source": [
+          "string"
+        ],
+        "$.records[].source_index_sha256": [
+          "string"
+        ],
+        "$.records[].source_index_url": [
+          "string"
+        ],
+        "$.records[].suite": [
+          "string"
+        ],
+        "$.records[].vcs_browser": [
+          "string"
+        ],
+        "$.records[].vcs_git": [
+          "string"
+        ],
+        "$.records[].version": [
+          "string"
+        ]
+      }
+    },
+    {
+      "path": "data/manifests/source_indices/fedora_sources.json",
+      "purpose": "Normalized Fedora source-RPM metadata before matching.",
+      "creation": "Official repomd/primary metadata; latest native source version per name.",
+      "structure": "object: created_at, distribution, records",
+      "observed_field_types": {
+        "$": [
+          "object"
+        ],
+        "$.created_at": [
+          "string"
+        ],
+        "$.distribution": [
+          "string"
+        ],
+        "$.records": [
+          "array"
+        ],
+        "$.records[]": [
+          "object"
+        ],
+        "$.records[].distribution": [
+          "string"
+        ],
+        "$.records[].epoch": [
+          "string"
+        ],
+        "$.records[].homepage": [
+          "string"
+        ],
+        "$.records[].location": [
+          "string"
+        ],
+        "$.records[].nvr": [
+          "string"
+        ],
+        "$.records[].primary_sha256": [
+          "string"
+        ],
+        "$.records[].primary_url": [
+          "string"
+        ],
+        "$.records[].release": [
+          "string"
+        ],
+        "$.records[].repository": [
+          "string"
+        ],
+        "$.records[].repository_base": [
+          "string"
+        ],
+        "$.records[].rpm_sha256": [
+          "string"
+        ],
+        "$.records[].source": [
+          "string"
+        ],
+        "$.records[].summary": [
+          "string"
+        ],
+        "$.records[].version": [
+          "string"
+        ]
+      }
+    },
+    {
+      "path": "data/manifests/source_indices/ubuntu_sources.json",
+      "purpose": "Normalized Ubuntu metadata for the planned secondary analysis.",
+      "creation": "Official source-index collection; not part of the Debian/Fedora primary population inference.",
+      "structure": "object: created_at, distribution, index_reasons, records",
+      "observed_field_types": {
+        "$": [
+          "object"
+        ],
+        "$.created_at": [
+          "string"
+        ],
+        "$.distribution": [
+          "string"
+        ],
+        "$.index_reasons": [
+          "array"
+        ],
+        "$.records": [
+          "array"
+        ],
+        "$.records[]": [
+          "object"
+        ],
+        "$.records[].component": [
+          "string"
+        ],
+        "$.records[].directory": [
+          "string"
+        ],
+        "$.records[].distribution": [
+          "string"
+        ],
+        "$.records[].files": [
+          "array"
+        ],
+        "$.records[].files[]": [
+          "object"
+        ],
+        "$.records[].files[].name": [
+          "string"
+        ],
+        "$.records[].files[].sha256": [
+          "string"
+        ],
+        "$.records[].files[].size": [
+          "integer"
+        ],
+        "$.records[].homepage": [
+          "string"
+        ],
+        "$.records[].source": [
+          "string"
+        ],
+        "$.records[].source_index_sha256": [
+          "string"
+        ],
+        "$.records[].source_index_url": [
+          "string"
+        ],
+        "$.records[].suite": [
+          "string"
+        ],
+        "$.records[].vcs_browser": [
+          "string"
+        ],
+        "$.records[].vcs_git": [
+          "string"
+        ],
+        "$.records[].version": [
+          "string"
+        ]
+      }
+    },
+    {
+      "path": "data/manifests/source_role_selection.json",
+      "purpose": "Declared archive roles, selection decisions, and content hashes.",
+      "creation": "Primary source-role resolution rather than filesystem ordering.",
+      "structure": "object: records, rule",
+      "observed_field_types": {
+        "$": [
+          "object"
+        ],
+        "$.records": [
+          "array"
+        ],
+        "$.records[]": [
+          "object"
+        ],
+        "$.records[].candidates": [
+          "array"
+        ],
+        "$.records[].candidates[]": [
+          "object"
+        ],
+        "$.records[].candidates[].archive_kind": [
+          "string"
+        ],
+        "$.records[].candidates[].bytes": [
+          "integer"
+        ],
+        "$.records[].candidates[].name": [
+          "string"
+        ],
+        "$.records[].candidates[].role": [
+          "string"
+        ],
+        "$.records[].candidates[].sha256": [
+          "string"
+        ],
+        "$.records[].canonical_upstream": [
+          "string"
+        ],
+        "$.records[].nvr": [
+          "string"
+        ],
+        "$.records[].old_filesystem_first_tar": [
+          "string"
+        ],
+        "$.records[].primary_source0": [
+          "string"
+        ],
+        "$.records[].selection_changed": [
+          "boolean"
+        ],
+        "$.records[].source": [
+          "string"
+        ],
+        "$.records[].srpm_sha256": [
+          "string"
+        ],
+        "$.rule": [
+          "string"
+        ]
+      }
+    },
+    {
+      "path": "data/manifests/ubuntu_secondary.json",
+      "purpose": "Secondary Ubuntu acquisition/estimability record.",
+      "creation": "Exact-record secondary procedure; no estimable primary Ubuntu comparison.",
+      "structure": "object: available_logs, completed_at, records, state",
+      "observed_field_types": {
+        "$": [
+          "object"
+        ],
+        "$.available_logs": [
+          "integer"
+        ],
+        "$.completed_at": [
+          "string"
+        ],
+        "$.records": [
+          "array"
+        ],
+        "$.records[]": [
+          "object"
+        ],
+        "$.records[].api_sha256": [
+          "string"
+        ],
+        "$.records[].api_url": [
+          "string"
+        ],
+        "$.records[].architecture": [
+          "string"
+        ],
+        "$.records[].canonical_upstream": [
+          "string"
+        ],
+        "$.records[].pocket": [
+          "string"
+        ],
+        "$.records[].reason": [
+          "string"
+        ],
+        "$.records[].source": [
+          "string"
+        ],
+        "$.records[].state": [
+          "string"
+        ],
+        "$.records[].suite": [
+          "string"
+        ],
+        "$.records[].upstream_version": [
+          "string"
+        ],
+        "$.records[].version": [
+          "string"
+        ],
+        "$.state": [
+          "string"
+        ]
+      }
+    },
+    {
+      "path": "data/validation/automated_validation_protocol.json",
+      "purpose": "Rules and scope for automated validation.",
+      "creation": "Protocol freeze before independent validation comparisons.",
+      "structure": "object: schema_version, protocol_id, author_amendment_date, status, supersedes, independence_definition, u_selection, prohibited_validator_inputs, validator_a, validator_b, consensus_rules, freeze_order, correction_rule, future_hash_manifest, future_output_hash_manifest",
+      "observed_field_types": {
+        "$": [
+          "object"
+        ],
+        "$.author_amendment_date": [
+          "string"
+        ],
+        "$.consensus_rules": [
+          "object"
+        ],
+        "$.consensus_rules.both_indeterminate": [
+          "string"
+        ],
+        "$.consensus_rules.different_resolved_states": [
+          "string"
+        ],
+        "$.consensus_rules.majority_selection": [
+          "boolean"
+        ],
+        "$.consensus_rules.manual_adjudication": [
+          "boolean"
+        ],
+        "$.consensus_rules.one_resolved_one_indeterminate": [
+          "string"
+        ],
+        "$.consensus_rules.same_resolved_state": [
+          "string"
+        ],
+        "$.correction_rule": [
+          "object"
+        ],
+        "$.correction_rule.package_specific_override_forbidden": [
+          "boolean"
+        ],
+        "$.correction_rule.required_actions": [
+          "array"
+        ],
+        "$.correction_rule.required_actions[]": [
+          "string"
+        ],
+        "$.correction_rule.required_evidence": [
+          "string"
+        ],
+        "$.correction_rule.single_path_override_forbidden": [
+          "boolean"
+        ],
+        "$.freeze_order": [
+          "array"
+        ],
+        "$.freeze_order[]": [
+          "string"
+        ],
+        "$.future_hash_manifest": [
+          "string"
+        ],
+        "$.future_output_hash_manifest": [
+          "string"
+        ],
+        "$.independence_definition": [
+          "string"
+        ],
+        "$.prohibited_validator_inputs": [
+          "array"
+        ],
+        "$.prohibited_validator_inputs[]": [
+          "string"
+        ],
+        "$.protocol_id": [
+          "string"
+        ],
+        "$.schema_version": [
+          "string"
+        ],
+        "$.status": [
+          "string"
+        ],
+        "$.supersedes": [
+          "string"
+        ],
+        "$.u_selection": [
+          "object"
+        ],
+        "$.u_selection.legacy_manifest": [
+          "string"
+        ],
+        "$.u_selection.legacy_manifest_sha256": [
+          "string"
+        ],
+        "$.u_selection.membership": [
+          "string"
+        ],
+        "$.u_selection.production_labels_retained_in_validator_input": [
+          "boolean"
+        ],
+        "$.u_selection.source_hashes": [
+          "string"
+        ],
+        "$.u_selection.validator_input": [
+          "string"
+        ],
+        "$.u_selection.validator_input_sha256": [
+          "string"
+        ],
+        "$.validator_a": [
+          "string"
+        ],
+        "$.validator_b": [
+          "string"
+        ]
+      }
+    },
+    {
+      "path": "data/validation/deterministic_run_1_hashes.json",
+      "purpose": "Output hashes from the first clean deterministic execution.",
+      "creation": "SHA-256 inventory after the first recorded validation run.",
+      "structure": "object: file_count, files, schema_version",
+      "observed_field_types": {
+        "$": [
+          "object"
+        ],
+        "$.file_count": [
+          "integer"
+        ],
+        "$.files": [
+          "array"
+        ],
+        "$.files[]": [
+          "object"
+        ],
+        "$.files[].bytes": [
+          "integer"
+        ],
+        "$.files[].path": [
+          "string"
+        ],
+        "$.files[].sha256": [
+          "string"
+        ],
+        "$.schema_version": [
+          "string"
+        ]
+      }
+    },
+    {
+      "path": "data/validation/deterministic_run_2_hashes.json",
+      "purpose": "Output hashes from the second clean deterministic execution.",
+      "creation": "SHA-256 inventory after the second recorded validation run.",
+      "structure": "object: file_count, files, schema_version",
+      "observed_field_types": {
+        "$": [
+          "object"
+        ],
+        "$.file_count": [
+          "integer"
+        ],
+        "$.files": [
+          "array"
+        ],
+        "$.files[]": [
+          "object"
+        ],
+        "$.files[].bytes": [
+          "integer"
+        ],
+        "$.files[].path": [
+          "string"
+        ],
+        "$.files[].sha256": [
+          "string"
+        ],
+        "$.schema_version": [
+          "string"
+        ]
+      }
+    },
+    {
+      "path": "data/validation/frame_collision_report.json",
+      "purpose": "Canonical-key collision and ambiguity diagnostics.",
+      "creation": "Deterministic corrected-frame collision check.",
+      "structure": "object: collision_count, collisions, retained_matched_projects, schema_version, shared_identities",
+      "observed_field_types": {
+        "$": [
+          "object"
+        ],
+        "$.collision_count": [
+          "integer"
+        ],
+        "$.collisions": [
+          "array"
+        ],
+        "$.collisions[]": [
+          "object"
+        ],
+        "$.collisions[].ambiguous": [
+          "boolean"
+        ],
+        "$.collisions[].distribution": [
+          "string"
+        ],
+        "$.collisions[].identity": [
+          "string"
+        ],
+        "$.collisions[].source_count": [
+          "integer"
+        ],
+        "$.collisions[].sources": [
+          "array"
+        ],
+        "$.collisions[].sources[]": [
+          "string"
+        ],
+        "$.retained_matched_projects": [
+          "array"
+        ],
+        "$.retained_matched_projects[]": [
+          "string"
+        ],
+        "$.schema_version": [
+          "string"
+        ],
+        "$.shared_identities": [
+          "array"
+        ],
+        "$.shared_identities[]": [
+          "string"
+        ]
+      }
+    },
+    {
+      "path": "data/validation/frame_independent_validation.json",
+      "purpose": "Independently implemented URL identity results.",
+      "creation": "Host-specific identity grammar implementation in distrotest_lite_validation.",
+      "structure": "object: excluded_ambiguous_identity_count, implementation, input_counts, records, resolved_url_count, retained_matched_project_count, schema_version, shared_identity_count, unresolved_url_count",
+      "observed_field_types": {
+        "$": [
+          "object"
+        ],
+        "$.excluded_ambiguous_identity_count": [
+          "integer"
+        ],
+        "$.implementation": [
+          "string"
+        ],
+        "$.input_counts": [
+          "object"
+        ],
+        "$.input_counts.debian": [
+          "integer"
+        ],
+        "$.input_counts.fedora": [
+          "integer"
+        ],
+        "$.records": [
+          "array"
+        ],
+        "$.records[]": [
+          "object"
+        ],
+        "$.records[].distribution": [
+          "string"
+        ],
+        "$.records[].host": [
+          "string"
+        ],
+        "$.records[].identity": [
+          "null",
+          "string"
+        ],
+        "$.records[].raw_url_sha256": [
+          "string"
+        ],
+        "$.records[].reason": [
+          "string"
+        ],
+        "$.records[].source": [
+          "string"
+        ],
+        "$.records[].status": [
+          "string"
+        ],
+        "$.records[].view_suffix_normalized": [
+          "boolean"
+        ],
+        "$.resolved_url_count": [
+          "integer"
+        ],
+        "$.retained_matched_project_count": [
+          "integer"
+        ],
+        "$.schema_version": [
+          "string"
+        ],
+        "$.shared_identity_count": [
+          "integer"
+        ],
+        "$.unresolved_url_count": [
+          "integer"
+        ]
+      }
+    },
+    {
+      "path": "data/validation/frame_production_vs_independent.json",
+      "purpose": "Agreement and discrepancies between frame identity implementations.",
+      "creation": "Join and comparison by original record identity; agreement is not reference-based matching accuracy.",
+      "structure": "object: both_resolved_url_count, disagreement_mechanisms, disagreements, identity_agreement_count, identity_disagreement_count, independent_implementation_agreement, independent_retained_matched_project_count, production_retained_matched_project_count, retained_only_independent, retained_only_production, schema_version",
+      "observed_field_types": {
+        "$": [
+          "object"
+        ],
+        "$.both_resolved_url_count": [
+          "integer"
+        ],
+        "$.disagreement_mechanisms": [
+          "object"
+        ],
+        "$.disagreements": [
+          "array"
+        ],
+        "$.identity_agreement_count": [
+          "integer"
+        ],
+        "$.identity_disagreement_count": [
+          "integer"
+        ],
+        "$.independent_implementation_agreement": [
+          "number"
+        ],
+        "$.independent_retained_matched_project_count": [
+          "integer"
+        ],
+        "$.production_retained_matched_project_count": [
+          "integer"
+        ],
+        "$.retained_only_independent": [
+          "array"
+        ],
+        "$.retained_only_production": [
+          "array"
+        ],
+        "$.schema_version": [
+          "string"
+        ]
+      }
+    },
+    {
+      "path": "data/validation/l_sensitivity_adversarial_results.json",
+      "purpose": "Generic-L rule checks against deterministic adversarial negatives.",
+      "creation": "Execution of negation, zero, collection, compilation, and related negative fixtures.",
+      "structure": "object: fixture_count, records, rejected_count, schema_version",
+      "observed_field_types": {
+        "$": [
+          "object"
+        ],
+        "$.fixture_count": [
+          "integer"
+        ],
+        "$.records": [
+          "array"
+        ],
+        "$.records[]": [
+          "object"
+        ],
+        "$.records[].result": [
+          "null",
+          "object"
+        ],
+        "$.records[].result.numbers": [
+          "array"
+        ],
+        "$.records[].result.numbers[]": [
+          "integer"
+        ],
+        "$.records[].result.positive": [
+          "boolean"
+        ],
+        "$.records[].result.reason": [
+          "string"
+        ],
+        "$.records[].result.tokens": [
+          "array"
+        ],
+        "$.records[].result.tokens[]": [
+          "string"
+        ],
+        "$.records[].text": [
+          "string"
+        ],
+        "$.records[].text_sha256": [
+          "string"
+        ],
+        "$.rejected_count": [
+          "integer"
+        ],
+        "$.schema_version": [
+          "string"
+        ]
+      }
+    },
+    {
+      "path": "data/validation/l_sensitivity_candidates.json",
+      "purpose": "Logs affected by the generic-L sensitivity.",
+      "creation": "Corpus scan and comparison against frozen primary L states.",
+      "structure": "object: candidate_log_count, records, schema_version",
+      "observed_field_types": {
+        "$": [
+          "object"
+        ],
+        "$.candidate_log_count": [
+          "integer"
+        ],
+        "$.records": [
+          "array"
+        ],
+        "$.records[]": [
+          "object"
+        ],
+        "$.records[].candidates": [
+          "array"
+        ],
+        "$.records[].candidates[]": [
+          "object"
+        ],
+        "$.records[].candidates[].line_end": [
+          "integer"
+        ],
+        "$.records[].candidates[].line_start": [
+          "integer"
+        ],
+        "$.records[].candidates[].numbers": [
+          "array"
+        ],
+        "$.records[].candidates[].numbers[]": [
+          "integer"
+        ],
+        "$.records[].candidates[].positive": [
+          "boolean"
+        ],
+        "$.records[].candidates[].reason": [
+          "string"
+        ],
+        "$.records[].candidates[].text_sha256": [
+          "string"
+        ],
+        "$.records[].candidates[].tokens": [
+          "array"
+        ],
+        "$.records[].candidates[].tokens[]": [
+          "string"
+        ],
+        "$.records[].log": [
+          "string"
+        ],
+        "$.records[].log_sha256": [
+          "string"
+        ],
+        "$.schema_version": [
+          "string"
+        ]
+      }
+    },
+    {
+      "path": "data/validation/l_sensitivity_independent_validation.json",
+      "purpose": "Independent token-based generic-success checks.",
+      "creation": "Separately implemented test/result/count token logic with exclusion contexts.",
+      "structure": "object: certificates, corpus_count, positive_log_count, schema_version",
+      "observed_field_types": {
+        "$": [
+          "object"
+        ],
+        "$.certificates": [
+          "array"
+        ],
+        "$.certificates[]": [
+          "object"
+        ],
+        "$.certificates[].candidate_count": [
+          "integer"
+        ],
+        "$.certificates[].candidates": [
+          "array"
+        ],
+        "$.certificates[].candidates[]": [
+          "object"
+        ],
+        "$.certificates[].candidates[].line_end": [
+          "integer"
+        ],
+        "$.certificates[].candidates[].line_start": [
+          "integer"
+        ],
+        "$.certificates[].candidates[].numbers": [
+          "array"
+        ],
+        "$.certificates[].candidates[].numbers[]": [
+          "integer"
+        ],
+        "$.certificates[].candidates[].positive": [
+          "boolean"
+        ],
+        "$.certificates[].candidates[].reason": [
+          "string"
+        ],
+        "$.certificates[].candidates[].text_sha256": [
+          "string"
+        ],
+        "$.certificates[].candidates[].tokens": [
+          "array"
+        ],
+        "$.certificates[].candidates[].tokens[]": [
+          "string"
+        ],
+        "$.certificates[].limitations": [
+          "array"
+        ],
+        "$.certificates[].limitations[]": [
+          "string"
+        ],
+        "$.certificates[].log": [
+          "string"
+        ],
+        "$.certificates[].log_sha256": [
+          "string"
+        ],
+        "$.certificates[].positive_candidate_count": [
+          "integer"
+        ],
+        "$.certificates[].reference_positive": [
+          "boolean"
+        ],
+        "$.certificates[].validation_backend": [
+          "string"
+        ],
+        "$.corpus_count": [
+          "integer"
+        ],
+        "$.positive_log_count": [
+          "integer"
+        ],
+        "$.schema_version": [
+          "string"
+        ]
+      }
+    },
+    {
+      "path": "data/validation/l_sensitivity_production_vs_independent.json",
+      "purpose": "Comparison of generic-L production and independent token checks.",
+      "creation": "Join of corpus-wide automated outputs; no human reference labels supplied.",
+      "structure": "object: corpus_count, generic_rule_independently_confirmed, generic_rule_not_confirmed, generic_rule_positive_count, records, schema_version",
+      "observed_field_types": {
+        "$": [
+          "object"
+        ],
+        "$.corpus_count": [
+          "integer"
+        ],
+        "$.generic_rule_independently_confirmed": [
+          "integer"
+        ],
+        "$.generic_rule_not_confirmed": [
+          "integer"
+        ],
+        "$.generic_rule_positive_count": [
+          "integer"
+        ],
+        "$.records": [
+          "array"
+        ],
+        "$.records[]": [
+          "object"
+        ],
+        "$.records[].agreement_on_generic_positive": [
+          "boolean",
+          "null"
+        ],
+        "$.records[].canonical_upstream": [
+          "string"
+        ],
+        "$.records[].distribution": [
+          "string"
+        ],
+        "$.records[].generic_rule_evidenced": [
+          "boolean"
+        ],
+        "$.records[].independent_reference_positive": [
+          "boolean"
+        ],
+        "$.records[].log": [
+          "string"
+        ],
+        "$.records[].primary_state": [
+          "string"
+        ],
+        "$.records[].sensitivity_changed": [
+          "boolean"
+        ],
+        "$.records[].sensitivity_state": [
+          "string"
+        ],
+        "$.schema_version": [
+          "string"
+        ]
+      }
+    },
+    {
+      "path": "data/validation/l_sensitivity_validation_manifest.json",
+      "purpose": "Input identities, hashes, and scope of the L sensitivity check.",
+      "creation": "Frozen validation input/output provenance inventory.",
+      "structure": "object: records, rule, scope, status, validation_artifact",
+      "observed_field_types": {
+        "$": [
+          "object"
+        ],
+        "$.records": [
+          "array"
+        ],
+        "$.records[]": [
+          "object"
+        ],
+        "$.records[].canonical_upstream": [
+          "string"
+        ],
+        "$.records[].distribution": [
+          "string"
+        ],
+        "$.records[].independent_visible_positive": [
+          "boolean"
+        ],
+        "$.records[].new_rule_ids": [
+          "array"
+        ],
+        "$.records[].new_rule_ids[]": [
+          "string"
+        ],
+        "$.records[].new_state": [
+          "string"
+        ],
+        "$.records[].old_state": [
+          "string"
+        ],
+        "$.records[].validation_method": [
+          "string"
+        ],
+        "$.rule": [
+          "string"
+        ],
+        "$.scope": [
+          "string"
+        ],
+        "$.status": [
+          "string"
+        ],
+        "$.validation_artifact": [
+          "string"
+        ]
+      }
+    },
+    {
+      "path": "data/validation/production_comparison_provenance.json",
+      "purpose": "Provenance of classifier outputs used for validation comparisons.",
+      "creation": "Explicit production-input identity and hash inventory.",
+      "structure": "object: freeze_commit, production_inputs, schema_version, validation_outputs_freeze_sha256",
+      "observed_field_types": {
+        "$": [
+          "object"
+        ],
+        "$.freeze_commit": [
+          "string"
+        ],
+        "$.production_inputs": [
+          "array"
+        ],
+        "$.production_inputs[]": [
+          "object"
+        ],
+        "$.production_inputs[].path": [
+          "string"
+        ],
+        "$.production_inputs[].sha256": [
+          "string"
+        ],
+        "$.schema_version": [
+          "string"
+        ],
+        "$.validation_outputs_freeze_sha256": [
+          "string"
+        ]
+      }
+    },
+    {
+      "path": "data/validation/u88_blind_input.json",
+      "purpose": "Frozen 88-case U validation inputs without production labels.",
+      "creation": "Deterministic label-blind validation-set preparation.",
+      "structure": "object: protocol, records, schema_version, selection_manifest",
+      "observed_field_types": {
+        "$": [
+          "object"
+        ],
+        "$.protocol": [
+          "string"
+        ],
+        "$.records": [
+          "array"
+        ],
+        "$.records[]": [
+          "object"
+        ],
+        "$.records[].canonical_upstream": [
+          "string"
+        ],
+        "$.records[].case_id": [
+          "string"
+        ],
+        "$.records[].distribution": [
+          "string"
+        ],
+        "$.records[].multi_source_archive": [
+          "boolean"
+        ],
+        "$.records[].primary_source_artifacts": [
+          "array"
+        ],
+        "$.records[].primary_source_artifacts[]": [
+          "object"
+        ],
+        "$.records[].primary_source_artifacts[].bytes": [
+          "integer"
+        ],
+        "$.records[].primary_source_artifacts[].name": [
+          "string"
+        ],
+        "$.records[].primary_source_artifacts[].role": [
+          "string"
+        ],
+        "$.records[].primary_source_artifacts[].sha256": [
+          "string"
+        ],
+        "$.records[].primary_source_artifacts[].size": [
+          "integer"
+        ],
+        "$.records[].source_package": [
+          "string"
+        ],
+        "$.records[].source_tree": [
+          "string"
+        ],
+        "$.records[].source_tree_certificate": [
+          "object"
+        ],
+        "$.records[].source_tree_certificate.regular_file_bytes": [
+          "integer"
+        ],
+        "$.records[].source_tree_certificate.regular_files": [
+          "integer"
+        ],
+        "$.records[].source_tree_certificate.sha256": [
+          "string"
+        ],
+        "$.schema_version": [
+          "string"
+        ],
+        "$.selection_manifest": [
+          "object"
+        ],
+        "$.selection_manifest.note": [
+          "string"
+        ],
+        "$.selection_manifest.path": [
+          "string"
+        ],
+        "$.selection_manifest.records": [
+          "integer"
+        ],
+        "$.selection_manifest.sha256": [
+          "string"
+        ]
+      }
+    },
+    {
+      "path": "data/validation/u88_production_comparison.json",
+      "purpose": "Production U comparisons for the initial 88-case exercise.",
+      "creation": "Join of frozen production and independent U outputs.",
+      "structure": "object: confusion_matrix, records, schema_version, summary",
+      "observed_field_types": {
+        "$": [
+          "object"
+        ],
+        "$.confusion_matrix": [
+          "object"
+        ],
+        "$.confusion_matrix.U_NO_TEST_CAPABILITY_RESOLVED": [
+          "object"
+        ],
+        "$.confusion_matrix.U_NO_TEST_CAPABILITY_RESOLVED.U_NO_TEST_CAPABILITY_RESOLVED": [
+          "integer"
+        ],
+        "$.confusion_matrix.U_TEST_ENTRYPOINT_RESOLVED": [
+          "object"
+        ],
+        "$.confusion_matrix.U_TEST_ENTRYPOINT_RESOLVED.U_TEST_ENTRYPOINT_RESOLVED": [
+          "integer"
+        ],
+        "$.records": [
+          "array"
+        ],
+        "$.records[]": [
+          "object"
+        ],
+        "$.records[].automated_reference_state": [
+          "null",
+          "string"
+        ],
+        "$.records[].canonical_upstream": [
+          "string"
+        ],
+        "$.records[].case_id": [
+          "string"
+        ],
+        "$.records[].consensus_status": [
+          "string"
+        ],
+        "$.records[].distribution": [
+          "string"
+        ],
+        "$.records[].error_mechanism": [
+          "null"
+        ],
+        "$.records[].production_reason": [
+          "null",
+          "string"
+        ],
+        "$.records[].production_state": [
+          "string"
+        ],
+        "$.records[].production_vs_reference_agreement": [
+          "boolean",
+          "null"
+        ],
+        "$.records[].validator_a_certificate": [
+          "object"
+        ],
+        "$.records[].validator_a_certificate.absence_checklist_complete": [
+          "boolean"
+        ],
+        "$.records[].validator_a_certificate.asset_examples": [
+          "array"
+        ],
+        "$.records[].validator_a_certificate.asset_examples[]": [
+          "string"
+        ],
+        "$.records[].validator_a_certificate.case_id": [
+          "string"
+        ],
+        "$.records[].validator_a_certificate.coverage": [
+          "array"
+        ],
+        "$.records[].validator_a_certificate.coverage[]": [
+          "object"
+        ],
+        "$.records[].validator_a_certificate.coverage[].backend": [
+          "string"
+        ],
+        "$.records[].validator_a_certificate.coverage[].resolved": [
+          "boolean"
+        ],
+        "$.records[].validator_a_certificate.coverage[].test_count": [
+          "integer"
+        ],
+        "$.records[].validator_a_certificate.evidence": [
+          "array"
+        ],
+        "$.records[].validator_a_certificate.evidence[]": [
+          "object"
+        ],
+        "$.records[].validator_a_certificate.evidence[].construct": [
+          "string"
+        ],
+        "$.records[].validator_a_certificate.evidence[].exit_code": [
+          "integer"
+        ],
+        "$.records[].validator_a_certificate.evidence[].native_command": [
+          "string"
+        ],
+        "$.records[].validator_a_certificate.evidence[].native_output": [
+          "string"
+        ],
+        "$.records[].validator_a_certificate.evidence[].native_output_sha256": [
+          "string"
+        ],
+        "$.records[].validator_a_certificate.evidence[].output_truncated": [
+          "boolean"
+        ],
+        "$.records[].validator_a_certificate.evidence[].timed_out": [
+          "boolean"
+        ],
+        "$.records[].validator_a_certificate.evidence[].validation_backend": [
+          "string"
+        ],
+        "$.records[].validator_a_certificate.family": [
+          "array"
+        ],
+        "$.records[].validator_a_certificate.family[]": [
+          "string"
+        ],
+        "$.records[].validator_a_certificate.limitations": [
+          "array"
+        ],
+        "$.records[].validator_a_certificate.limitations[]": [
+          "string"
+        ],
+        "$.records[].validator_a_certificate.reason": [
+          "string"
+        ],
+        "$.records[].validator_a_certificate.reference_state": [
+          "string"
+        ],
+        "$.records[].validator_a_certificate.resolved_entrypoint": [
+          "null",
+          "string"
+        ],
+        "$.records[].validator_a_certificate.source_sha256": [
+          "string"
+        ],
+        "$.records[].validator_a_certificate.validation_backend": [
+          "string"
+        ],
+        "$.records[].validator_a_certificate.validation_status": [
+          "string"
+        ],
+        "$.records[].validator_a_state": [
+          "string"
+        ],
+        "$.records[].validator_b_certificate": [
+          "object"
+        ],
+        "$.records[].validator_b_certificate.absence_checklist_complete": [
+          "boolean"
+        ],
+        "$.records[].validator_b_certificate.asset_examples": [
+          "array"
+        ],
+        "$.records[].validator_b_certificate.asset_examples[]": [
+          "string"
+        ],
+        "$.records[].validator_b_certificate.case_id": [
+          "string"
+        ],
+        "$.records[].validator_b_certificate.coverage": [
+          "array"
+        ],
+        "$.records[].validator_b_certificate.coverage[]": [
+          "object"
+        ],
+        "$.records[].validator_b_certificate.coverage[].examined": [
+          "boolean"
+        ],
+        "$.records[].validator_b_certificate.coverage[].surface": [
+          "string"
+        ],
+        "$.records[].validator_b_certificate.evidence": [
+          "array"
+        ],
+        "$.records[].validator_b_certificate.evidence[]": [
+          "object"
+        ],
+        "$.records[].validator_b_certificate.evidence[].construct": [
+          "string"
+        ],
+        "$.records[].validator_b_certificate.evidence[].file": [
+          "string"
+        ],
+        "$.records[].validator_b_certificate.evidence[].line_end": [
+          "integer",
+          "null"
+        ],
+        "$.records[].validator_b_certificate.evidence[].line_start": [
+          "integer",
+          "null"
+        ],
+        "$.records[].validator_b_certificate.evidence[].parser": [
+          "string"
+        ],
+        "$.records[].validator_b_certificate.family": [
+          "array"
+        ],
+        "$.records[].validator_b_certificate.family[]": [
+          "string"
+        ],
+        "$.records[].validator_b_certificate.limitations": [
+          "array"
+        ],
+        "$.records[].validator_b_certificate.limitations[]": [
+          "string"
+        ],
+        "$.records[].validator_b_certificate.reason": [
+          "string"
+        ],
+        "$.records[].validator_b_certificate.reference_state": [
+          "string"
+        ],
+        "$.records[].validator_b_certificate.resolved_entrypoint": [
+          "null",
+          "string"
+        ],
+        "$.records[].validator_b_certificate.source_sha256": [
+          "string"
+        ],
+        "$.records[].validator_b_certificate.validation_backend": [
+          "string"
+        ],
+        "$.records[].validator_b_certificate.validation_status": [
+          "string"
+        ],
+        "$.records[].validator_b_state": [
+          "string"
+        ],
+        "$.schema_version": [
+          "string"
+        ],
+        "$.summary": [
+          "object"
+        ],
+        "$.summary.a_b_agreement": [
+          "integer"
+        ],
+        "$.summary.a_b_disagreement": [
+          "integer"
+        ],
+        "$.summary.both_indeterminate": [
+          "integer"
+        ],
+        "$.summary.case_count": [
+          "integer"
+        ],
+        "$.summary.error_mechanisms": [
+          "object"
+        ],
+        "$.summary.independently_discovered_production_false_negatives": [
+          "integer"
+        ],
+        "$.summary.production_entrypoint": [
+          "object"
+        ],
+        "$.summary.production_entrypoint.confirmed_by_strong_reference": [
+          "integer"
+        ],
+        "$.summary.production_entrypoint.sample_count": [
+          "integer"
+        ],
+        "$.summary.production_entrypoint.suspected_false_positives_two_path": [
+          "integer"
+        ],
+        "$.summary.production_no_capability": [
+          "object"
+        ],
+        "$.summary.production_no_capability.confirmed_by_strong_reference": [
+          "integer"
+        ],
+        "$.summary.production_no_capability.entrypoint_discovered_two_path": [
+          "integer"
+        ],
+        "$.summary.production_no_capability.sample_count": [
+          "integer"
+        ],
+        "$.summary.production_unresolved": [
+          "object"
+        ],
+        "$.summary.production_unresolved.entrypoint_discovered_two_path": [
+          "integer"
+        ],
+        "$.summary.production_unresolved.sample_count": [
+          "integer"
+        ],
+        "$.summary.single_path_confirmation": [
+          "integer"
+        ],
+        "$.summary.state_specific": [
+          "object"
+        ],
+        "$.summary.state_specific.U_NO_TEST_CAPABILITY_RESOLVED": [
+          "object"
+        ],
+        "$.summary.state_specific.U_NO_TEST_CAPABILITY_RESOLVED.agreed": [
+          "integer"
+        ],
+        "$.summary.state_specific.U_NO_TEST_CAPABILITY_RESOLVED.disagreed": [
+          "integer"
+        ],
+        "$.summary.state_specific.U_NO_TEST_CAPABILITY_RESOLVED.production_count_in_strong_domain": [
+          "integer"
+        ],
+        "$.summary.state_specific.U_TEST_ASSETS_ONLY": [
+          "object"
+        ],
+        "$.summary.state_specific.U_TEST_ASSETS_ONLY.agreed": [
+          "integer"
+        ],
+        "$.summary.state_specific.U_TEST_ASSETS_ONLY.disagreed": [
+          "integer"
+        ],
+        "$.summary.state_specific.U_TEST_ASSETS_ONLY.production_count_in_strong_domain": [
+          "integer"
+        ],
+        "$.summary.state_specific.U_TEST_ENTRYPOINT_RESOLVED": [
+          "object"
+        ],
+        "$.summary.state_specific.U_TEST_ENTRYPOINT_RESOLVED.agreed": [
+          "integer"
+        ],
+        "$.summary.state_specific.U_TEST_ENTRYPOINT_RESOLVED.disagreed": [
+          "integer"
+        ],
+        "$.summary.state_specific.U_TEST_ENTRYPOINT_RESOLVED.production_count_in_strong_domain": [
+          "integer"
+        ],
+        "$.summary.state_specific.U_UNRESOLVED": [
+          "object"
+        ],
+        "$.summary.state_specific.U_UNRESOLVED.agreed": [
+          "integer"
+        ],
+        "$.summary.state_specific.U_UNRESOLVED.disagreed": [
+          "integer"
+        ],
+        "$.summary.state_specific.U_UNRESOLVED.production_count_in_strong_domain": [
+          "integer"
+        ],
+        "$.summary.strong_reference_count": [
+          "integer"
+        ],
+        "$.summary.strong_reference_production_agreement": [
+          "integer"
+        ],
+        "$.summary.strong_reference_production_disagreement": [
+          "integer"
+        ]
+      }
+    },
+    {
+      "path": "data/validation/u88_validation_consensus.json",
+      "purpose": "Agreement, disagreement, and indeterminate states of the initial two U paths.",
+      "creation": "Comparison of native discovery and structured static inspection; indeterminate is not a negative reference.",
+      "structure": "object: case_count, records, schema_version, status_counts",
+      "observed_field_types": {
+        "$": [
+          "object"
+        ],
+        "$.case_count": [
+          "integer"
+        ],
+        "$.records": [
+          "array"
+        ],
+        "$.records[]": [
+          "object"
+        ],
+        "$.records[].automated_reference_state": [
+          "null",
+          "string"
+        ],
+        "$.records[].case_id": [
+          "string"
+        ],
+        "$.records[].consensus_status": [
+          "string"
+        ],
+        "$.records[].validator_a_state": [
+          "string"
+        ],
+        "$.records[].validator_b_state": [
+          "string"
+        ],
+        "$.schema_version": [
+          "string"
+        ],
+        "$.status_counts": [
+          "object"
+        ],
+        "$.status_counts.AUTOMATED_REFERENCE_AGREEMENT": [
+          "integer"
+        ],
+        "$.status_counts.AUTOMATED_VALIDATION_DISAGREEMENT": [
+          "integer"
+        ],
+        "$.status_counts.SINGLE_PATH_CONFIRMATION": [
+          "integer"
+        ],
+        "$.status_counts.VALIDATION_INDETERMINATE": [
+          "integer"
+        ]
+      }
+    },
+    {
+      "path": "data/validation/u88_validator_a.json",
+      "purpose": "Bounded offline native-discovery U outputs.",
+      "creation": "First independently implemented automated validation path.",
+      "structure": "object: case_count, certificates, schema_version, validator",
+      "observed_field_types": {
+        "$": [
+          "object"
+        ],
+        "$.case_count": [
+          "integer"
+        ],
+        "$.certificates": [
+          "array"
+        ],
+        "$.certificates[]": [
+          "object"
+        ],
+        "$.certificates[].absence_checklist_complete": [
+          "boolean"
+        ],
+        "$.certificates[].asset_examples": [
+          "array"
+        ],
+        "$.certificates[].asset_examples[]": [
+          "string"
+        ],
+        "$.certificates[].case_id": [
+          "string"
+        ],
+        "$.certificates[].coverage": [
+          "array"
+        ],
+        "$.certificates[].coverage[]": [
+          "object"
+        ],
+        "$.certificates[].coverage[].backend": [
+          "string"
+        ],
+        "$.certificates[].coverage[].resolved": [
+          "boolean"
+        ],
+        "$.certificates[].coverage[].test_count": [
+          "integer"
+        ],
+        "$.certificates[].evidence": [
+          "array"
+        ],
+        "$.certificates[].evidence[]": [
+          "object"
+        ],
+        "$.certificates[].evidence[].construct": [
+          "string"
+        ],
+        "$.certificates[].evidence[].exit_code": [
+          "integer"
+        ],
+        "$.certificates[].evidence[].native_command": [
+          "string"
+        ],
+        "$.certificates[].evidence[].native_output": [
+          "string"
+        ],
+        "$.certificates[].evidence[].native_output_sha256": [
+          "string"
+        ],
+        "$.certificates[].evidence[].output_truncated": [
+          "boolean"
+        ],
+        "$.certificates[].evidence[].timed_out": [
+          "boolean"
+        ],
+        "$.certificates[].evidence[].validation_backend": [
+          "string"
+        ],
+        "$.certificates[].family": [
+          "array"
+        ],
+        "$.certificates[].family[]": [
+          "string"
+        ],
+        "$.certificates[].limitations": [
+          "array"
+        ],
+        "$.certificates[].limitations[]": [
+          "string"
+        ],
+        "$.certificates[].reason": [
+          "string"
+        ],
+        "$.certificates[].reference_state": [
+          "string"
+        ],
+        "$.certificates[].resolved_entrypoint": [
+          "null",
+          "string"
+        ],
+        "$.certificates[].source_sha256": [
+          "string"
+        ],
+        "$.certificates[].validation_backend": [
+          "string"
+        ],
+        "$.certificates[].validation_status": [
+          "string"
+        ],
+        "$.schema_version": [
+          "string"
+        ],
+        "$.validator": [
+          "string"
+        ]
+      }
+    },
+    {
+      "path": "data/validation/u88_validator_b.json",
+      "purpose": "Structured static-inspection U outputs.",
+      "creation": "Second independently implemented automated validation path.",
+      "structure": "object: case_count, certificates, schema_version, validator",
+      "observed_field_types": {
+        "$": [
+          "object"
+        ],
+        "$.case_count": [
+          "integer"
+        ],
+        "$.certificates": [
+          "array"
+        ],
+        "$.certificates[]": [
+          "object"
+        ],
+        "$.certificates[].absence_checklist_complete": [
+          "boolean"
+        ],
+        "$.certificates[].asset_examples": [
+          "array"
+        ],
+        "$.certificates[].asset_examples[]": [
+          "string"
+        ],
+        "$.certificates[].case_id": [
+          "string"
+        ],
+        "$.certificates[].coverage": [
+          "array"
+        ],
+        "$.certificates[].coverage[]": [
+          "object"
+        ],
+        "$.certificates[].coverage[].examined": [
+          "boolean"
+        ],
+        "$.certificates[].coverage[].surface": [
+          "string"
+        ],
+        "$.certificates[].evidence": [
+          "array"
+        ],
+        "$.certificates[].evidence[]": [
+          "object"
+        ],
+        "$.certificates[].evidence[].construct": [
+          "string"
+        ],
+        "$.certificates[].evidence[].file": [
+          "string"
+        ],
+        "$.certificates[].evidence[].line_end": [
+          "integer",
+          "null"
+        ],
+        "$.certificates[].evidence[].line_start": [
+          "integer",
+          "null"
+        ],
+        "$.certificates[].evidence[].parser": [
+          "string"
+        ],
+        "$.certificates[].family": [
+          "array"
+        ],
+        "$.certificates[].family[]": [
+          "string"
+        ],
+        "$.certificates[].limitations": [
+          "array"
+        ],
+        "$.certificates[].limitations[]": [
+          "string"
+        ],
+        "$.certificates[].reason": [
+          "string"
+        ],
+        "$.certificates[].reference_state": [
+          "string"
+        ],
+        "$.certificates[].resolved_entrypoint": [
+          "null",
+          "string"
+        ],
+        "$.certificates[].source_sha256": [
+          "string"
+        ],
+        "$.certificates[].validation_backend": [
+          "string"
+        ],
+        "$.certificates[].validation_status": [
+          "string"
+        ],
+        "$.schema_version": [
+          "string"
+        ],
+        "$.validator": [
+          "string"
+        ]
+      }
+    },
+    {
+      "path": "data/validation/u_corrected_production_assessment.json",
+      "purpose": "Assessment of final U positives after generic corrections.",
+      "creation": "Combination of original positive certificates and supported counterexample certificates.",
+      "structure": "object: claim_scope, confirmed_count, contradicted_count, counterexample_search, disposition, family_certification, final_positive_count, generic_defect, indeterminate_count, one_path_confirmed, provenance, records, rq1_changed, schema_version, two_path_confirmed",
+      "observed_field_types": {
+        "$": [
+          "object"
+        ],
+        "$.claim_scope": [
+          "string"
+        ],
+        "$.confirmed_count": [
+          "integer"
+        ],
+        "$.contradicted_count": [
+          "integer"
+        ],
+        "$.counterexample_search": [
+          "object"
+        ],
+        "$.counterexample_search.confirmed_before_correction": [
+          "integer"
+        ],
+        "$.counterexample_search.globally_corrected_count": [
+          "integer"
+        ],
+        "$.counterexample_search.searched_count": [
+          "integer"
+        ],
+        "$.counterexample_search.uncorrected_confirmed_count": [
+          "integer"
+        ],
+        "$.counterexample_search.unresolved_candidate_count": [
+          "integer"
+        ],
+        "$.disposition": [
+          "string"
+        ],
+        "$.family_certification": [
+          "object"
+        ],
+        "$.family_certification.autotools": [
+          "object"
+        ],
+        "$.family_certification.autotools+cmake+python": [
+          "object"
+        ],
+        "$.family_certification.autotools+cmake+python.POSITIVE_CLAIM_CONFIRMED": [
+          "integer"
+        ],
+        "$.family_certification.autotools+python": [
+          "object"
+        ],
+        "$.family_certification.autotools+python.POSITIVE_CLAIM_CONFIRMED": [
+          "integer"
+        ],
+        "$.family_certification.autotools.POSITIVE_CLAIM_CONFIRMED": [
+          "integer"
+        ],
+        "$.family_certification.cmake": [
+          "object"
+        ],
+        "$.family_certification.cmake.POSITIVE_CLAIM_CONFIRMED": [
+          "integer"
+        ],
+        "$.family_certification.go": [
+          "object"
+        ],
+        "$.family_certification.go.POSITIVE_CLAIM_CONFIRMED": [
+          "integer"
+        ],
+        "$.family_certification.go.VALIDATION_INDETERMINATE": [
+          "integer"
+        ],
+        "$.family_certification.maven": [
+          "object"
+        ],
+        "$.family_certification.maven.VALIDATION_INDETERMINATE": [
+          "integer"
+        ],
+        "$.family_certification.meson": [
+          "object"
+        ],
+        "$.family_certification.meson.POSITIVE_CLAIM_CONFIRMED": [
+          "integer"
+        ],
+        "$.family_certification.python": [
+          "object"
+        ],
+        "$.family_certification.python.POSITIVE_CLAIM_CONFIRMED": [
+          "integer"
+        ],
+        "$.family_certification.python.VALIDATION_INDETERMINATE": [
+          "integer"
+        ],
+        "$.final_positive_count": [
+          "integer"
+        ],
+        "$.generic_defect": [
+          "string"
+        ],
+        "$.indeterminate_count": [
+          "integer"
+        ],
+        "$.one_path_confirmed": [
+          "integer"
+        ],
+        "$.provenance": [
+          "object"
+        ],
+        "$.provenance.corrected_production_labels_sha256": [
+          "string"
+        ],
+        "$.provenance.frozen_counterexample_search_sha256": [
+          "string"
+        ],
+        "$.provenance.frozen_positive_certificates_sha256": [
+          "string"
+        ],
+        "$.provenance.frozen_validation_outputs_sha256": [
+          "string"
+        ],
+        "$.provenance.protocol_sha256": [
+          "string"
+        ],
+        "$.provenance.transition_table_sha256": [
+          "string"
+        ],
+        "$.records": [
+          "array"
+        ],
+        "$.records[]": [
+          "object"
+        ],
+        "$.records[].canonical_upstream": [
+          "string"
+        ],
+        "$.records[].case_id": [
+          "string"
+        ],
+        "$.records[].distribution": [
+          "string"
+        ],
+        "$.records[].evidence_origin": [
+          "string"
+        ],
+        "$.records[].positive_path_count": [
+          "integer"
+        ],
+        "$.records[].production_family_v1_2": [
+          "string"
+        ],
+        "$.records[].resolved_entrypoint": [
+          "null",
+          "string"
+        ],
+        "$.records[].source_sha256": [
+          "string"
+        ],
+        "$.records[].validation_status": [
+          "string"
+        ],
+        "$.rq1_changed": [
+          "boolean"
+        ],
+        "$.schema_version": [
+          "string"
+        ],
+        "$.two_path_confirmed": [
+          "integer"
+        ]
+      }
+    },
+    {
+      "path": "data/validation/u_nonpositive_counterexample_search.json",
+      "purpose": "Supported-domain missed entrypoints among original nonpositive U observations.",
+      "creation": "Label-blind counterexample search followed by production comparison; no exhaustive absence claim.",
+      "structure": "object: candidate_case_ids, case_count, confirmed_count, protocol_sha256, records, schema_version, status_counts, unresolved_candidate_count",
+      "observed_field_types": {
+        "$": [
+          "object"
+        ],
+        "$.candidate_case_ids": [
+          "array"
+        ],
+        "$.candidate_case_ids[]": [
+          "string"
+        ],
+        "$.case_count": [
+          "integer"
+        ],
+        "$.confirmed_count": [
+          "integer"
+        ],
+        "$.protocol_sha256": [
+          "string"
+        ],
+        "$.records": [
+          "array"
+        ],
+        "$.records[]": [
+          "object"
+        ],
+        "$.records[].candidate_confidence": [
+          "null",
+          "string"
+        ],
+        "$.records[].canonical_upstream": [
+          "string"
+        ],
+        "$.records[].case_id": [
+          "string"
+        ],
+        "$.records[].counterexample_status": [
+          "string"
+        ],
+        "$.records[].distribution": [
+          "string"
+        ],
+        "$.records[].evidence": [
+          "array"
+        ],
+        "$.records[].evidence[]": [
+          "object"
+        ],
+        "$.records[].evidence[].construct": [
+          "string"
+        ],
+        "$.records[].evidence[].file": [
+          "string"
+        ],
+        "$.records[].evidence[].line_end": [
+          "integer"
+        ],
+        "$.records[].evidence[].line_start": [
+          "integer"
+        ],
+        "$.records[].evidence[].parser": [
+          "string"
+        ],
+        "$.records[].family": [
+          "array"
+        ],
+        "$.records[].family[]": [
+          "string"
+        ],
+        "$.records[].interpretation": [
+          "string"
+        ],
+        "$.records[].limitations": [
+          "array"
+        ],
+        "$.records[].limitations[]": [
+          "string"
+        ],
+        "$.records[].path_results": [
+          "array"
+        ],
+        "$.records[].path_results[]": [
+          "object"
+        ],
+        "$.records[].path_results[].entrypoints": [
+          "array"
+        ],
+        "$.records[].path_results[].entrypoints[]": [
+          "string"
+        ],
+        "$.records[].path_results[].evidence": [
+          "array"
+        ],
+        "$.records[].path_results[].evidence[]": [
+          "object"
+        ],
+        "$.records[].path_results[].evidence[].construct": [
+          "string"
+        ],
+        "$.records[].path_results[].evidence[].exit_code": [
+          "integer"
+        ],
+        "$.records[].path_results[].evidence[].file": [
+          "string"
+        ],
+        "$.records[].path_results[].evidence[].line_end": [
+          "integer"
+        ],
+        "$.records[].path_results[].evidence[].line_start": [
+          "integer"
+        ],
+        "$.records[].path_results[].evidence[].native_command": [
+          "string"
+        ],
+        "$.records[].path_results[].evidence[].native_output_sha256": [
+          "string"
+        ],
+        "$.records[].path_results[].evidence[].output_truncated": [
+          "boolean"
+        ],
+        "$.records[].path_results[].evidence[].parser": [
+          "string"
+        ],
+        "$.records[].path_results[].evidence[].timed_out": [
+          "boolean"
+        ],
+        "$.records[].path_results[].evidence[].validation_backend": [
+          "string"
+        ],
+        "$.records[].path_results[].families": [
+          "array"
+        ],
+        "$.records[].path_results[].families[]": [
+          "string"
+        ],
+        "$.records[].path_results[].limitations": [
+          "array"
+        ],
+        "$.records[].path_results[].limitations[]": [
+          "string"
+        ],
+        "$.records[].path_results[].path": [
+          "string"
+        ],
+        "$.records[].path_results[].positive": [
+          "boolean"
+        ],
+        "$.records[].path_results[].source_root_prefix": [
+          "string"
+        ],
+        "$.records[].path_results[].state": [
+          "string"
+        ],
+        "$.records[].path_results[].status": [
+          "string"
+        ],
+        "$.records[].positive_path_count": [
+          "integer"
+        ],
+        "$.records[].resolved_entrypoint": [
+          "null",
+          "string"
+        ],
+        "$.records[].search_target": [
+          "string"
+        ],
+        "$.records[].source_sha256": [
+          "null",
+          "string"
+        ],
+        "$.schema_version": [
+          "string"
+        ],
+        "$.status_counts": [
+          "object"
+        ],
+        "$.status_counts.INDEPENDENT_COUNTEREXAMPLE_CONFIRMED": [
+          "integer"
+        ],
+        "$.status_counts.NO_CLEAR_COUNTEREXAMPLE_FOUND": [
+          "integer"
+        ],
+        "$.unresolved_candidate_count": [
+          "integer"
+        ]
+      }
+    },
+    {
+      "path": "data/validation/u_positive_certificates.json",
+      "purpose": "Artifact-linked evidence for production-positive U eligibility claims.",
+      "creation": "Independent automated native/static checks with supporting file/target evidence.",
+      "structure": "object: case_count, certificate_status_counts, certificates, family_certification, path_coverage, protocol_sha256, schema_version",
+      "observed_field_types": {
+        "$": [
+          "object"
+        ],
+        "$.case_count": [
+          "integer"
+        ],
+        "$.certificate_status_counts": [
+          "object"
+        ],
+        "$.certificate_status_counts.CERTIFICATION_INDETERMINATE": [
+          "integer"
+        ],
+        "$.certificate_status_counts.ORTHOGONAL_POSITIVE_CERTIFIED": [
+          "integer"
+        ],
+        "$.certificates": [
+          "array"
+        ],
+        "$.certificates[]": [
+          "object"
+        ],
+        "$.certificates[].canonical_upstream": [
+          "string"
+        ],
+        "$.certificates[].case_id": [
+          "string"
+        ],
+        "$.certificates[].certificate_status": [
+          "string"
+        ],
+        "$.certificates[].decision": [
+          "string"
+        ],
+        "$.certificates[].distribution": [
+          "string"
+        ],
+        "$.certificates[].evidence": [
+          "array"
+        ],
+        "$.certificates[].evidence[]": [
+          "object"
+        ],
+        "$.certificates[].evidence[].construct": [
+          "string"
+        ],
+        "$.certificates[].evidence[].document_locator": [
+          "string"
+        ],
+        "$.certificates[].evidence[].exit_code": [
+          "integer"
+        ],
+        "$.certificates[].evidence[].file": [
+          "string"
+        ],
+        "$.certificates[].evidence[].line_end": [
+          "integer",
+          "null"
+        ],
+        "$.certificates[].evidence[].line_start": [
+          "integer",
+          "null"
+        ],
+        "$.certificates[].evidence[].native_command": [
+          "string"
+        ],
+        "$.certificates[].evidence[].native_output_sha256": [
+          "string"
+        ],
+        "$.certificates[].evidence[].output_truncated": [
+          "boolean"
+        ],
+        "$.certificates[].evidence[].parser": [
+          "string"
+        ],
+        "$.certificates[].evidence[].timed_out": [
+          "boolean"
+        ],
+        "$.certificates[].evidence[].validation_backend": [
+          "string"
+        ],
+        "$.certificates[].family": [
+          "array"
+        ],
+        "$.certificates[].family[]": [
+          "string"
+        ],
+        "$.certificates[].limitations": [
+          "array"
+        ],
+        "$.certificates[].limitations[]": [
+          "string"
+        ],
+        "$.certificates[].path_results": [
+          "array"
+        ],
+        "$.certificates[].path_results[]": [
+          "object"
+        ],
+        "$.certificates[].path_results[].entrypoints": [
+          "array"
+        ],
+        "$.certificates[].path_results[].entrypoints[]": [
+          "string"
+        ],
+        "$.certificates[].path_results[].evidence": [
+          "array"
+        ],
+        "$.certificates[].path_results[].evidence[]": [
+          "object"
+        ],
+        "$.certificates[].path_results[].evidence[].construct": [
+          "string"
+        ],
+        "$.certificates[].path_results[].evidence[].document_locator": [
+          "string"
+        ],
+        "$.certificates[].path_results[].evidence[].exit_code": [
+          "integer"
+        ],
+        "$.certificates[].path_results[].evidence[].file": [
+          "string"
+        ],
+        "$.certificates[].path_results[].evidence[].line_end": [
+          "integer",
+          "null"
+        ],
+        "$.certificates[].path_results[].evidence[].line_start": [
+          "integer",
+          "null"
+        ],
+        "$.certificates[].path_results[].evidence[].native_command": [
+          "string"
+        ],
+        "$.certificates[].path_results[].evidence[].native_output_sha256": [
+          "string"
+        ],
+        "$.certificates[].path_results[].evidence[].output_truncated": [
+          "boolean"
+        ],
+        "$.certificates[].path_results[].evidence[].parser": [
+          "string"
+        ],
+        "$.certificates[].path_results[].evidence[].timed_out": [
+          "boolean"
+        ],
+        "$.certificates[].path_results[].evidence[].validation_backend": [
+          "string"
+        ],
+        "$.certificates[].path_results[].families": [
+          "array"
+        ],
+        "$.certificates[].path_results[].families[]": [
+          "string"
+        ],
+        "$.certificates[].path_results[].limitations": [
+          "array"
+        ],
+        "$.certificates[].path_results[].limitations[]": [
+          "string"
+        ],
+        "$.certificates[].path_results[].path": [
+          "string"
+        ],
+        "$.certificates[].path_results[].positive": [
+          "boolean"
+        ],
+        "$.certificates[].path_results[].source_root_prefix": [
+          "string"
+        ],
+        "$.certificates[].path_results[].state": [
+          "string"
+        ],
+        "$.certificates[].path_results[].status": [
+          "string"
+        ],
+        "$.certificates[].positive_path_count": [
+          "integer"
+        ],
+        "$.certificates[].production_state_under_validation": [
+          "string"
+        ],
+        "$.certificates[].resolved_entrypoint": [
+          "null",
+          "string"
+        ],
+        "$.certificates[].source_sha256": [
+          "string"
+        ],
+        "$.certificates[].validator_backend": [
+          "string"
+        ],
+        "$.family_certification": [
+          "object"
+        ],
+        "$.family_certification.cmake+cmake_ctest_native": [
+          "object"
+        ],
+        "$.family_certification.cmake+cmake_ctest_native+make-autotools+make_native_database": [
+          "object"
+        ],
+        "$.family_certification.cmake+cmake_ctest_native+make-autotools+make_native_database.ORTHOGONAL_POSITIVE_CERTIFIED": [
+          "integer"
+        ],
+        "$.family_certification.cmake+cmake_ctest_native.ORTHOGONAL_POSITIVE_CERTIFIED": [
+          "integer"
+        ],
+        "$.family_certification.go+go_native_test_listing": [
+          "object"
+        ],
+        "$.family_certification.go+go_native_test_listing.ORTHOGONAL_POSITIVE_CERTIFIED": [
+          "integer"
+        ],
+        "$.family_certification.make-autotools+make_native_database": [
+          "object"
+        ],
+        "$.family_certification.make-autotools+make_native_database.ORTHOGONAL_POSITIVE_CERTIFIED": [
+          "integer"
+        ],
+        "$.family_certification.maven": [
+          "object"
+        ],
+        "$.family_certification.maven.CERTIFICATION_INDETERMINATE": [
+          "integer"
+        ],
+        "$.family_certification.meson+meson_native_introspection+pytest_native_collection+python": [
+          "object"
+        ],
+        "$.family_certification.meson+meson_native_introspection+pytest_native_collection+python.CERTIFICATION_INDETERMINATE": [
+          "integer"
+        ],
+        "$.family_certification.no_applicable_independent_backend": [
+          "object"
+        ],
+        "$.family_certification.no_applicable_independent_backend.CERTIFICATION_INDETERMINATE": [
+          "integer"
+        ],
+        "$.family_certification.pytest_native_collection+python": [
+          "object"
+        ],
+        "$.family_certification.pytest_native_collection+python.CERTIFICATION_INDETERMINATE": [
+          "integer"
+        ],
+        "$.family_certification.pytest_native_collection+python.ORTHOGONAL_POSITIVE_CERTIFIED": [
+          "integer"
+        ],
+        "$.path_coverage": [
+          "object"
+        ],
+        "$.path_coverage.contradicted": [
+          "integer"
+        ],
+        "$.path_coverage.indeterminate": [
+          "integer"
+        ],
+        "$.path_coverage.one_path_certified": [
+          "integer"
+        ],
+        "$.path_coverage.two_path_certified": [
+          "integer"
+        ],
+        "$.protocol_sha256": [
+          "string"
+        ],
+        "$.schema_version": [
+          "string"
+        ]
+      }
+    },
+    {
+      "path": "data/validation/u_positive_output_freeze.json",
+      "purpose": "Frozen positive-validation output hashes and provenance.",
+      "creation": "Hash inventory of completed positive validation outputs.",
+      "structure": "object: byte_identical, deterministic_run_1_inventory_sha256, deterministic_run_2_inventory_sha256, file_count, files, schema_version",
+      "observed_field_types": {
+        "$": [
+          "object"
+        ],
+        "$.byte_identical": [
+          "boolean"
+        ],
+        "$.deterministic_run_1_inventory_sha256": [
+          "string"
+        ],
+        "$.deterministic_run_2_inventory_sha256": [
+          "string"
+        ],
+        "$.file_count": [
+          "integer"
+        ],
+        "$.files": [
+          "array"
+        ],
+        "$.files[]": [
+          "object"
+        ],
+        "$.files[].bytes": [
+          "integer"
+        ],
+        "$.files[].path": [
+          "string"
+        ],
+        "$.files[].sha256": [
+          "string"
+        ],
+        "$.schema_version": [
+          "string"
+        ]
+      }
+    },
+    {
+      "path": "data/validation/u_positive_validation_protocol.json",
+      "purpose": "State-specific positive-claim validation scope and rules.",
+      "creation": "Protocol for checking original positives and searching supported nonpositive cases.",
+      "structure": "object: allowed_evidence, author_decision, counterexample_cases, decision_rules, environment, execution_constraints, forbidden_inputs, implementation, implementation_sha256, positive_cases, protocol, schema_version, selection, stop_rules, supported_families",
+      "observed_field_types": {
+        "$": [
+          "object"
+        ],
+        "$.allowed_evidence": [
+          "array"
+        ],
+        "$.allowed_evidence[]": [
+          "string"
+        ],
+        "$.author_decision": [
+          "string"
+        ],
+        "$.counterexample_cases": [
+          "array"
+        ],
+        "$.counterexample_cases[]": [
+          "object"
+        ],
+        "$.counterexample_cases[].canonical_upstream": [
+          "string"
+        ],
+        "$.counterexample_cases[].case_id": [
+          "string"
+        ],
+        "$.counterexample_cases[].distribution": [
+          "string"
+        ],
+        "$.counterexample_cases[].primary_source_artifacts": [
+          "array"
+        ],
+        "$.counterexample_cases[].primary_source_artifacts[]": [
+          "object"
+        ],
+        "$.counterexample_cases[].primary_source_artifacts[].bytes": [
+          "integer"
+        ],
+        "$.counterexample_cases[].primary_source_artifacts[].name": [
+          "string"
+        ],
+        "$.counterexample_cases[].primary_source_artifacts[].role": [
+          "string"
+        ],
+        "$.counterexample_cases[].primary_source_artifacts[].sha256": [
+          "string"
+        ],
+        "$.counterexample_cases[].primary_source_artifacts[].size": [
+          "integer"
+        ],
+        "$.counterexample_cases[].search_target": [
+          "string"
+        ],
+        "$.counterexample_cases[].source_package": [
+          "string"
+        ],
+        "$.counterexample_cases[].source_record_sha256": [
+          "string"
+        ],
+        "$.counterexample_cases[].source_tree": [
+          "null",
+          "string"
+        ],
+        "$.counterexample_cases[].source_tree_certificate": [
+          "null",
+          "object"
+        ],
+        "$.counterexample_cases[].source_tree_certificate.regular_file_bytes": [
+          "integer"
+        ],
+        "$.counterexample_cases[].source_tree_certificate.regular_files": [
+          "integer"
+        ],
+        "$.counterexample_cases[].source_tree_certificate.sha256": [
+          "string"
+        ],
+        "$.counterexample_cases[].source_unavailable_reason": [
+          "string"
+        ],
+        "$.decision_rules": [
+          "object"
+        ],
+        "$.decision_rules.counterexample": [
+          "object"
+        ],
+        "$.decision_rules.counterexample.no_clear_positive": [
+          "string"
+        ],
+        "$.decision_rules.counterexample.strong_native_or_structured_semantic_evidence": [
+          "string"
+        ],
+        "$.decision_rules.counterexample.weak_signal_only": [
+          "string"
+        ],
+        "$.decision_rules.generic_defect": [
+          "string"
+        ],
+        "$.decision_rules.positive": [
+          "object"
+        ],
+        "$.decision_rules.positive.at_least_one_construct_conformant_path": [
+          "string"
+        ],
+        "$.decision_rules.positive.explicit_construct_contradiction": [
+          "string"
+        ],
+        "$.decision_rules.positive.unresolved_only": [
+          "string"
+        ],
+        "$.environment": [
+          "object"
+        ],
+        "$.environment.platform": [
+          "string"
+        ],
+        "$.environment.python": [
+          "string"
+        ],
+        "$.environment.sha256": [
+          "string"
+        ],
+        "$.environment.tools": [
+          "object"
+        ],
+        "$.environment.tools.bwrap": [
+          "string"
+        ],
+        "$.environment.tools.cargo": [
+          "string"
+        ],
+        "$.environment.tools.cmake": [
+          "string"
+        ],
+        "$.environment.tools.ctest": [
+          "string"
+        ],
+        "$.environment.tools.go": [
+          "string"
+        ],
+        "$.environment.tools.make": [
+          "string"
+        ],
+        "$.environment.tools.meson": [
+          "string"
+        ],
+        "$.environment.tools.node": [
+          "string"
+        ],
+        "$.environment.tools.pytest": [
+          "string"
+        ],
+        "$.execution_constraints": [
+          "object"
+        ],
+        "$.execution_constraints.failure_mapping": [
+          "string"
+        ],
+        "$.execution_constraints.limits": [
+          "string"
+        ],
+        "$.execution_constraints.network": [
+          "string"
+        ],
+        "$.execution_constraints.source": [
+          "string"
+        ],
+        "$.forbidden_inputs": [
+          "array"
+        ],
+        "$.forbidden_inputs[]": [
+          "string"
+        ],
+        "$.implementation": [
+          "array"
+        ],
+        "$.implementation[]": [
+          "object"
+        ],
+        "$.implementation[].path": [
+          "string"
+        ],
+        "$.implementation[].sha256": [
+          "string"
+        ],
+        "$.implementation_sha256": [
+          "string"
+        ],
+        "$.positive_cases": [
+          "array"
+        ],
+        "$.positive_cases[]": [
+          "object"
+        ],
+        "$.positive_cases[].canonical_upstream": [
+          "string"
+        ],
+        "$.positive_cases[].case_id": [
+          "string"
+        ],
+        "$.positive_cases[].distribution": [
+          "string"
+        ],
+        "$.positive_cases[].primary_source_artifacts": [
+          "array"
+        ],
+        "$.positive_cases[].primary_source_artifacts[]": [
+          "object"
+        ],
+        "$.positive_cases[].primary_source_artifacts[].bytes": [
+          "integer"
+        ],
+        "$.positive_cases[].primary_source_artifacts[].name": [
+          "string"
+        ],
+        "$.positive_cases[].primary_source_artifacts[].role": [
+          "string"
+        ],
+        "$.positive_cases[].primary_source_artifacts[].sha256": [
+          "string"
+        ],
+        "$.positive_cases[].primary_source_artifacts[].size": [
+          "integer"
+        ],
+        "$.positive_cases[].production_state_under_validation": [
+          "string"
+        ],
+        "$.positive_cases[].source_package": [
+          "string"
+        ],
+        "$.positive_cases[].source_record_sha256": [
+          "string"
+        ],
+        "$.positive_cases[].source_tree": [
+          "string"
+        ],
+        "$.positive_cases[].source_tree_certificate": [
+          "object"
+        ],
+        "$.positive_cases[].source_tree_certificate.regular_file_bytes": [
+          "integer"
+        ],
+        "$.positive_cases[].source_tree_certificate.regular_files": [
+          "integer"
+        ],
+        "$.positive_cases[].source_tree_certificate.sha256": [
+          "string"
+        ],
+        "$.protocol": [
+          "string"
+        ],
+        "$.schema_version": [
+          "string"
+        ],
+        "$.selection": [
+          "object"
+        ],
+        "$.selection.counterexample_target": [
+          "string"
+        ],
+        "$.selection.input_manifest_sha256": [
+          "string"
+        ],
+        "$.selection.positive_target": [
+          "string"
+        ],
+        "$.selection.production_labels_sha256": [
+          "string"
+        ],
+        "$.selection.source_manifest_sha256": [
+          "string"
+        ],
+        "$.stop_rules": [
+          "array"
+        ],
+        "$.stop_rules[]": [
+          "string"
+        ],
+        "$.supported_families": [
+          "object"
+        ],
+        "$.supported_families.autotools_make": [
+          "string"
+        ],
+        "$.supported_families.cargo": [
+          "string"
+        ],
+        "$.supported_families.cmake_ctest": [
+          "string"
+        ],
+        "$.supported_families.go": [
+          "string"
+        ],
+        "$.supported_families.gradle": [
+          "string"
+        ],
+        "$.supported_families.javascript": [
+          "string"
+        ],
+        "$.supported_families.maven": [
+          "string"
+        ],
+        "$.supported_families.meson": [
+          "string"
+        ],
+        "$.supported_families.python": [
+          "string"
+        ]
+      }
+    },
+    {
+      "path": "data/validation/u_positive_validation_summary.json",
+      "purpose": "Positive-certification and supported-miss summary counts.",
+      "creation": "Aggregation of retained certificates and counterexample search.",
+      "structure": "object: counterexample_status_counts, generic_defect_assessment, positive, positive_status_counts, protocol_sha256, schema_version",
+      "observed_field_types": {
+        "$": [
+          "object"
+        ],
+        "$.counterexample_status_counts": [
+          "object"
+        ],
+        "$.counterexample_status_counts.INDEPENDENT_COUNTEREXAMPLE_CONFIRMED": [
+          "integer"
+        ],
+        "$.counterexample_status_counts.NO_CLEAR_COUNTEREXAMPLE_FOUND": [
+          "integer"
+        ],
+        "$.generic_defect_assessment": [
+          "string"
+        ],
+        "$.positive": [
+          "object"
+        ],
+        "$.positive.contradicted": [
+          "integer"
+        ],
+        "$.positive.indeterminate": [
+          "integer"
+        ],
+        "$.positive.one_path_certified": [
+          "integer"
+        ],
+        "$.positive.two_path_certified": [
+          "integer"
+        ],
+        "$.positive_status_counts": [
+          "object"
+        ],
+        "$.positive_status_counts.CERTIFICATION_INDETERMINATE": [
+          "integer"
+        ],
+        "$.positive_status_counts.ORTHOGONAL_POSITIVE_CERTIFIED": [
+          "integer"
+        ],
+        "$.protocol_sha256": [
+          "string"
+        ],
+        "$.schema_version": [
+          "string"
+        ]
+      }
+    },
+    {
+      "path": "data/validation/u_validation_manifest.json",
+      "purpose": "U validation case identities and input hashes.",
+      "creation": "Frozen manifest for automated U checks.",
+      "structure": "object: author_decision, claim_boundary, state_specific_validation, status, symmetric_88_case_exercise",
+      "observed_field_types": {
+        "$": [
+          "object"
+        ],
+        "$.author_decision": [
+          "string"
+        ],
+        "$.claim_boundary": [
+          "string"
+        ],
+        "$.state_specific_validation": [
+          "object"
+        ],
+        "$.state_specific_validation.confirmed_counterexamples_globally_corrected": [
+          "integer"
+        ],
+        "$.state_specific_validation.corrected_assessment": [
+          "string"
+        ],
+        "$.state_specific_validation.final_positive_confirmed": [
+          "integer"
+        ],
+        "$.state_specific_validation.final_positive_contradicted": [
+          "integer"
+        ],
+        "$.state_specific_validation.final_positive_count": [
+          "integer"
+        ],
+        "$.state_specific_validation.final_positive_indeterminate": [
+          "integer"
+        ],
+        "$.state_specific_validation.frozen_counterexample_search": [
+          "string"
+        ],
+        "$.state_specific_validation.frozen_positive_certificates": [
+          "string"
+        ],
+        "$.state_specific_validation.original_positive_certified": [
+          "integer"
+        ],
+        "$.state_specific_validation.original_positive_indeterminate": [
+          "integer"
+        ],
+        "$.state_specific_validation.protocol": [
+          "string"
+        ],
+        "$.state_specific_validation.uncorrected_confirmed_counterexamples": [
+          "integer"
+        ],
+        "$.status": [
+          "string"
+        ],
+        "$.symmetric_88_case_exercise": [
+          "object"
+        ],
+        "$.symmetric_88_case_exercise.comparison": [
+          "string"
+        ],
+        "$.symmetric_88_case_exercise.cross_validator_disagreement": [
+          "integer"
+        ],
+        "$.symmetric_88_case_exercise.doubly_indeterminate": [
+          "integer"
+        ],
+        "$.symmetric_88_case_exercise.protocol": [
+          "string"
+        ],
+        "$.symmetric_88_case_exercise.single_path_confirmation": [
+          "integer"
+        ],
+        "$.symmetric_88_case_exercise.strong_two_path_reference": [
+          "integer"
+        ]
+      }
+    },
+    {
+      "path": "data/validation/validation_implementation_freeze.json",
+      "purpose": "Independent-validation implementation identities and hashes.",
+      "creation": "Code inventory frozen for the automated validation exercise.",
+      "structure": "object: environment, implementations, network_policy, protocol_commit, resource_policy, schema_version, u_contract_domain",
+      "observed_field_types": {
+        "$": [
+          "object"
+        ],
+        "$.environment": [
+          "object"
+        ],
+        "$.environment.bwrap": [
+          "string"
+        ],
+        "$.environment.cargo": [
+          "string"
+        ],
+        "$.environment.cmake": [
+          "string"
+        ],
+        "$.environment.go": [
+          "string"
+        ],
+        "$.environment.meson": [
+          "string"
+        ],
+        "$.environment.node": [
+          "string"
+        ],
+        "$.environment.platform": [
+          "string"
+        ],
+        "$.environment.prove": [
+          "string"
+        ],
+        "$.environment.python": [
+          "string"
+        ],
+        "$.implementations": [
+          "array"
+        ],
+        "$.implementations[]": [
+          "object"
+        ],
+        "$.implementations[].path": [
+          "string"
+        ],
+        "$.implementations[].sha256": [
+          "string"
+        ],
+        "$.network_policy": [
+          "string"
+        ],
+        "$.protocol_commit": [
+          "string"
+        ],
+        "$.resource_policy": [
+          "object"
+        ],
+        "$.resource_policy.address_space_bytes": [
+          "integer"
+        ],
+        "$.resource_policy.cpu_seconds": [
+          "integer"
+        ],
+        "$.resource_policy.file_bytes": [
+          "integer"
+        ],
+        "$.resource_policy.processes": [
+          "integer"
+        ],
+        "$.resource_policy.wall_timeout_seconds": [
+          "integer"
+        ],
+        "$.schema_version": [
+          "string"
+        ],
+        "$.u_contract_domain": [
+          "array"
+        ],
+        "$.u_contract_domain[]": [
+          "string"
+        ]
+      }
+    },
+    {
+      "path": "data/validation/validation_outputs_freeze.json",
+      "purpose": "Validation-output identities and hashes.",
+      "creation": "Content-hash inventory after completed validation.",
+      "structure": "object: comparison_gate, deterministic_rerun, files, implementation_commits, protocol_commit, schema_version",
+      "observed_field_types": {
+        "$": [
+          "object"
+        ],
+        "$.comparison_gate": [
+          "string"
+        ],
+        "$.deterministic_rerun": [
+          "string"
+        ],
+        "$.files": [
+          "array"
+        ],
+        "$.files[]": [
+          "object"
+        ],
+        "$.files[].bytes": [
+          "integer"
+        ],
+        "$.files[].path": [
+          "string"
+        ],
+        "$.files[].sha256": [
+          "string"
+        ],
+        "$.implementation_commits": [
+          "array"
+        ],
+        "$.implementation_commits[]": [
+          "string"
+        ],
+        "$.protocol_commit": [
+          "string"
+        ],
+        "$.schema_version": [
+          "string"
+        ]
+      }
+    },
+    {
+      "path": "results/authoritative/scientific_results_posthoc_l_sensitivity.json",
+      "purpose": "Authoritative secondary generic-L sensitivity estimates.",
+      "creation": "Same analysis pipeline with the separate opt-in sensitivity labels.",
+      "structure": "object: c2a, inference, retrievability, rq1, rq2, rq3",
+      "observed_field_types": {
+        "$": [
+          "object"
+        ],
+        "$.c2a": [
+          "object"
+        ],
+        "$.c2a.directional_discordance_count": [
+          "integer"
+        ],
+        "$.c2a.discordance_project_bootstrap_ci": [
+          "array"
+        ],
+        "$.c2a.discordance_project_bootstrap_ci[]": [
+          "number"
+        ],
+        "$.c2a.discordance_proportion": [
+          "number"
+        ],
+        "$.c2a.identity_states": [
+          "object"
+        ],
+        "$.c2a.identity_states.C2A_ARTIFACT_DIFFERS": [
+          "integer"
+        ],
+        "$.c2a.identity_states.C2A_EXACT": [
+          "integer"
+        ],
+        "$.c2a.identity_states.C2A_UNRESOLVED": [
+          "integer"
+        ],
+        "$.c2a.paired_difference_project_bootstrap_ci": [
+          "array"
+        ],
+        "$.c2a.paired_difference_project_bootstrap_ci[]": [
+          "number"
+        ],
+        "$.c2a.paired_positive_prevalence_difference_fedora_minus_debian": [
+          "number"
+        ],
+        "$.c2a.strict_exact_primary_artifact_projects": [
+          "integer"
+        ],
+        "$.inference": [
+          "object"
+        ],
+        "$.inference.bootstrap_replicates": [
+          "integer"
+        ],
+        "$.inference.bootstrap_unit": [
+          "string"
+        ],
+        "$.inference.finite_population_sensitivity": [
+          "string"
+        ],
+        "$.inference.percentile_quantile_convention": [
+          "string"
+        ],
+        "$.retrievability": [
+          "object"
+        ],
+        "$.retrievability.debian": [
+          "object"
+        ],
+        "$.retrievability.debian.denominator": [
+          "integer"
+        ],
+        "$.retrievability.debian.positive_count": [
+          "integer"
+        ],
+        "$.retrievability.debian.unweighted_proportion": [
+          "number"
+        ],
+        "$.retrievability.debian.unweighted_wilson_ci": [
+          "array"
+        ],
+        "$.retrievability.debian.unweighted_wilson_ci[]": [
+          "number"
+        ],
+        "$.retrievability.debian.weighted_bootstrap_ci": [
+          "array"
+        ],
+        "$.retrievability.debian.weighted_bootstrap_ci[]": [
+          "number"
+        ],
+        "$.retrievability.debian.weighted_fpc_sensitivity": [
+          "object"
+        ],
+        "$.retrievability.debian.weighted_fpc_sensitivity.estimate": [
+          "number"
+        ],
+        "$.retrievability.debian.weighted_fpc_sensitivity.method": [
+          "string"
+        ],
+        "$.retrievability.debian.weighted_fpc_sensitivity.normal_ci": [
+          "array"
+        ],
+        "$.retrievability.debian.weighted_fpc_sensitivity.normal_ci[]": [
+          "number"
+        ],
+        "$.retrievability.debian.weighted_fpc_sensitivity.standard_error": [
+          "number"
+        ],
+        "$.retrievability.debian.weighted_proportion": [
+          "number"
+        ],
+        "$.retrievability.fedora": [
+          "object"
+        ],
+        "$.retrievability.fedora.denominator": [
+          "integer"
+        ],
+        "$.retrievability.fedora.positive_count": [
+          "integer"
+        ],
+        "$.retrievability.fedora.unweighted_proportion": [
+          "number"
+        ],
+        "$.retrievability.fedora.unweighted_wilson_ci": [
+          "array"
+        ],
+        "$.retrievability.fedora.unweighted_wilson_ci[]": [
+          "number"
+        ],
+        "$.retrievability.fedora.weighted_bootstrap_ci": [
+          "array"
+        ],
+        "$.retrievability.fedora.weighted_bootstrap_ci[]": [
+          "number"
+        ],
+        "$.retrievability.fedora.weighted_fpc_sensitivity": [
+          "object"
+        ],
+        "$.retrievability.fedora.weighted_fpc_sensitivity.estimate": [
+          "number"
+        ],
+        "$.retrievability.fedora.weighted_fpc_sensitivity.method": [
+          "string"
+        ],
+        "$.retrievability.fedora.weighted_fpc_sensitivity.normal_ci": [
+          "array"
+        ],
+        "$.retrievability.fedora.weighted_fpc_sensitivity.normal_ci[]": [
+          "number"
+        ],
+        "$.retrievability.fedora.weighted_fpc_sensitivity.standard_error": [
+          "number"
+        ],
+        "$.retrievability.fedora.weighted_proportion": [
+          "number"
+        ],
+        "$.rq1": [
+          "object"
+        ],
+        "$.rq1.debian": [
+          "object"
+        ],
+        "$.rq1.debian.conditional": [
+          "object"
+        ],
+        "$.rq1.debian.conditional.denominator": [
+          "integer"
+        ],
+        "$.rq1.debian.conditional.positive_count": [
+          "integer"
+        ],
+        "$.rq1.debian.conditional.unweighted_proportion": [
+          "number"
+        ],
+        "$.rq1.debian.conditional.unweighted_wilson_ci": [
+          "array"
+        ],
+        "$.rq1.debian.conditional.unweighted_wilson_ci[]": [
+          "number"
+        ],
+        "$.rq1.debian.conditional.weighted_bootstrap_ci": [
+          "array"
+        ],
+        "$.rq1.debian.conditional.weighted_bootstrap_ci[]": [
+          "number"
+        ],
+        "$.rq1.debian.conditional.weighted_fpc_sensitivity": [
+          "object"
+        ],
+        "$.rq1.debian.conditional.weighted_fpc_sensitivity.estimate": [
+          "number"
+        ],
+        "$.rq1.debian.conditional.weighted_fpc_sensitivity.method": [
+          "string"
+        ],
+        "$.rq1.debian.conditional.weighted_fpc_sensitivity.normal_ci": [
+          "array"
+        ],
+        "$.rq1.debian.conditional.weighted_fpc_sensitivity.normal_ci[]": [
+          "number"
+        ],
+        "$.rq1.debian.conditional.weighted_fpc_sensitivity.standard_error": [
+          "number"
+        ],
+        "$.rq1.debian.conditional.weighted_proportion": [
+          "number"
+        ],
+        "$.rq1.debian.overall": [
+          "object"
+        ],
+        "$.rq1.debian.overall.denominator": [
+          "integer"
+        ],
+        "$.rq1.debian.overall.positive_count": [
+          "integer"
+        ],
+        "$.rq1.debian.overall.unweighted_proportion": [
+          "number"
+        ],
+        "$.rq1.debian.overall.unweighted_wilson_ci": [
+          "array"
+        ],
+        "$.rq1.debian.overall.unweighted_wilson_ci[]": [
+          "number"
+        ],
+        "$.rq1.debian.overall.weighted_bootstrap_ci": [
+          "array"
+        ],
+        "$.rq1.debian.overall.weighted_bootstrap_ci[]": [
+          "number"
+        ],
+        "$.rq1.debian.overall.weighted_fpc_sensitivity": [
+          "object"
+        ],
+        "$.rq1.debian.overall.weighted_fpc_sensitivity.estimate": [
+          "number"
+        ],
+        "$.rq1.debian.overall.weighted_fpc_sensitivity.method": [
+          "string"
+        ],
+        "$.rq1.debian.overall.weighted_fpc_sensitivity.normal_ci": [
+          "array"
+        ],
+        "$.rq1.debian.overall.weighted_fpc_sensitivity.normal_ci[]": [
+          "number"
+        ],
+        "$.rq1.debian.overall.weighted_fpc_sensitivity.standard_error": [
+          "number"
+        ],
+        "$.rq1.debian.overall.weighted_proportion": [
+          "number"
+        ],
+        "$.rq1.debian.u_state_counts": [
+          "object"
+        ],
+        "$.rq1.debian.u_state_counts.U_NO_TEST_CAPABILITY_RESOLVED": [
+          "integer"
+        ],
+        "$.rq1.debian.u_state_counts.U_TEST_ASSETS_ONLY": [
+          "integer"
+        ],
+        "$.rq1.debian.u_state_counts.U_TEST_ENTRYPOINT_RESOLVED": [
+          "integer"
+        ],
+        "$.rq1.debian.u_state_counts.U_UNRESOLVED": [
+          "integer"
+        ],
+        "$.rq1.fedora": [
+          "object"
+        ],
+        "$.rq1.fedora.conditional": [
+          "object"
+        ],
+        "$.rq1.fedora.conditional.denominator": [
+          "integer"
+        ],
+        "$.rq1.fedora.conditional.positive_count": [
+          "integer"
+        ],
+        "$.rq1.fedora.conditional.unweighted_proportion": [
+          "number"
+        ],
+        "$.rq1.fedora.conditional.unweighted_wilson_ci": [
+          "array"
+        ],
+        "$.rq1.fedora.conditional.unweighted_wilson_ci[]": [
+          "number"
+        ],
+        "$.rq1.fedora.conditional.weighted_bootstrap_ci": [
+          "array"
+        ],
+        "$.rq1.fedora.conditional.weighted_bootstrap_ci[]": [
+          "number"
+        ],
+        "$.rq1.fedora.conditional.weighted_fpc_sensitivity": [
+          "object"
+        ],
+        "$.rq1.fedora.conditional.weighted_fpc_sensitivity.estimate": [
+          "number"
+        ],
+        "$.rq1.fedora.conditional.weighted_fpc_sensitivity.method": [
+          "string"
+        ],
+        "$.rq1.fedora.conditional.weighted_fpc_sensitivity.normal_ci": [
+          "array"
+        ],
+        "$.rq1.fedora.conditional.weighted_fpc_sensitivity.normal_ci[]": [
+          "number"
+        ],
+        "$.rq1.fedora.conditional.weighted_fpc_sensitivity.standard_error": [
+          "number"
+        ],
+        "$.rq1.fedora.conditional.weighted_proportion": [
+          "number"
+        ],
+        "$.rq1.fedora.overall": [
+          "object"
+        ],
+        "$.rq1.fedora.overall.denominator": [
+          "integer"
+        ],
+        "$.rq1.fedora.overall.positive_count": [
+          "integer"
+        ],
+        "$.rq1.fedora.overall.unweighted_proportion": [
+          "number"
+        ],
+        "$.rq1.fedora.overall.unweighted_wilson_ci": [
+          "array"
+        ],
+        "$.rq1.fedora.overall.unweighted_wilson_ci[]": [
+          "number"
+        ],
+        "$.rq1.fedora.overall.weighted_bootstrap_ci": [
+          "array"
+        ],
+        "$.rq1.fedora.overall.weighted_bootstrap_ci[]": [
+          "number"
+        ],
+        "$.rq1.fedora.overall.weighted_fpc_sensitivity": [
+          "object"
+        ],
+        "$.rq1.fedora.overall.weighted_fpc_sensitivity.estimate": [
+          "number"
+        ],
+        "$.rq1.fedora.overall.weighted_fpc_sensitivity.method": [
+          "string"
+        ],
+        "$.rq1.fedora.overall.weighted_fpc_sensitivity.normal_ci": [
+          "array"
+        ],
+        "$.rq1.fedora.overall.weighted_fpc_sensitivity.normal_ci[]": [
+          "number"
+        ],
+        "$.rq1.fedora.overall.weighted_fpc_sensitivity.standard_error": [
+          "number"
+        ],
+        "$.rq1.fedora.overall.weighted_proportion": [
+          "number"
+        ],
+        "$.rq1.fedora.u_state_counts": [
+          "object"
+        ],
+        "$.rq1.fedora.u_state_counts.U_NO_TEST_CAPABILITY_RESOLVED": [
+          "integer"
+        ],
+        "$.rq1.fedora.u_state_counts.U_TEST_ASSETS_ONLY": [
+          "integer"
+        ],
+        "$.rq1.fedora.u_state_counts.U_TEST_ENTRYPOINT_RESOLVED": [
+          "integer"
+        ],
+        "$.rq1.fedora.u_state_counts.U_UNRESOLVED": [
+          "integer"
+        ],
+        "$.rq2": [
+          "object"
+        ],
+        "$.rq2.debian": [
+          "object"
+        ],
+        "$.rq2.debian.declared_minus_nohook_weighted_difference": [
+          "number"
+        ],
+        "$.rq2.debian.difference_bootstrap_ci": [
+          "array"
+        ],
+        "$.rq2.debian.difference_bootstrap_ci[]": [
+          "number"
+        ],
+        "$.rq2.debian.rows": [
+          "array"
+        ],
+        "$.rq2.debian.rows[]": [
+          "object"
+        ],
+        "$.rq2.debian.rows[].category": [
+          "string"
+        ],
+        "$.rq2.debian.rows[].category_count": [
+          "integer"
+        ],
+        "$.rq2.debian.rows[].denominator": [
+          "integer"
+        ],
+        "$.rq2.debian.rows[].positive_count": [
+          "integer"
+        ],
+        "$.rq2.debian.rows[].unweighted_proportion": [
+          "null",
+          "number"
+        ],
+        "$.rq2.debian.rows[].unweighted_wilson_ci": [
+          "array",
+          "null"
+        ],
+        "$.rq2.debian.rows[].unweighted_wilson_ci[]": [
+          "number"
+        ],
+        "$.rq2.debian.rows[].weighted_bootstrap_ci": [
+          "array",
+          "null"
+        ],
+        "$.rq2.debian.rows[].weighted_bootstrap_ci[]": [
+          "number"
+        ],
+        "$.rq2.debian.rows[].weighted_fpc_sensitivity": [
+          "object"
+        ],
+        "$.rq2.debian.rows[].weighted_fpc_sensitivity.estimate": [
+          "null",
+          "number"
+        ],
+        "$.rq2.debian.rows[].weighted_fpc_sensitivity.method": [
+          "string"
+        ],
+        "$.rq2.debian.rows[].weighted_fpc_sensitivity.normal_ci": [
+          "array",
+          "null"
+        ],
+        "$.rq2.debian.rows[].weighted_fpc_sensitivity.normal_ci[]": [
+          "number"
+        ],
+        "$.rq2.debian.rows[].weighted_fpc_sensitivity.standard_error": [
+          "null",
+          "number"
+        ],
+        "$.rq2.debian.rows[].weighted_proportion": [
+          "null",
+          "number"
+        ],
+        "$.rq2.fedora": [
+          "object"
+        ],
+        "$.rq2.fedora.declared_minus_nohook_weighted_difference": [
+          "number"
+        ],
+        "$.rq2.fedora.difference_bootstrap_ci": [
+          "array"
+        ],
+        "$.rq2.fedora.difference_bootstrap_ci[]": [
+          "number"
+        ],
+        "$.rq2.fedora.rows": [
+          "array"
+        ],
+        "$.rq2.fedora.rows[]": [
+          "object"
+        ],
+        "$.rq2.fedora.rows[].category": [
+          "string"
+        ],
+        "$.rq2.fedora.rows[].category_count": [
+          "integer"
+        ],
+        "$.rq2.fedora.rows[].denominator": [
+          "integer"
+        ],
+        "$.rq2.fedora.rows[].positive_count": [
+          "integer"
+        ],
+        "$.rq2.fedora.rows[].unweighted_proportion": [
+          "number"
+        ],
+        "$.rq2.fedora.rows[].unweighted_wilson_ci": [
+          "array"
+        ],
+        "$.rq2.fedora.rows[].unweighted_wilson_ci[]": [
+          "number"
+        ],
+        "$.rq2.fedora.rows[].weighted_bootstrap_ci": [
+          "array"
+        ],
+        "$.rq2.fedora.rows[].weighted_bootstrap_ci[]": [
+          "number"
+        ],
+        "$.rq2.fedora.rows[].weighted_fpc_sensitivity": [
+          "object"
+        ],
+        "$.rq2.fedora.rows[].weighted_fpc_sensitivity.estimate": [
+          "number"
+        ],
+        "$.rq2.fedora.rows[].weighted_fpc_sensitivity.method": [
+          "string"
+        ],
+        "$.rq2.fedora.rows[].weighted_fpc_sensitivity.normal_ci": [
+          "array"
+        ],
+        "$.rq2.fedora.rows[].weighted_fpc_sensitivity.normal_ci[]": [
+          "number"
+        ],
+        "$.rq2.fedora.rows[].weighted_fpc_sensitivity.standard_error": [
+          "number"
+        ],
+        "$.rq2.fedora.rows[].weighted_proportion": [
+          "number"
+        ],
+        "$.rq3": [
+          "object"
+        ],
+        "$.rq3.counts": [
+          "object"
+        ],
+        "$.rq3.counts.both_evidenced": [
+          "integer"
+        ],
+        "$.rq3.counts.debian_only_evidenced": [
+          "integer"
+        ],
+        "$.rq3.counts.fedora_only_evidenced": [
+          "integer"
+        ],
+        "$.rq3.counts.neither_positive_evidence": [
+          "integer"
+        ],
+        "$.rq3.counts.one_or_both_unresolved": [
+          "integer"
+        ],
+        "$.rq3.directional_discordance_count": [
+          "integer"
+        ],
+        "$.rq3.discordance_project_bootstrap_ci": [
+          "array"
+        ],
+        "$.rq3.discordance_project_bootstrap_ci[]": [
+          "number"
+        ],
+        "$.rq3.discordance_proportion": [
+          "number"
+        ],
+        "$.rq3.discordance_wilson_ci": [
+          "array"
+        ],
+        "$.rq3.discordance_wilson_ci[]": [
+          "number"
+        ],
+        "$.rq3.mcnemar_exact_p": [
+          "number"
+        ],
+        "$.rq3.paired_difference_project_bootstrap_ci": [
+          "array"
+        ],
+        "$.rq3.paired_difference_project_bootstrap_ci[]": [
+          "number"
+        ],
+        "$.rq3.paired_positive_prevalence_difference_fedora_minus_debian": [
+          "number"
+        ],
+        "$.rq3.sampled_c2v_projects": [
+          "integer"
+        ],
+        "$.rq3.strict_resolved_projects": [
+          "integer"
+        ],
+        "$.rq3.target_strict_projects": [
+          "integer"
+        ]
+      }
+    },
+    {
+      "path": "results/authoritative/scientific_results_primary.json",
+      "purpose": "Authoritative primary RQ1/RQ2/RQ3 estimates, intervals, and archive subset results.",
+      "creation": "scripts/analyze/reproduce_results.py from frozen corrected-frame sample and primary U/P/L observations.",
+      "structure": "object: c2a, inference, retrievability, rq1, rq2, rq3",
+      "observed_field_types": {
+        "$": [
+          "object"
+        ],
+        "$.c2a": [
+          "object"
+        ],
+        "$.c2a.directional_discordance_count": [
+          "integer"
+        ],
+        "$.c2a.discordance_project_bootstrap_ci": [
+          "array"
+        ],
+        "$.c2a.discordance_project_bootstrap_ci[]": [
+          "number"
+        ],
+        "$.c2a.discordance_proportion": [
+          "number"
+        ],
+        "$.c2a.identity_states": [
+          "object"
+        ],
+        "$.c2a.identity_states.C2A_ARTIFACT_DIFFERS": [
+          "integer"
+        ],
+        "$.c2a.identity_states.C2A_EXACT": [
+          "integer"
+        ],
+        "$.c2a.identity_states.C2A_UNRESOLVED": [
+          "integer"
+        ],
+        "$.c2a.paired_difference_project_bootstrap_ci": [
+          "array"
+        ],
+        "$.c2a.paired_difference_project_bootstrap_ci[]": [
+          "number"
+        ],
+        "$.c2a.paired_positive_prevalence_difference_fedora_minus_debian": [
+          "number"
+        ],
+        "$.c2a.strict_exact_primary_artifact_projects": [
+          "integer"
+        ],
+        "$.inference": [
+          "object"
+        ],
+        "$.inference.bootstrap_replicates": [
+          "integer"
+        ],
+        "$.inference.bootstrap_unit": [
+          "string"
+        ],
+        "$.inference.finite_population_sensitivity": [
+          "string"
+        ],
+        "$.inference.percentile_quantile_convention": [
+          "string"
+        ],
+        "$.retrievability": [
+          "object"
+        ],
+        "$.retrievability.debian": [
+          "object"
+        ],
+        "$.retrievability.debian.denominator": [
+          "integer"
+        ],
+        "$.retrievability.debian.positive_count": [
+          "integer"
+        ],
+        "$.retrievability.debian.unweighted_proportion": [
+          "number"
+        ],
+        "$.retrievability.debian.unweighted_wilson_ci": [
+          "array"
+        ],
+        "$.retrievability.debian.unweighted_wilson_ci[]": [
+          "number"
+        ],
+        "$.retrievability.debian.weighted_bootstrap_ci": [
+          "array"
+        ],
+        "$.retrievability.debian.weighted_bootstrap_ci[]": [
+          "number"
+        ],
+        "$.retrievability.debian.weighted_fpc_sensitivity": [
+          "object"
+        ],
+        "$.retrievability.debian.weighted_fpc_sensitivity.estimate": [
+          "number"
+        ],
+        "$.retrievability.debian.weighted_fpc_sensitivity.method": [
+          "string"
+        ],
+        "$.retrievability.debian.weighted_fpc_sensitivity.normal_ci": [
+          "array"
+        ],
+        "$.retrievability.debian.weighted_fpc_sensitivity.normal_ci[]": [
+          "number"
+        ],
+        "$.retrievability.debian.weighted_fpc_sensitivity.standard_error": [
+          "number"
+        ],
+        "$.retrievability.debian.weighted_proportion": [
+          "number"
+        ],
+        "$.retrievability.fedora": [
+          "object"
+        ],
+        "$.retrievability.fedora.denominator": [
+          "integer"
+        ],
+        "$.retrievability.fedora.positive_count": [
+          "integer"
+        ],
+        "$.retrievability.fedora.unweighted_proportion": [
+          "number"
+        ],
+        "$.retrievability.fedora.unweighted_wilson_ci": [
+          "array"
+        ],
+        "$.retrievability.fedora.unweighted_wilson_ci[]": [
+          "number"
+        ],
+        "$.retrievability.fedora.weighted_bootstrap_ci": [
+          "array"
+        ],
+        "$.retrievability.fedora.weighted_bootstrap_ci[]": [
+          "number"
+        ],
+        "$.retrievability.fedora.weighted_fpc_sensitivity": [
+          "object"
+        ],
+        "$.retrievability.fedora.weighted_fpc_sensitivity.estimate": [
+          "number"
+        ],
+        "$.retrievability.fedora.weighted_fpc_sensitivity.method": [
+          "string"
+        ],
+        "$.retrievability.fedora.weighted_fpc_sensitivity.normal_ci": [
+          "array"
+        ],
+        "$.retrievability.fedora.weighted_fpc_sensitivity.normal_ci[]": [
+          "number"
+        ],
+        "$.retrievability.fedora.weighted_fpc_sensitivity.standard_error": [
+          "number"
+        ],
+        "$.retrievability.fedora.weighted_proportion": [
+          "number"
+        ],
+        "$.rq1": [
+          "object"
+        ],
+        "$.rq1.debian": [
+          "object"
+        ],
+        "$.rq1.debian.conditional": [
+          "object"
+        ],
+        "$.rq1.debian.conditional.denominator": [
+          "integer"
+        ],
+        "$.rq1.debian.conditional.positive_count": [
+          "integer"
+        ],
+        "$.rq1.debian.conditional.unweighted_proportion": [
+          "number"
+        ],
+        "$.rq1.debian.conditional.unweighted_wilson_ci": [
+          "array"
+        ],
+        "$.rq1.debian.conditional.unweighted_wilson_ci[]": [
+          "number"
+        ],
+        "$.rq1.debian.conditional.weighted_bootstrap_ci": [
+          "array"
+        ],
+        "$.rq1.debian.conditional.weighted_bootstrap_ci[]": [
+          "number"
+        ],
+        "$.rq1.debian.conditional.weighted_fpc_sensitivity": [
+          "object"
+        ],
+        "$.rq1.debian.conditional.weighted_fpc_sensitivity.estimate": [
+          "number"
+        ],
+        "$.rq1.debian.conditional.weighted_fpc_sensitivity.method": [
+          "string"
+        ],
+        "$.rq1.debian.conditional.weighted_fpc_sensitivity.normal_ci": [
+          "array"
+        ],
+        "$.rq1.debian.conditional.weighted_fpc_sensitivity.normal_ci[]": [
+          "number"
+        ],
+        "$.rq1.debian.conditional.weighted_fpc_sensitivity.standard_error": [
+          "number"
+        ],
+        "$.rq1.debian.conditional.weighted_proportion": [
+          "number"
+        ],
+        "$.rq1.debian.overall": [
+          "object"
+        ],
+        "$.rq1.debian.overall.denominator": [
+          "integer"
+        ],
+        "$.rq1.debian.overall.positive_count": [
+          "integer"
+        ],
+        "$.rq1.debian.overall.unweighted_proportion": [
+          "number"
+        ],
+        "$.rq1.debian.overall.unweighted_wilson_ci": [
+          "array"
+        ],
+        "$.rq1.debian.overall.unweighted_wilson_ci[]": [
+          "number"
+        ],
+        "$.rq1.debian.overall.weighted_bootstrap_ci": [
+          "array"
+        ],
+        "$.rq1.debian.overall.weighted_bootstrap_ci[]": [
+          "number"
+        ],
+        "$.rq1.debian.overall.weighted_fpc_sensitivity": [
+          "object"
+        ],
+        "$.rq1.debian.overall.weighted_fpc_sensitivity.estimate": [
+          "number"
+        ],
+        "$.rq1.debian.overall.weighted_fpc_sensitivity.method": [
+          "string"
+        ],
+        "$.rq1.debian.overall.weighted_fpc_sensitivity.normal_ci": [
+          "array"
+        ],
+        "$.rq1.debian.overall.weighted_fpc_sensitivity.normal_ci[]": [
+          "number"
+        ],
+        "$.rq1.debian.overall.weighted_fpc_sensitivity.standard_error": [
+          "number"
+        ],
+        "$.rq1.debian.overall.weighted_proportion": [
+          "number"
+        ],
+        "$.rq1.debian.u_state_counts": [
+          "object"
+        ],
+        "$.rq1.debian.u_state_counts.U_NO_TEST_CAPABILITY_RESOLVED": [
+          "integer"
+        ],
+        "$.rq1.debian.u_state_counts.U_TEST_ASSETS_ONLY": [
+          "integer"
+        ],
+        "$.rq1.debian.u_state_counts.U_TEST_ENTRYPOINT_RESOLVED": [
+          "integer"
+        ],
+        "$.rq1.debian.u_state_counts.U_UNRESOLVED": [
+          "integer"
+        ],
+        "$.rq1.fedora": [
+          "object"
+        ],
+        "$.rq1.fedora.conditional": [
+          "object"
+        ],
+        "$.rq1.fedora.conditional.denominator": [
+          "integer"
+        ],
+        "$.rq1.fedora.conditional.positive_count": [
+          "integer"
+        ],
+        "$.rq1.fedora.conditional.unweighted_proportion": [
+          "number"
+        ],
+        "$.rq1.fedora.conditional.unweighted_wilson_ci": [
+          "array"
+        ],
+        "$.rq1.fedora.conditional.unweighted_wilson_ci[]": [
+          "number"
+        ],
+        "$.rq1.fedora.conditional.weighted_bootstrap_ci": [
+          "array"
+        ],
+        "$.rq1.fedora.conditional.weighted_bootstrap_ci[]": [
+          "number"
+        ],
+        "$.rq1.fedora.conditional.weighted_fpc_sensitivity": [
+          "object"
+        ],
+        "$.rq1.fedora.conditional.weighted_fpc_sensitivity.estimate": [
+          "number"
+        ],
+        "$.rq1.fedora.conditional.weighted_fpc_sensitivity.method": [
+          "string"
+        ],
+        "$.rq1.fedora.conditional.weighted_fpc_sensitivity.normal_ci": [
+          "array"
+        ],
+        "$.rq1.fedora.conditional.weighted_fpc_sensitivity.normal_ci[]": [
+          "number"
+        ],
+        "$.rq1.fedora.conditional.weighted_fpc_sensitivity.standard_error": [
+          "number"
+        ],
+        "$.rq1.fedora.conditional.weighted_proportion": [
+          "number"
+        ],
+        "$.rq1.fedora.overall": [
+          "object"
+        ],
+        "$.rq1.fedora.overall.denominator": [
+          "integer"
+        ],
+        "$.rq1.fedora.overall.positive_count": [
+          "integer"
+        ],
+        "$.rq1.fedora.overall.unweighted_proportion": [
+          "number"
+        ],
+        "$.rq1.fedora.overall.unweighted_wilson_ci": [
+          "array"
+        ],
+        "$.rq1.fedora.overall.unweighted_wilson_ci[]": [
+          "number"
+        ],
+        "$.rq1.fedora.overall.weighted_bootstrap_ci": [
+          "array"
+        ],
+        "$.rq1.fedora.overall.weighted_bootstrap_ci[]": [
+          "number"
+        ],
+        "$.rq1.fedora.overall.weighted_fpc_sensitivity": [
+          "object"
+        ],
+        "$.rq1.fedora.overall.weighted_fpc_sensitivity.estimate": [
+          "number"
+        ],
+        "$.rq1.fedora.overall.weighted_fpc_sensitivity.method": [
+          "string"
+        ],
+        "$.rq1.fedora.overall.weighted_fpc_sensitivity.normal_ci": [
+          "array"
+        ],
+        "$.rq1.fedora.overall.weighted_fpc_sensitivity.normal_ci[]": [
+          "number"
+        ],
+        "$.rq1.fedora.overall.weighted_fpc_sensitivity.standard_error": [
+          "number"
+        ],
+        "$.rq1.fedora.overall.weighted_proportion": [
+          "number"
+        ],
+        "$.rq1.fedora.u_state_counts": [
+          "object"
+        ],
+        "$.rq1.fedora.u_state_counts.U_NO_TEST_CAPABILITY_RESOLVED": [
+          "integer"
+        ],
+        "$.rq1.fedora.u_state_counts.U_TEST_ASSETS_ONLY": [
+          "integer"
+        ],
+        "$.rq1.fedora.u_state_counts.U_TEST_ENTRYPOINT_RESOLVED": [
+          "integer"
+        ],
+        "$.rq1.fedora.u_state_counts.U_UNRESOLVED": [
+          "integer"
+        ],
+        "$.rq2": [
+          "object"
+        ],
+        "$.rq2.debian": [
+          "object"
+        ],
+        "$.rq2.debian.declared_minus_nohook_weighted_difference": [
+          "number"
+        ],
+        "$.rq2.debian.difference_bootstrap_ci": [
+          "array"
+        ],
+        "$.rq2.debian.difference_bootstrap_ci[]": [
+          "number"
+        ],
+        "$.rq2.debian.rows": [
+          "array"
+        ],
+        "$.rq2.debian.rows[]": [
+          "object"
+        ],
+        "$.rq2.debian.rows[].category": [
+          "string"
+        ],
+        "$.rq2.debian.rows[].category_count": [
+          "integer"
+        ],
+        "$.rq2.debian.rows[].denominator": [
+          "integer"
+        ],
+        "$.rq2.debian.rows[].positive_count": [
+          "integer"
+        ],
+        "$.rq2.debian.rows[].unweighted_proportion": [
+          "null",
+          "number"
+        ],
+        "$.rq2.debian.rows[].unweighted_wilson_ci": [
+          "array",
+          "null"
+        ],
+        "$.rq2.debian.rows[].unweighted_wilson_ci[]": [
+          "number"
+        ],
+        "$.rq2.debian.rows[].weighted_bootstrap_ci": [
+          "array",
+          "null"
+        ],
+        "$.rq2.debian.rows[].weighted_bootstrap_ci[]": [
+          "number"
+        ],
+        "$.rq2.debian.rows[].weighted_fpc_sensitivity": [
+          "object"
+        ],
+        "$.rq2.debian.rows[].weighted_fpc_sensitivity.estimate": [
+          "null",
+          "number"
+        ],
+        "$.rq2.debian.rows[].weighted_fpc_sensitivity.method": [
+          "string"
+        ],
+        "$.rq2.debian.rows[].weighted_fpc_sensitivity.normal_ci": [
+          "array",
+          "null"
+        ],
+        "$.rq2.debian.rows[].weighted_fpc_sensitivity.normal_ci[]": [
+          "number"
+        ],
+        "$.rq2.debian.rows[].weighted_fpc_sensitivity.standard_error": [
+          "null",
+          "number"
+        ],
+        "$.rq2.debian.rows[].weighted_proportion": [
+          "null",
+          "number"
+        ],
+        "$.rq2.fedora": [
+          "object"
+        ],
+        "$.rq2.fedora.declared_minus_nohook_weighted_difference": [
+          "number"
+        ],
+        "$.rq2.fedora.difference_bootstrap_ci": [
+          "array"
+        ],
+        "$.rq2.fedora.difference_bootstrap_ci[]": [
+          "number"
+        ],
+        "$.rq2.fedora.rows": [
+          "array"
+        ],
+        "$.rq2.fedora.rows[]": [
+          "object"
+        ],
+        "$.rq2.fedora.rows[].category": [
+          "string"
+        ],
+        "$.rq2.fedora.rows[].category_count": [
+          "integer"
+        ],
+        "$.rq2.fedora.rows[].denominator": [
+          "integer"
+        ],
+        "$.rq2.fedora.rows[].positive_count": [
+          "integer"
+        ],
+        "$.rq2.fedora.rows[].unweighted_proportion": [
+          "number"
+        ],
+        "$.rq2.fedora.rows[].unweighted_wilson_ci": [
+          "array"
+        ],
+        "$.rq2.fedora.rows[].unweighted_wilson_ci[]": [
+          "number"
+        ],
+        "$.rq2.fedora.rows[].weighted_bootstrap_ci": [
+          "array"
+        ],
+        "$.rq2.fedora.rows[].weighted_bootstrap_ci[]": [
+          "number"
+        ],
+        "$.rq2.fedora.rows[].weighted_fpc_sensitivity": [
+          "object"
+        ],
+        "$.rq2.fedora.rows[].weighted_fpc_sensitivity.estimate": [
+          "number"
+        ],
+        "$.rq2.fedora.rows[].weighted_fpc_sensitivity.method": [
+          "string"
+        ],
+        "$.rq2.fedora.rows[].weighted_fpc_sensitivity.normal_ci": [
+          "array"
+        ],
+        "$.rq2.fedora.rows[].weighted_fpc_sensitivity.normal_ci[]": [
+          "number"
+        ],
+        "$.rq2.fedora.rows[].weighted_fpc_sensitivity.standard_error": [
+          "number"
+        ],
+        "$.rq2.fedora.rows[].weighted_proportion": [
+          "number"
+        ],
+        "$.rq3": [
+          "object"
+        ],
+        "$.rq3.counts": [
+          "object"
+        ],
+        "$.rq3.counts.both_evidenced": [
+          "integer"
+        ],
+        "$.rq3.counts.debian_only_evidenced": [
+          "integer"
+        ],
+        "$.rq3.counts.fedora_only_evidenced": [
+          "integer"
+        ],
+        "$.rq3.counts.neither_positive_evidence": [
+          "integer"
+        ],
+        "$.rq3.counts.one_or_both_unresolved": [
+          "integer"
+        ],
+        "$.rq3.directional_discordance_count": [
+          "integer"
+        ],
+        "$.rq3.discordance_project_bootstrap_ci": [
+          "array"
+        ],
+        "$.rq3.discordance_project_bootstrap_ci[]": [
+          "number"
+        ],
+        "$.rq3.discordance_proportion": [
+          "number"
+        ],
+        "$.rq3.discordance_wilson_ci": [
+          "array"
+        ],
+        "$.rq3.discordance_wilson_ci[]": [
+          "number"
+        ],
+        "$.rq3.mcnemar_exact_p": [
+          "number"
+        ],
+        "$.rq3.paired_difference_project_bootstrap_ci": [
+          "array"
+        ],
+        "$.rq3.paired_difference_project_bootstrap_ci[]": [
+          "number"
+        ],
+        "$.rq3.paired_positive_prevalence_difference_fedora_minus_debian": [
+          "number"
+        ],
+        "$.rq3.sampled_c2v_projects": [
+          "integer"
+        ],
+        "$.rq3.strict_resolved_projects": [
+          "integer"
+        ],
+        "$.rq3.target_strict_projects": [
+          "integer"
+        ]
+      }
+    },
+    {
+      "path": "results/authoritative/typed_results.json",
+      "purpose": "Typed reported values with numerator, denominator, interval method, and weighting fields.",
+      "creation": "Typed reporting extraction from authoritative primary and sensitivity analysis.",
+      "structure": "object: rows, schema_version",
+      "observed_field_types": {
+        "$": [
+          "object"
+        ],
+        "$.rows": [
+          "array"
+        ],
+        "$.rows[]": [
+          "object"
+        ],
+        "$.rows[].analysis": [
+          "string"
+        ],
+        "$.rows[].count": [
+          "integer"
+        ],
+        "$.rows[].denominator": [
+          "integer"
+        ],
+        "$.rows[].distribution": [
+          "string"
+        ],
+        "$.rows[].interval": [
+          "array"
+        ],
+        "$.rows[].interval[]": [
+          "number"
+        ],
+        "$.rows[].interval_method": [
+          "string"
+        ],
+        "$.rows[].metric": [
+          "string"
+        ],
+        "$.rows[].panel": [
+          "string"
+        ],
+        "$.rows[].point": [
+          "number"
+        ],
+        "$.rows[].weighting": [
+          "string"
+        ],
+        "$.schema_version": [
+          "string"
+        ]
+      }
+    },
+    {
+      "path": "results/release_manifest.json",
+      "purpose": "Release-file content hashes and distribution boundary.",
+      "creation": "Inventory of distributable package files; does not hash itself.",
+      "structure": "object: files, redistribution, schema_version, source_repository",
+      "observed_field_types": {
+        "$": [
+          "object"
+        ],
+        "$.files": [
+          "array"
+        ],
+        "$.files[]": [
+          "object"
+        ],
+        "$.files[].bytes": [
+          "integer"
+        ],
+        "$.files[].path": [
+          "string"
+        ],
+        "$.files[].sha256": [
+          "string"
+        ],
+        "$.redistribution": [
+          "object"
+        ],
+        "$.redistribution.included": [
+          "string"
+        ],
+        "$.redistribution.not_included": [
+          "string"
+        ],
+        "$.schema_version": [
+          "string"
+        ],
+        "$.source_repository": [
+          "object"
+        ],
+        "$.source_repository.authoritative_analysis_commit": [
+          "string"
+        ],
+        "$.source_repository.final_classifier_commit": [
+          "string"
+        ],
+        "$.source_repository.frame_validation_commit": [
+          "string"
+        ],
+        "$.source_repository.frozen_sample_commit": [
+          "string"
+        ],
+        "$.source_repository.l_validation_comparison_commit": [
+          "string"
+        ],
+        "$.source_repository.packaging_source_commit": [
+          "string"
+        ],
+        "$.source_repository.u_validation_output_commit": [
+          "string"
+        ]
+      }
+    }
+  ]
+}

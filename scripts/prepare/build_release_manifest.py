@@ -49,7 +49,7 @@ def main() -> None:
             "l_validation_comparison_commit": "b7b9229e8dfd6250642a037fad4cebec160edf97",
         },
         "redistribution": {
-            "included": "normalized source-index metadata, frozen manifests, derived labels, result files, and validation certificates",
+            "included": "normalized source-index metadata, frozen manifests, derived labels, result files, validation certificates, data dictionary, observed schemas, and explanatory case codebook",
             "not_included": "raw upstream source archives, extracted source trees, raw build records, and normalized build logs",
         },
         "files": files,

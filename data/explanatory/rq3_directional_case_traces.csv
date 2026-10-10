@@ -1,0 +1,8 @@
+canonical_upstream,primary_direction,artifact_state,mechanism_class,measurement_sensitivity_case,interpretation
+cran.r-project.org/package=filelock,fedora_only,C2A_EXACT,runner_selection_and_output_visibility,False,Positive runner result visible only in Fedora; Debian execution unresolved.
+github.com/blitzpp/blitz,debian_only,C2A_UNRESOLVED,different_test_targets,False,Different test targets or configurations.
+github.com/cgwalters/git-evtag,debian_only,C2A_ARTIFACT_DIFFERS,fedora_check_omitted,False,Fedora recipe omits the check step.
+github.com/icecc/icecream,fedora_only,C2A_ARTIFACT_DIFFERS,debian_empty_override_suppression,False,Debian recipe suppresses the helper.
+github.com/nayuki/qr-code-generator,fedora_only,C2A_EXACT,primary_rule_output_format_miss,True,Both logs report passing tests; primary Debian label is a rule miss.
+wiki.gnome.org/apps/geary,debian_only,C2A_EXACT,fedora_environmental_test_step_omitted,False,Debian provisions the test environment and invokes the suite.
+xiph.org/oggz,debian_only,C2A_ARTIFACT_DIFFERS,fedora_explicit_comment_disabled,False,Fedora explicitly disables this package's suite.
