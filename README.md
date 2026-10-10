@@ -1,6 +1,6 @@
 # Can Official Build Records Reveal Evidence of Package Test Execution?
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21914963.svg)](https://doi.org/10.5281/zenodo.21914963)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23288389.svg)](https://doi.org/10.5281/zenodo.23288389)
 
 ## Overview
 
@@ -9,11 +9,11 @@ This repository is the replication package for an empirical study of positive pa
 ## Repository contents
 
 - `src/distrotest_lite/`: repository acquisition, identity resolution, normalization, U/P/L classification, weighting, bootstrap, and RQ1--RQ3 analysis code.
-- `src/distrotest_lite_validation/`: independent frame, U, and generic-L validation implementations.
+- `src/distrotest_lite_validation/`: separately implemented frame, U, and generic-L checks.
 - `scripts/collect/`: collection of normalized package metadata from official services.
 - `scripts/prepare/`: corrected-frame reconstruction and release-provenance inventory.
 - `scripts/analyze/`: deterministic reproduction of the primary and retained sensitivity analyses.
-- `scripts/validate/`: independent automated validation entry points.
+- `scripts/validate/`: automated entry points for the separate checks.
 - `data/manifests/`: frozen source-index metadata, sample and acquisition manifests, source roles, hashes, URLs, build IDs, and exact-artifact states.
 - `data/derived/`: final U/P/L observations and rule-transition records.
 - `data/validation/`: machine-readable validation protocols, certificates, comparisons, and frozen output hashes.
@@ -96,9 +96,11 @@ PDF, SVG, PNG, and a provenance manifest are written to `results/reproduced/figu
 uv run pytest -q
 ```
 
-The released tests cover U/P/L classifiers, repository canonicalization, source-role extraction, weighting and bootstrap behavior, independent validators, and frozen-artifact integrity checks.
+The released tests cover U/P/L classifiers, repository canonicalization, source-role extraction, weighting and bootstrap behavior, separate validators, and frozen-artifact integrity checks.
 
 ## Reproducibility
+
+U inspects the Debian tree reconstructed by `dpkg-source -x`, which may include distribution patches, and the Fedora tree unpacked from Source0. This source-representation proxy cannot isolate pristine upstream capability independently of distribution modifications. Primary-archive byte comparison uses the declared Debian main orig payload and expanded RPM Source0 separately.
 
 For identical frozen inputs and the locked environment, the machine-readable primary, sensitivity, and typed outputs are deterministic. Bootstrap sampling uses fixed seeds and resamples canonical upstream projects within the C2V and non-C2V strata while retaining Debian/Fedora pairs.
 
@@ -129,5 +131,7 @@ uv run python scripts/validate/check_token_v1_1.py
 The official-date metadata can be recollected with `scripts/collect/collect_build_dates.py`; this network operation updates metadata only, and it leaves the frozen log corpus and outcome labels intact. The enriched log audit was unblinded and has no documented independent adjudication. Its historical agreement figures must not be interpreted as calibrated population recall.
 
 ## Citation
+
+The v1.1.0 replication release is archived under version-specific DOI [10.5281/zenodo.23288389](https://doi.org/10.5281/zenodo.23288389). Cite that DOI for the revision artifacts.
 
 The archival series uses concept DOI [10.5281/zenodo.21914963](https://doi.org/10.5281/zenodo.21914963), which resolves to its latest version. For immutable version citations, use the version-specific record. The earlier v1.0.0 package remains archived under DOI [10.5281/zenodo.21914964](https://doi.org/10.5281/zenodo.21914964). That earlier DOI identifies the v1.0.0 artifacts. Citation information for the article will be added after publication.
