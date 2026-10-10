@@ -80,6 +80,16 @@ The main analysis writes:
 - `bootstrap_primary.json` and `bootstrap_posthoc_l_sensitivity.json`: deterministic bootstrap replicates;
 - `reproduction_summary.json`: headline counts and authoritative byte-match status.
 
+## Reproducing the revised figures
+
+The four quantitative manuscript figures use the authoritative typed values and frozen primary labels. Rendering does not refit an analysis. With the pinned plotting dependency:
+
+```bash
+uv run --with matplotlib==3.10.6 python scripts/analyze/render_figures.py
+```
+
+PDF, SVG, PNG, and a provenance manifest are written to `results/reproduced/figures/`. Confidence intervals and raw denominators are retained; unresolved U states and paired no-positive states remain visible.
+
 ## Testing
 
 ```bash
