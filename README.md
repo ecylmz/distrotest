@@ -118,7 +118,7 @@ This release documents all 62 JSON/CSV data files in a generated catalogue and s
 uv run python scripts/prepare/generate_data_dictionary.py
 ```
 
-The 170/30 sample allocation was fixed to prioritize same-version pairs within a 200-project budget. The planning record does not contain a prospective retrieval-rate calculation uniquely deriving that allocation. The 67-usable-pair precision target required 39.4% joint usability from 170 selected projects; 53/170 (31.2%) were usable. The deterministic hash ordering and final weights are retained in the sample manifests. These additions explain the original design; they preserve its sample and analyses.
+The 170/30 sample allocation was fixed to prioritize same-version pairs within a 200-project budget. The planning record does not contain a prospective retrieval-rate calculation uniquely deriving that allocation. The 67-usable-pair precision target required 39.4% joint usability from 170 selected projects; 53/170 (31.2%) were usable. The deterministic hash ordering and final weights are retained in the sample manifests. In `data/manifests/sample_revision.json`, top-level `strata` and original manifest hashes retain historical provenance. Corrected stratum populations and weights are in `revision.strata`; corrected inclusion probabilities and design weights are in `projects`. Primary analysis uses `projects[].design_weight`. The data dictionary and structural catalogue explicitly identify these authoritative fields. These additions explain the original design; they preserve its sample and analyses.
 
 To reproduce the added frozen-input diagnostics and checks:
 

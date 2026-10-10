@@ -158,6 +158,8 @@ Created by: Reassociation of the unchanged sample with the corrected frame.
 
 Structure: `object: frozen_at, input_frame_sha256, namespace, population_manifest_sha256, projects, revision, selected_project_count, selection_method, strata`. Full observed field types are in `DATA_SCHEMA.json`.
 
+Field authority: Top-level strata and original manifest hashes retain historical provenance. Use revision.strata for corrected stratum populations and weights, and project-level inclusion probabilities and design weights for the corrected sample. Primary analysis reads projects[].design_weight; do not substitute historical top-level strata weights.
+
 ## `data/manifests/source_acquisition_revision.json`
 
 Source acquisition records after declared-role resolution.

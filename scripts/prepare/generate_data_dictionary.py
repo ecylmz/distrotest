@@ -89,7 +89,15 @@ for p in entries:
     else:
         with p.open(newline='') as f: reader=csv.DictReader(f); cols=reader.fieldnames; rows=list(reader)
         observed={c:['string'] for c in cols};shape=f'CSV ({len(rows)} rows): '+', '.join(cols)
-    records.append({'path':str(p.relative_to(ROOT)),'purpose':purpose,'creation':producer,'structure':shape,'observed_field_types':observed})
+    record={'path':str(p.relative_to(ROOT)),'purpose':purpose,'creation':producer,'structure':shape,'observed_field_types':observed}
+    if p.name=='sample_revision.json':
+        record['field_authority']={
+            'historical_provenance':['$.strata','$.input_frame_sha256','$.population_manifest_sha256'],
+            'corrected_stratum_population_and_weight':'$.revision.strata',
+            'corrected_project_probability_and_weight':['$.projects[].inclusion_probability','$.projects[].inclusion_probability_fraction','$.projects[].design_weight'],
+            'primary_analysis_weight':'$.projects[].design_weight',
+            'note':'Top-level strata and original manifest hashes retain historical provenance. Use revision.strata for corrected stratum populations and weights, and project-level inclusion probabilities and design weights for the corrected sample. Primary analysis reads projects[].design_weight; do not substitute historical top-level strata weights.'}
+    records.append(record)
 output={'schema_version':'1.0','schema_status':'Observed structural inventory, not a normative JSON Schema; missing keys and empty arrays do not establish required fields or item types.',
         'join_keys':['canonical_upstream','distribution'], 'files':records}
 (ROOT/'DATA_SCHEMA.json').write_text(json.dumps(output,indent=2,ensure_ascii=False)+'\n')
@@ -100,5 +108,7 @@ lines=['# Released data dictionary','',
 'The historical token checker is named `token_semantic_success_validator_v1.0` in machine-readable records. The separately versioned v1.1 exclusion rejects zero-success counts when nonzero skip counts or timings could mislead v1.0. The original entry points and records are retained.', '', 'The log audit selected cases using classifier outputs and displayed those outputs during annotation. Its perfect within-set agreement does not supply a calibrated population recall interval; no independently adjudicated assessor labels are documented.', '', 'Record dates describe the selected historical official builds, which can be years apart. Same-version and exact-archive pairing leave toolchain and time effects uncontrolled. Retrieval failure codes refer to the specified architecture and version policy rather than every possible official record.', '', 'Historical manifests and validation stages are retained for provenance. The corrected sample and final primary labels drive the authoritative primary results. Sensitivity labels and results remain secondary. Automated validation agreement is not independent human ground truth. Ubuntu records document the planned secondary analysis and do not support primary Ubuntu inference.','']
 for r in records:
     lines += ['## `'+r['path']+'`','',r['purpose'],'','Created by: '+r['creation'],'','Structure: `'+r['structure']+'`. Full observed field types are in `DATA_SCHEMA.json`.','']
+    if 'field_authority' in r:
+        lines += ['Field authority: '+r['field_authority']['note'], '']
 (ROOT/'DATA_DICTIONARY.md').write_text('\n'.join(lines))
 print(f'Documented {len(records)} files')

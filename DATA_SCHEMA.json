@@ -1768,6 +1768,21 @@
         "$.strata.NON_C2V.sha256": [
           "string"
         ]
+      },
+      "field_authority": {
+        "historical_provenance": [
+          "$.strata",
+          "$.input_frame_sha256",
+          "$.population_manifest_sha256"
+        ],
+        "corrected_stratum_population_and_weight": "$.revision.strata",
+        "corrected_project_probability_and_weight": [
+          "$.projects[].inclusion_probability",
+          "$.projects[].inclusion_probability_fraction",
+          "$.projects[].design_weight"
+        ],
+        "primary_analysis_weight": "$.projects[].design_weight",
+        "note": "Top-level strata and original manifest hashes retain historical provenance. Use revision.strata for corrected stratum populations and weights, and project-level inclusion probabilities and design weights for the corrected sample. Primary analysis reads projects[].design_weight; do not substitute historical top-level strata weights."
       }
     },
     {
