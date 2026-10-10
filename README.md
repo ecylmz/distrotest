@@ -1,6 +1,6 @@
 # Can Official Build Records Reveal Evidence of Package Test Execution?
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21914964.svg)](https://doi.org/10.5281/zenodo.21914964)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21914963.svg)](https://doi.org/10.5281/zenodo.21914963)
 
 ## Overview
 
@@ -130,4 +130,4 @@ The official-date metadata can be recollected with `scripts/collect/collect_buil
 
 ## Citation
 
-The v1.0.0 replication package is archived on Zenodo under the version-specific DOI [10.5281/zenodo.21914964](https://doi.org/10.5281/zenodo.21914964). Use this DOI when citing the archived artifacts. Citation information for the article will be added after publication.
+The archival series uses concept DOI [10.5281/zenodo.21914963](https://doi.org/10.5281/zenodo.21914963), which resolves to its latest version. For immutable version citations, use the version-specific record. The earlier v1.0.0 package remains archived under DOI [10.5281/zenodo.21914964](https://doi.org/10.5281/zenodo.21914964). That earlier DOI identifies the v1.0.0 artifacts. Citation information for the article will be added after publication.
