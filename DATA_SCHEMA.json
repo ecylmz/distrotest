@@ -431,6 +431,132 @@
       }
     },
     {
+      "path": "data/derived/p_label_transitions_p-rules-v1.0.0_to_p-rules-v1.1.0.csv",
+      "purpose": "Tabular historical P transitions with old/new memberships.",
+      "creation": "CSV serialization of the complete P-transition records; exported with LF line endings.",
+      "structure": "CSV (400 rows): canonical_upstream, distribution, old_labels, new_labels, removed_labels, added_labels, changed",
+      "observed_field_types": {
+        "canonical_upstream": [
+          "string"
+        ],
+        "distribution": [
+          "string"
+        ],
+        "old_labels": [
+          "string"
+        ],
+        "new_labels": [
+          "string"
+        ],
+        "removed_labels": [
+          "string"
+        ],
+        "added_labels": [
+          "string"
+        ],
+        "changed": [
+          "string"
+        ]
+      }
+    },
+    {
+      "path": "data/derived/p_label_transitions_p-rules-v1.0.0_to_p-rules-v1.1.0.json",
+      "purpose": "Complete 400-observation historical P membership transitions.",
+      "creation": "Generic target-body correction after L outcomes were available: 15 Debian observations changed, with 11 disabled and four declared memberships removed.",
+      "structure": "array (400 records)",
+      "observed_field_types": {
+        "$": [
+          "array"
+        ],
+        "$[]": [
+          "object"
+        ],
+        "$[].added_labels": [
+          "array"
+        ],
+        "$[].canonical_upstream": [
+          "string"
+        ],
+        "$[].changed": [
+          "boolean"
+        ],
+        "$[].distribution": [
+          "string"
+        ],
+        "$[].new_labels": [
+          "array"
+        ],
+        "$[].new_labels[]": [
+          "string"
+        ],
+        "$[].old_labels": [
+          "array"
+        ],
+        "$[].old_labels[]": [
+          "string"
+        ],
+        "$[].removed_labels": [
+          "array"
+        ],
+        "$[].removed_labels[]": [
+          "string"
+        ]
+      }
+    },
+    {
+      "path": "data/derived/p_transition_matrix_p-rules-v1.0.0_to_p-rules-v1.1.0.json",
+      "purpose": "Historical P transition counts for full label sets and individual memberships.",
+      "creation": "Aggregation of the complete non-exclusive P transitions.",
+      "structure": "object: label_membership_matrix, label_set_matrix, note",
+      "observed_field_types": {
+        "$": [
+          "object"
+        ],
+        "$.label_membership_matrix": [
+          "array"
+        ],
+        "$.label_membership_matrix[]": [
+          "object"
+        ],
+        "$.label_membership_matrix[].count": [
+          "integer"
+        ],
+        "$.label_membership_matrix[].distribution": [
+          "string"
+        ],
+        "$.label_membership_matrix[].label": [
+          "string"
+        ],
+        "$.label_membership_matrix[].new_present": [
+          "boolean"
+        ],
+        "$.label_membership_matrix[].old_present": [
+          "boolean"
+        ],
+        "$.label_set_matrix": [
+          "array"
+        ],
+        "$.label_set_matrix[]": [
+          "object"
+        ],
+        "$.label_set_matrix[].count": [
+          "integer"
+        ],
+        "$.label_set_matrix[].distribution": [
+          "string"
+        ],
+        "$.label_set_matrix[].new_label_set": [
+          "string"
+        ],
+        "$.label_set_matrix[].old_label_set": [
+          "string"
+        ],
+        "$.note": [
+          "string"
+        ]
+      }
+    },
+    {
       "path": "data/derived/u_label_transitions_v1.1.0_to_v1.2.0.csv",
       "purpose": "Tabular U transitions for reuse in analysis tools.",
       "creation": "CSV serialization of the retained U-transition records.",
@@ -3337,6 +3463,80 @@
           "integer"
         ],
         "$.scope": [
+          "string"
+        ]
+      }
+    },
+    {
+      "path": "data/validation/rule_amendment_l_v1_2_2.json",
+      "purpose": "Historical audit-triggered Meson rule correction and full-sample rerun provenance.",
+      "creation": "Qualifying named-test requirement replaced a bare successful-summary rule before the retained primary analysis; this correction used observed audit content.",
+      "structure": "object: amendment_version, previous_version, trigger, construct_defect, prospective_correction, old_automatic_output, old_audit_manifest, fixture_policy, scope, fixture_result, new_automatic_output, new_audit_manifest, complete_rerun_result",
+      "observed_field_types": {
+        "$": [
+          "object"
+        ],
+        "$.amendment_version": [
+          "string"
+        ],
+        "$.complete_rerun_result": [
+          "string"
+        ],
+        "$.construct_defect": [
+          "string"
+        ],
+        "$.fixture_policy": [
+          "string"
+        ],
+        "$.fixture_result": [
+          "string"
+        ],
+        "$.new_audit_manifest": [
+          "object"
+        ],
+        "$.new_audit_manifest.path": [
+          "string"
+        ],
+        "$.new_audit_manifest.sha256": [
+          "string"
+        ],
+        "$.new_automatic_output": [
+          "object"
+        ],
+        "$.new_automatic_output.path": [
+          "string"
+        ],
+        "$.new_automatic_output.sha256": [
+          "string"
+        ],
+        "$.old_audit_manifest": [
+          "object"
+        ],
+        "$.old_audit_manifest.path": [
+          "string"
+        ],
+        "$.old_audit_manifest.sha256": [
+          "string"
+        ],
+        "$.old_automatic_output": [
+          "object"
+        ],
+        "$.old_automatic_output.path": [
+          "string"
+        ],
+        "$.old_automatic_output.sha256": [
+          "string"
+        ],
+        "$.previous_version": [
+          "string"
+        ],
+        "$.prospective_correction": [
+          "string"
+        ],
+        "$.scope": [
+          "string"
+        ],
+        "$.trigger": [
           "string"
         ]
       }

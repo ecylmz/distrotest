@@ -1,0 +1,27 @@
+{
+  "amendment_version": "l-rules-v1.2.2",
+  "previous_version": "l-rules-v1.2.1",
+  "trigger": "The frozen confirmatory audit exposed a generic Meson false-positive class: a bare successful Meson Ok summary can describe excluded lint or packaging-validation-only actions.",
+  "construct_defect": "L_MESON_OK required only a positive Meson summary count and did not require evidence that the successful item was a qualifying behavioral test. The audited validate-metainfo task is excluded by qualifying-actions-v1.0.0.",
+  "prospective_correction": "Replace the bare summary rule with L_MESON_NAMED_TEST_OK, which requires a completed named test/spec/unit/integration item and a nonzero Meson summary in the same transcript.",
+  "old_automatic_output": {
+    "path": "derived/automatic_upl_labels_l-rules-v1.2.1.json",
+    "sha256": "6b13f2ed6ce799d3f09d91a44fd68ca4b184ede0581ee44e18861e59460da1ee"
+  },
+  "old_audit_manifest": {
+    "path": "audit/validation_manifest_l-rules-v1.2.1.json",
+    "sha256": "dbfc83eb325d373fe824bec17f6b68186f898703ea9701959f3fa25f31030ca7"
+  },
+  "fixture_policy": "The former bare-summary positive fixture is now adversarial-negative; named behavioral-test and validate-metainfo fixtures were added.",
+  "scope": "Generic rule amendment applied to the complete 200-project sample; no package-specific override and no outcome-proportion criterion was used.",
+  "fixture_result": "40/40 PASS",
+  "new_automatic_output": {
+    "path": "derived/automatic_upl_labels.json",
+    "sha256": "2575e7e293a98f8ee6450158e021ebddf48d5b162178d79f011282afba26d6b0"
+  },
+  "new_audit_manifest": {
+    "path": "audit/validation_manifest.json",
+    "sha256": "202c5fa5518fc5ae414f99d187e57f06e7528ef5af6d76aa4e981d44c7a78347"
+  },
+  "complete_rerun_result": "One generic false-positive state changed to L_NO_POSITIVE_EXECUTION_EVIDENCE; one independently positive transcript retained L_EXECUTION_EVIDENCED through qualifying Meson/TAP evidence."
+}

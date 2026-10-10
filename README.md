@@ -110,7 +110,7 @@ Raw upstream archives, extracted third-party source trees, raw build records, an
 
 ## Revision documentation (v1.1.0)
 
-This release documents all 58 JSON/CSV data files in a generated catalogue and supplies the complete paired-disagreement codebook, enriched audit records, historical U-denominator sensitivity, and record-date diagnostics. It preserves the frozen source observations, primary and sensitivity labels, and authoritative numerical results from v1.0.0. A separately versioned token-checker exclusion rejects explicit zero-success counts without changing the retained 194 candidate-set decisions; v1.0 behavior and outputs remain available. To regenerate the structural catalogue:
+This release documents all 62 JSON/CSV data files in a generated catalogue and supplies the complete paired-disagreement codebook, enriched audit records, historical U-denominator sensitivity, and record-date diagnostics. It preserves the frozen source observations, primary and sensitivity labels, and authoritative numerical results from v1.0.0. A separately versioned token-checker exclusion rejects explicit zero-success counts without changing the retained 194 candidate-set decisions; v1.0 behavior and outputs remain available. To regenerate the structural catalogue:
 
 ```bash
 uv run python scripts/prepare/generate_data_dictionary.py

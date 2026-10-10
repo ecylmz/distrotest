@@ -38,6 +38,30 @@ Created by: Comparison of primary and sensitivity L arrays.
 
 Structure: `array (1 records)`. Full observed field types are in `DATA_SCHEMA.json`.
 
+## `data/derived/p_label_transitions_p-rules-v1.0.0_to_p-rules-v1.1.0.csv`
+
+Tabular historical P transitions with old/new memberships.
+
+Created by: CSV serialization of the complete P-transition records; exported with LF line endings.
+
+Structure: `CSV (400 rows): canonical_upstream, distribution, old_labels, new_labels, removed_labels, added_labels, changed`. Full observed field types are in `DATA_SCHEMA.json`.
+
+## `data/derived/p_label_transitions_p-rules-v1.0.0_to_p-rules-v1.1.0.json`
+
+Complete 400-observation historical P membership transitions.
+
+Created by: Generic target-body correction after L outcomes were available: 15 Debian observations changed, with 11 disabled and four declared memberships removed.
+
+Structure: `array (400 records)`. Full observed field types are in `DATA_SCHEMA.json`.
+
+## `data/derived/p_transition_matrix_p-rules-v1.0.0_to_p-rules-v1.1.0.json`
+
+Historical P transition counts for full label sets and individual memberships.
+
+Created by: Aggregation of the complete non-exclusive P transitions.
+
+Structure: `object: label_membership_matrix, label_set_matrix, note`. Full observed field types are in `DATA_SCHEMA.json`.
+
 ## `data/derived/u_label_transitions_v1.1.0_to_v1.2.0.csv`
 
 Tabular U transitions for reuse in analysis tools.
@@ -309,6 +333,14 @@ Historical RQ1 denominator sensitivity before the generic U correction.
 Created by: scripts/analyze/u_correction_sensitivity.py reconstructs old U states from all retained transitions and repeats the same weighted analysis.
 
 Structure: `object: scope, old_rule_version, new_rule_version, rq1`. Full observed field types are in `DATA_SCHEMA.json`.
+
+## `data/validation/rule_amendment_l_v1_2_2.json`
+
+Historical audit-triggered Meson rule correction and full-sample rerun provenance.
+
+Created by: Qualifying named-test requirement replaced a bare successful-summary rule before the retained primary analysis; this correction used observed audit content.
+
+Structure: `object: amendment_version, previous_version, trigger, construct_defect, prospective_correction, old_automatic_output, old_audit_manifest, fixture_policy, scope, fixture_result, new_automatic_output, new_audit_manifest, complete_rerun_result`. Full observed field types are in `DATA_SCHEMA.json`.
 
 ## `data/validation/scp_revision_diagnostics.json`
 
